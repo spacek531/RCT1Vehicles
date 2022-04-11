@@ -18,7 +18,8 @@ def FindRangeAndIncrement(inString, repetitions):
     startValue = min(nums)
     endValue = max(nums)
     rangeValue = endValue - startValue + 1
-
+    print("Min: "+str(startValue)+" Max: "+str(endValue)+" Range: "+str(rangeValue))
+    outstring = ""
     print("----------")    
     for i in range(1, repetitions + 1):
         def matchcatch(match):
@@ -26,16 +27,17 @@ def FindRangeAndIncrement(inString, repetitions):
                 return str(int(match.group(0)) + rangeValue * i)
             else:
                 return match.group(0)
-        print(re.sub(prog,matchcatch, inString))
+        outstring += re.sub(prog,matchcatch, inString)
+    print(outstring)
     print("----------")
     
 def IncrementValue(inString, oldOffset, newOffset):
     print("----------")    
-    for i in range(1, repetitions + 1):
-        def matchcatch(match):
-            if match.group(0).isdigit():
-                return str(int(match.group(0)) + newOffset - oldOffset)
-            else:
-                return match.group(0)
-        print(re.sub(prog,matchcatch, inString))
+    def matchcatch(match):
+        if match.group(0).isdigit():
+            return str(int(match.group(0)) + newOffset - oldOffset)
+        else:
+            return match.group(0)
+    outstring = re.sub(prog,matchcatch, inString)
+    print(outstring)
     print("----------")
