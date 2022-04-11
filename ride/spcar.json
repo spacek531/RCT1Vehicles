@@ -1,0 +1,103 @@
+{
+    "id": "rct1.ride.spcar",
+    "authors": ["Chris Sawyer", "Simon Foster"],
+    "version": "1.0",
+    "sourceGame": ["rct2", "rct1"],
+    "objectType": "ride",
+    "properties": {
+        "type": "car_ride",
+        "category": "gentle",
+        "noCollisionCrashes": true,
+        "minCarsPerTrain": 1,
+        "maxCarsPerTrain": 1,
+        "carColours": [
+            [
+                ["bright_red", "yellow", "black"]
+            ],
+            [
+                ["dark_green", "olive_green", "black"]
+            ]
+        ],
+        "cars": [
+            {
+                "rotationFrameMask": 15,
+                "spacing": 174320,
+                "mass": 300,
+                "numSeats": 2,
+                "numSeatRows": 1,
+                "poweredAcceleration": 90,
+                "poweredMaxSpeed": 8,
+                "drawOrder": 9,
+                "frames": {
+                    "flat": true,
+                    "gentleSlopes": true
+                },
+                "framesNumRotations":
+                {
+                    "flat": 16,
+                    "slopes25": 4
+                },
+                "hasAdditionalColour1": true,
+                "isPowered": true,
+                "loadingPositions": [4, -4]
+            }
+        ],
+        "buildMenuPriority": 5
+    },
+    "strings": {
+        "name": {
+            "en-GB": "Sports Cars"
+        },
+        "description": {
+            "en-GB": "Powered vehicles in the shape of sports cars"
+        },
+        "capacity": {
+            "en-GB": "2 passengers per car"
+        }
+    },
+    "images": [
+    "$CSG[64206]",
+    "",
+    "",
+    
+        "$CSG[33229..33244]",
+    
+    "$CSG[33245]",
+    "$CSG[33249]",
+    "$CSG[33253]",
+    "$CSG[33257]",
+    "$CSG[33247]",
+    "$CSG[33251]",
+    "$CSG[33255]",
+    "$CSG[33259]",
+    
+    "$CSG[33246]",
+    "$CSG[33250]",
+    "$CSG[33254]",
+    "$CSG[33258]",
+    "$CSG[33248]",
+    "$CSG[33252]",
+    "$CSG[33256]",
+    "$CSG[33260]",
+    
+        "$CSG[33261..33276]",
+    
+    "$CSG[33277]",
+    "$CSG[33281]",
+    "$CSG[33285]",
+    "$CSG[33289]",
+    "$CSG[33279]",
+    "$CSG[33283]",
+    "$CSG[33287]",
+    "$CSG[33291]",
+    
+    "$CSG[33278]",
+    "$CSG[33282]",
+    "$CSG[33286]",
+    "$CSG[33290]",
+    "$CSG[33280]",
+    "$CSG[33284]",
+    "$CSG[33288]",
+    "$CSG[33292]"
+    ]
+}
