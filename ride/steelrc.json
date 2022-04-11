@@ -49,12 +49,16 @@
                     "diagonalGentleSlopeBankedTransitions":true,
                     "restraintAnimation":true
                 },
+                "framesNumRotations":
+                {
+                    "flat":16
+                },
                 "hasAdditionalColour1": true,
-                "VEHICLE_ENTRY_FLAG_11": true,
                 "loadingPositions": [5, 3, -7, -9]
             },
             {
                 "rotationFrameMask": 15,
+                "numRotationFrames":16,
                 "spacing": 183036,
                 "mass": 525,
                 "numSeats": 4,
@@ -73,9 +77,12 @@
                     "diagonalGentleSlopeBankedTransitions":true,
                     "restraintAnimation":true
                 },
+                "framesNumRotations":
+                {
+                    "flat":16
+                },
                 "hasAdditionalColour1": true,
                 "hasScreamingRiders": true,
-                "VEHICLE_ENTRY_FLAG_11": true,
                 "loadingPositions": [7, 9, -3, -1]
             }
         ]
