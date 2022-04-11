@@ -8,12 +8,8 @@
         "type": "car_ride",
         "category": "gentle",
         "noCollisionCrashes": true,
-        "minCarsPerTrain": 3,
-        "maxCarsPerTrain": 3,
-        "numEmptyCars": 2,
-        "tabCar": 1,
-        "headCars": 1,
-        "tailCars": 1,
+        "minCarsPerTrain": 1,
+        "maxCarsPerTrain": 1,
         "carColours": [
             [
                 ["bright_red", "yellow", "black"]
@@ -34,11 +30,15 @@
                 "drawOrder": 9,
                 "frames": {
                     "flat": true,
-                    "gentleSlopesOrthogonal": true
+                    "gentleSlopes": true
+                },
+                "framesNumRotations":
+                {
+                    "flat": 16,
+                    "slopes25": 4
                 },
                 "hasAdditionalColour1": true,
                 "isPowered": true,
-                "VEHICLE_ENTRY_FLAG_11": true,
                 "loadingPositions": [4, -4]
             }
         ],
@@ -46,13 +46,13 @@
     },
     "strings": {
         "name": {
-            "en-GB": "Sports Cars",
+            "en-GB": "Sports Cars"
         },
         "description": {
-            "en-GB": "Powered vehicles in the shape of sports cars",
+            "en-GB": "Powered vehicles in the shape of sports cars"
         },
         "capacity": {
-            "en-GB": "2 passengers per car",
+            "en-GB": "2 passengers per car"
         }
     },
     "images": [
