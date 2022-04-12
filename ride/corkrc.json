@@ -1,0 +1,271 @@
+{
+    "id": "rct2.ride.corkrc",
+    "authors": ["Chris Sawyer", "Simon Foster"],
+    "version": "1.0",
+    "sourceGame": "rct1aa",
+    "objectType": "ride",
+    "properties": {
+        "type": "corkscrew_rc",
+        "category": "rollercoaster",
+        "limitAirTimeBonus": true,
+        "minCarsPerTrain": 3,
+        "maxCarsPerTrain": 9,
+        "numEmptyCars": 1,
+        "defaultCar": 1,
+        "headCars": 0,
+        "ratingMultipler": {
+            "intensity": 10
+        },
+        "carColours": [
+            [
+                ["light_blue", "white", "yellow"]
+            ],
+            [
+                ["bright_red", "yellow", "yellow"]
+            ],
+            [
+                ["white", "bordeaux_red", "bordeaux_red"]
+            ]
+        ],
+        "cars": [
+            {
+                "rotationFrameMask": 31,
+                "spacing": 261480,
+                "mass": 600,
+                "numSeats": 4,
+                "numSeatRows": 2,
+                "frictionSoundId": 2,
+                "soundRange": 2,
+                "drawOrder": 5,
+                "frames": {
+                    "flat": true,
+                    "gentleSlopes": true,
+                    "steepSlopes": true,
+                    "verticalSlopes": true,
+                    "diagonalSlopes": true,
+                    "flatBanked": true,
+                    "flatToGentleSlopeBankedTransitions": true,
+                    "diagonalGentleSlopeBankedTransitions": true,
+                    "corkscrews": true,
+                    "restraintAnimation": true
+                },
+                "framesNumRotations":
+                {
+                    "flat":16,
+                    "slopes25":16,
+                    "slopes42":8,
+                    "slopes60":16,
+                    "slopes60":16,
+                    "slopes90":4,
+                    "flatBanked":16,
+                    "flatToGentleSlopeBankedTransitions":4,
+                    "restraintAnimation":4,
+                    "slopesLoop":4
+                },
+                "hasAdditionalColour2": true,
+                "hasAdditionalColour1": true,
+                "hasScreamingRiders": true,
+                "loadingPositions": [5, 3, -7, -9]
+            },
+            {
+                "rotationFrameMask": 31,
+                "spacing": 226616,
+                "mass": 500,
+                "numSeats": 4,
+                "numSeatRows": 2,
+                "frictionSoundId": 2,
+                "soundRange": 2,
+                "drawOrder": 6,
+                "frames": {
+                    "flat": true,
+                    "gentleSlopes": true,
+                    "steepSlopes": true,
+                    "verticalSlopes": true,
+                    "diagonalSlopes": true,
+                    "flatBanked": true,
+                    "flatToGentleSlopeBankedTransitions": true,
+                    "diagonalGentleSlopeBankedTransitions": true,
+                    "corkscrews": true,
+                    "restraintAnimation": true
+                },
+                "framesNumRotations":
+                {
+                    "flat":16,
+                    "slopes25":16,
+                    "slopes42":8,
+                    "slopes60":16,
+                    "slopes60":16,
+                    "slopes90":4,
+                    "flatBanked":16,
+                    "flatToGentleSlopeBankedTransitions":4,
+                    "restraintAnimation":4,
+                    "slopesLoop":4
+                },
+                "hasAdditionalColour2": true,
+                "hasAdditionalColour1": true,
+                "hasScreamingRiders": true,
+                "loadingPositions": [7, 9, -3, -1]
+            }
+        ],
+        "buildMenuPriority": 2
+    },
+    "strings": {
+        "name": {
+            "en-GB": "Corkscrew Roller Coaster Trains"
+        },
+        "description": {
+            "en-GB": "Roller coaster trains with shoulder restraints"
+        },
+        "capacity": {
+            "en-GB": "4 passengers per car"
+        }
+    },
+    "images": [
+    "$CSG[64214]",
+    "",
+    "",
+    
+            "$CSG[13542..13557]",
+    
+    "$CSG[13558]",
+    "$CSG[13566]",
+    "$CSG[13574]",
+    "$CSG[13582]",
+    "$CSG[13562]",
+    "$CSG[13570]",
+    "$CSG[13578]",
+    "$CSG[13586]",
+    
+    "$CSG[13559]",
+    "$CSG[13646..13648]",
+    "$CSG[13567]",
+    "$CSG[13649..13651]",
+    "$CSG[13575]",
+    "$CSG[13652..13654]",
+    "$CSG[13583]",
+    "$CSG[13655..13657]",
+    
+    "$CSG[13563]",
+    "$CSG[13658..13660]",
+    "$CSG[13571]",
+    "$CSG[13661..13663]",
+    "$CSG[13579]",
+    "$CSG[13664..13666]",
+    "$CSG[13587]",
+    "$CSG[13667..13669]",
+    
+    "$CSG[13560]",
+    "$CSG[13854]",
+    "$CSG[13568]",
+    "$CSG[13855]",
+    "$CSG[13576]",
+    "$CSG[13856]",
+    "$CSG[13584]",
+    "$CSG[13867]",
+    
+    "$CSG[13564]",
+    "$CSG[13870]",
+    "$CSG[13572]",
+    "$CSG[13871]",
+    "$CSG[13580]",
+    "$CSG[13872]",
+    "$CSG[13588]",
+    "$CSG[13873]",
+    
+    "$CSG[13561]",
+    "$CSG[13810..13812]",
+    "$CSG[13569]",
+    "$CSG[13813..13815]",
+    "$CSG[13577]",
+    "$CSG[13816..13818]",
+    "$CSG[13585]",
+    "$CSG[13819..13821]",
+    
+    "$CSG[13565]",
+    "$CSG[13822..13824]",
+    "$CSG[13573]",
+    "$CSG[13825..13827]",
+    "$CSG[13581]",
+    "$CSG[13828..13830]",
+    "$CSG[13589]",
+    "$CSG[13831..13833]",
+    
+    "$CSG[13670..13673]",
+    "$CSG[13702..13705]",
+    
+    "$CSG[13674]",
+    "$CSG[13675]",
+    "$CSG[13676]",
+    "$CSG[13677]",
+    "$CSG[13706]",
+    "$CSG[13707]",
+    "$CSG[13708]",
+    "$CSG[13709]",
+    
+    "$CSG[13678..13681]",
+    "$CSG[13710..13713]",
+    "$CSG[13682]",
+    "$CSG[13683]",
+    "$CSG[13684]",
+    "$CSG[13685]",
+    "$CSG[13714]",
+    "$CSG[13715]",
+    "$CSG[13716]",
+    "$CSG[13717]",
+    "$CSG[13686..13689]",
+    "$CSG[13718..13721]",
+    "$CSG[13690..13693]",
+    "$CSG[13722..13725]",
+    "$CSG[13694..13697]",
+    "$CSG[13726..13729]",
+    "$CSG[13698..13701]",
+    "$CSG[13730..13733]",
+    "$CSG[13702..13705]",
+    "$CSG[13734..13737]",
+    "$CSG[13706..13709]",
+    
+    "$CSG[13846..13849]",
+    "$CSG[13862..13865]",
+    "$CSG[13850..13853]",
+    "$CSG[13866..13869]",
+    "$CSG[13858..13861]",
+    "$CSG[13874..13877]",
+    
+    "$CSG[13622]",
+    "$CSG[13894]",
+    "$CSG[13623]",
+    "$CSG[13895]",
+    "$CSG[13624]",
+    "$CSG[13896]",
+    "$CSG[13625]",
+    "$CSG[13897]",
+    
+    "$CSG[13626]",
+    "$CSG[13898]",
+    "$CSG[13627]",
+    "$CSG[13899]",
+    "$CSG[13628]",
+    "$CSG[13900]",
+    "$CSG[13629]",
+    "$CSG[13901]",
+    "$CSG[13590..13621]",
+    
+    "$CSG[13630..13645]",
+    
+    "$CSG[13878..13893]",
+    "$CSG[13730..13809]",
+    
+    "$CSG[13834]",
+    "$CSG[13837]",
+    "$CSG[13840]",
+    "$CSG[13843]",
+    "$CSG[13835]",
+    "$CSG[13838]",
+    "$CSG[13841]",
+    "$CSG[13844]",
+    "$CSG[13836]",
+    "$CSG[13839]",
+    "$CSG[13842]",
+    "$CSG[13845]"
+    ]
+}
