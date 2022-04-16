@@ -2,7 +2,7 @@
     "id": "rct1aa.ride.woodtrc",
     "authors": ["Chris Sawyer", "Simon Foster"],
     "version": "1.0",
-    "sourceGame": ["rct1aa"],
+    "sourceGame": "rct1aa",
     "objectType": "ride",
     "properties": {
         "type": "wooden_rc",
