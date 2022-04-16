@@ -28,7 +28,7 @@
         ],
         "cars": [
             {
-                "rotationFrameMask": 31,
+                "rotationFrameMask": 15,
                 "spacing": 174320,
                 "mass": 350,
                 "numSeats": 2,
@@ -53,7 +53,6 @@
                     "slopes25":16,
                     "slopes42":8,
                     "slopes60":16,
-                    "slopes90":4,
                     "flatBanked":16,
                     "flatToGentleSlopeBankedTransitions":16,
                     "restraintAnimation":4
@@ -64,7 +63,7 @@
                 "loadingPositions": [5, 3, -7, -9]
             },
             {
-                "rotationFrameMask": 31,
+                "rotationFrameMask": 15,
                 "spacing": 122024,
                 "mass": 290,
                 "numSeats": 2,
@@ -75,16 +74,22 @@
                 "frames": {
                     "flat": true,
                     "gentleSlopes": true,
-                    "steepSlopes": true,
-                    "verticalSlopes": true,
-                    "diagonalSlopes": true,
-                    "flatBanked": true,
-                    "flatToGentleSlopeBankedTransitions": true,
-                    "diagonalGentleSlopeBankedTransitions": true,
-                    "gentleSlopeBankedTransitions": true,
-                    "gentleSlopeBankedTurns": true,
-                    "flatToGentleSlopeWhileBankedTransitions": true,
-                    "restraintAnimation": true
+                    "steepSlopes":true,
+                    "diagonalSlopes":true,
+                    "flatBanked":true,
+                    "flatToGentleSlopeBankedTransitions":true,
+                    "diagonalGentleSlopeBankedTransitions":true,
+                    "restraintAnimation":true
+                },
+                "framesNumRotations":
+                {
+                    "flat":16,
+                    "slopes25":16,
+                    "slopes42":8,
+                    "slopes60":16,
+                    "flatBanked":16,
+                    "flatToGentleSlopeBankedTransitions":16,
+                    "restraintAnimation":4
                 },
                 "hasAdditionalColour2": true,
                 "hasAdditionalColour1": true,
@@ -99,14 +104,14 @@
     "",
     "",
             "$CSG[17478..17493]",
-    "$CSG[17478]",
-    "$CSG[17486]",
     "$CSG[17494]",
     "$CSG[17502]",
-    "$CSG[17482]",
-    "$CSG[17490]",
+    "$CSG[17510]",
+    "$CSG[17518]",
     "$CSG[17498]",
     "$CSG[17506]",
+    "$CSG[17514]",
+    "$CSG[17522]",
     
     "$CSG[17495]",
     "$CSG[17582..17584]",
@@ -224,6 +229,8 @@
     "$CSG[17581]",
     "$CSG[17675..17677]",
     
+    "$CSG[17722..17737]",
+    
     "$CSG[17678]",
     "$CSG[17681]",
     "$CSG[17684]",
@@ -238,14 +245,14 @@
     "$CSG[17689]",
     
             "$CSG[17746..17761]",
-    "$CSG[17746]",
-    "$CSG[17754]",
     "$CSG[17762]",
     "$CSG[17770]",
-    "$CSG[17750]",
-    "$CSG[17758]",
+    "$CSG[17778]",
+    "$CSG[17786]",
     "$CSG[17766]",
     "$CSG[17774]",
+    "$CSG[17782]",
+    "$CSG[17790]",
     
     "$CSG[17763]",
     "$CSG[17850..17852]",
@@ -363,6 +370,8 @@
     "$CSG[17849]",
     "$CSG[17943..17945]",
     
+    "$CSG[17990..18005]",
+    
     "$CSG[17946]",
     "$CSG[17949]",
     "$CSG[17952]",
@@ -377,14 +386,14 @@
     "$CSG[17957]",
 
             "$CSG[18014..18029]",
-    "$CSG[18014]",
-    "$CSG[18022]",
     "$CSG[18030]",
     "$CSG[18038]",
-    "$CSG[18018]",
-    "$CSG[18026]",
+    "$CSG[18046]",
+    "$CSG[18054]",
     "$CSG[18034]",
     "$CSG[18042]",
+    "$CSG[18050]",
+    "$CSG[18058]",
     
     "$CSG[18031]",
     "$CSG[18118..18120]",
@@ -502,6 +511,8 @@
     "$CSG[18117]",
     "$CSG[18211..18213]",
     
+    "$CSG[18258..18273]",
+    
     "$CSG[18214]",
     "$CSG[18217]",
     "$CSG[18220]",
@@ -516,14 +527,14 @@
     "$CSG[18225]",
 
             "$CSG[18282..18297]",
-    "$CSG[18282]",
-    "$CSG[18290]",
     "$CSG[18298]",
     "$CSG[18306]",
-    "$CSG[18286]",
-    "$CSG[18294]",
+    "$CSG[18314]",
+    "$CSG[18322]",
     "$CSG[18302]",
     "$CSG[18310]",
+    "$CSG[18318]",
+    "$CSG[18326]",
     
     "$CSG[18299]",
     "$CSG[18386..18388]",
@@ -641,6 +652,8 @@
     "$CSG[18385]",
     "$CSG[18479..18481]",
     
+    "$CSG[18526..18541]",
+    
     "$CSG[18482]",
     "$CSG[18485]",
     "$CSG[18488]",
@@ -656,13 +669,13 @@
     ],
     "strings": {
         "name": {
-            "en-GB": "Articulated Roller Coaster Trains",
+            "en-GB": "Articulated Roller Coaster Trains"
         },
         "description": {
-            "en-GB": "Roller coaster trains with short single-row cars and open fronts",
+            "en-GB": "Roller coaster trains with short single-row cars and open fronts"
         },
         "capacity": {
-            "en-GB": "2 passengers per car",
+            "en-GB": "2 passengers per car"
         }
     }
 }
