@@ -1,11 +1,11 @@
 {
-    "id": "rct2.ride.corkrcrv",
+    "id": "rct1.ride.corkrcrv",
     "authors": [
         "Chris Sawyer",
         "Simon Foster"
     ],
     "version": "1.0",
-    "sourceGame": "rct1aa",
+    "sourceGame": "rct1",
     "objectType": "ride",
     "properties": {
         "type": "corkscrew_rc",
