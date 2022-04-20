@@ -1,0 +1,270 @@
+{
+    "id": "rct1.ride.rckc",
+    "authors": ["Chris Sawyer", "Simon Foster"],
+    "version": "1.0",
+    "sourceGame": "rct1",
+    "objectType": "ride",
+    "properties": {
+        "type": "classic_mini_rc",
+        "category": "rollercoaster",
+        "minCarsPerTrain": 1,
+        "maxCarsPerTrain": 3,
+        "ratingMultipler": {
+            "excitement": 5
+        },
+        "carColours": [
+            [
+                ["grey", "bright_red", "bordeaux_red"]
+            ],
+            [
+                ["grey", "yellow", "saturated_brown"]
+            ],
+            [
+                ["bright_red", "yellow", "black"]
+            ]
+        ],
+        "cars": [
+            {
+                "rotationFrameMask": 31,
+                "spacing": 322492,
+                "mass": 790,
+                "numSeats": 4,
+                "numSeatRows": 2,
+                "frictionSoundId": 2,
+                "soundRange": 2,
+                "drawOrder": 5,
+                "frames": {
+                    "flat": true,
+                    "gentleSlopes": true,
+                    "steepSlopes": true,
+                    "diagonalSlopes": true,
+                    "flatBanked": true,
+                    "flatToGentleSlopeBankedTransitions": true,
+                    "diagonalGentleSlopeBankedTransitions": true
+                },
+                    "framesNumRotations":{
+                        "flat":16,
+                        "slopes25":16,
+                        "slopes42":8,
+                        "slopes60":4,
+                        "flatBanked":16,
+                        "flatToGentleSlopeBankedTransitions":4,
+                        "slopesLoop":4,
+                        "inlineTwist":4,
+                        "restraintAnimation": 4,
+                        "corkscrew":4
+                    },
+                "hasAdditionalColour2": true,
+                "hasAdditionalColour1": true,
+                "hasScreamingRiders": true,
+                "loadingPositions": [4, -4, 4, -4]
+            },
+            {
+                "rotationFrameMask": 3,
+                "spacing": 34864,
+                "frictionSoundId": 2,
+                "soundRange": 2,
+                "carVisual": 1,
+                "drawOrder": 8,
+                "frames": {
+                    "flat": true
+                },
+                "framesNumRotations":{
+                    "flat":4
+                },
+                "hasScreamingRiders": true
+            }
+            ],
+        "buildMenuPriority": 2
+    },
+    "images": [
+    "$CSG[64199]","","",
+    
+    "$CSG[30693..30708]",
+    
+    "$CSG[30709]",
+    "$CSG[30717]",
+    "$CSG[30725]",
+    "$CSG[30733]",
+    "$CSG[30713]",
+    "$CSG[30721]",
+    "$CSG[30729]",
+    "$CSG[30737]",
+    "$CSG[30710]",
+    "$CSG[30741..30743]",
+    "$CSG[30718]",
+    "$CSG[30744..30746]",
+    "$CSG[30726]",
+    "$CSG[30747..30749]",
+    "$CSG[30734]",
+    "$CSG[30750..30752]",
+    "$CSG[30714]",
+    "$CSG[30753..30755]",
+    "$CSG[30722]",
+    "$CSG[30756..30758]",
+    "$CSG[30730]",
+    "$CSG[30759..30761]",
+    "$CSG[30738]",
+    "$CSG[30762..30764]",
+    
+    "$CSG[30711]",
+    "$CSG[30785]",
+    "$CSG[30719]",
+    "$CSG[30786]",
+    "$CSG[30727]",
+    "$CSG[30787]",
+    "$CSG[30735]",
+    "$CSG[30788]",
+    "$CSG[30715]",
+    "$CSG[30801]",
+    "$CSG[30723]",
+    "$CSG[30802]",
+    "$CSG[30731]",
+    "$CSG[30803]",
+    "$CSG[30739]",
+    "$CSG[30804]",
+    "$CSG[30712]",
+    "$CSG[30720]",
+    "$CSG[30728]",
+    "$CSG[30736]",
+    "$CSG[30716]",
+    "$CSG[30724]",
+    "$CSG[30732]",
+    "$CSG[30740]",
+    
+    "$CSG[30777..30780]",
+    "$CSG[30793..30796]",
+    "$CSG[30781..30784]",
+    "$CSG[30797..30800]",
+    "$CSG[30789..30792]",
+    "$CSG[30805..30808]",
+    
+    "$CSG[30841]",
+    "$CSG[30881]",
+    "$CSG[30842]",
+    "$CSG[30882]",
+    "$CSG[30843]",
+    "$CSG[30883]",
+    "$CSG[30844]",
+    "$CSG[30884]",
+    "$CSG[30845]",
+    "$CSG[30885]",
+    "$CSG[30846]",
+    "$CSG[30886]",
+    "$CSG[30847]",
+    "$CSG[30887]",
+    "$CSG[30848]",
+    "$CSG[30888]",
+    "$CSG[30809..30840]",
+    
+    "$CSG[30849..30880]",
+
+    "$CSG[30765]",
+    "$CSG[30768]",
+    "$CSG[30771]",
+    "$CSG[30774]",
+    "$CSG[30766]",
+    "$CSG[30769]",
+    "$CSG[30772]",
+    "$CSG[30775]",
+    "$CSG[30767]",
+    "$CSG[30770]",
+    "$CSG[30773]",
+    "$CSG[30776]",
+    
+    "$CSG[30889..30904]",
+    
+    "$CSG[30905]",
+    "$CSG[30913]",
+    "$CSG[30921]",
+    "$CSG[30929]",
+    "$CSG[30909]",
+    "$CSG[30917]",
+    "$CSG[30925]",
+    "$CSG[30933]",
+    "$CSG[30906]",
+    "$CSG[30937..30939]",
+    "$CSG[30914]",
+    "$CSG[30940..30942]",
+    "$CSG[30922]",
+    "$CSG[30943..30945]",
+    "$CSG[30930]",
+    "$CSG[30946..30948]",
+    "$CSG[30910]",
+    "$CSG[30949..30951]",
+    "$CSG[30918]",
+    "$CSG[30952..30954]",
+    "$CSG[30926]",
+    "$CSG[30955..30957]",
+    "$CSG[30934]",
+    "$CSG[30958..30960]",
+    
+    "$CSG[30907]",
+    "$CSG[30981]",
+    "$CSG[30915]",
+    "$CSG[30982]",
+    "$CSG[30923]",
+    "$CSG[30983]",
+    "$CSG[30931]",
+    "$CSG[30984]",
+    "$CSG[30911]",
+    "$CSG[30997]",
+    "$CSG[30919]",
+    "$CSG[30998]",
+    "$CSG[30927]",
+    "$CSG[30999]",
+    "$CSG[30935]",
+    "$CSG[31000]",
+    "$CSG[30908]",
+    "$CSG[30916]",
+    "$CSG[30924]",
+    "$CSG[30932]",
+    "$CSG[30912]",
+    "$CSG[30920]",
+    "$CSG[30928]",
+    "$CSG[30936]",
+    
+    "$CSG[30973..30976]",
+    "$CSG[30989..30992]",
+    "$CSG[30977..30980]",
+    "$CSG[30993..30996]",
+    "$CSG[30985..30988]",
+    "$CSG[31001..31004]",
+    
+    "$CSG[31037]",
+    "$CSG[31077]",
+    "$CSG[31038]",
+    "$CSG[31078]",
+    "$CSG[31039]",
+    "$CSG[31079]",
+    "$CSG[31040]",
+    "$CSG[31080]",
+    "$CSG[31041]",
+    "$CSG[31081]",
+    "$CSG[31042]",
+    "$CSG[31082]",
+    "$CSG[31043]",
+    "$CSG[31083]",
+    "$CSG[31044]",
+    "$CSG[31084]",
+    "$CSG[31005..31036]",
+    
+    "$CSG[31045..31076]",
+
+    "",
+    "",
+    "",
+    ""
+    ],
+    "strings": {
+        "name": {
+            "en-GB": "Rocket Cars"
+        },
+        "description": {
+            "en-GB": "Roller coaster cars themed to look like rockets"
+        },
+        "capacity": {
+            "en-GB": "4 passengers per car" 
+        }
+    }
+}
