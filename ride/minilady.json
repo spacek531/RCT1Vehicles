@@ -5,7 +5,7 @@
     "sourceGame": "rct1",
     "objectType": "ride",
     "properties": {
-        "type": "junior_rc",
+        "type": "classic_mini_rc",
         "category": "rollercoaster",
         "noInversions": true,
         "minCarsPerTrain": 5,
