@@ -28,14 +28,10 @@
                 "poweredAcceleration": 90,
                 "poweredMaxSpeed": 8,
                 "drawOrder": 9,
-                "frames": {
-                    "flat": true,
-                    "gentleSlopes": true
-                },
-                "framesNumRotations":
-                {
-                    "flat": 16,
-                    "slopes25": 4
+                "spriteGroups":{
+                    "slopeFlat":16,
+                    "slopes12":4,
+                    "slopes25":4
                 },
                 "hasAdditionalColour1": true,
                 "isPowered": true,
