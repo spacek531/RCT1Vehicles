@@ -1,0 +1,105 @@
+{
+    "id": "rct1.ride.horses",
+    "authors": ["Chris Sawyer", "Simon Foster"],
+    "version": "1.0",
+    "sourceGame": "rct1",
+    "objectType": "ride",
+    "properties": {
+        "type": "steeplechase",
+        "category": "rollercoaster",
+        "ratingMultipler": {
+            "excitement": 5
+        },
+        "carColours": [
+            [
+                ["white", "bright_red", "black"]
+            ],
+            [
+                ["white", "yellow", "black"]
+            ],
+            [
+                ["white", "light_blue", "black"]
+            ]
+        ],
+        "cars": {
+            "rotationFrameMask": 31,
+            "spacing": 244048,
+            "mass": 800,
+            "numSeats": 2,
+            "numSeatRows": 1,
+            "frictionSoundId": 2,
+            "soundRange": 0,
+            "drawOrder": 9,
+                "spriteGroups":{
+                    "slopeFlat":16,
+                    "slopes12":4,
+                    "slopes25":4
+                },
+            "hasAdditionalColour1": true,
+            "hasScreamingRiders": true,
+            "loadingPositions": [4, -4]
+        },
+        "buildMenuPriority": 3
+    },
+    "images": [
+    {"path":"steeplechasethumb.png"},
+    "",
+    "",
+    "$CSG[32141..32156]",
+    
+    "$CSG[32157]",
+    "$CSG[32161]",
+    "$CSG[32165]",
+    "$CSG[32169]",
+    
+    "$CSG[32159]",
+    "$CSG[32163]",
+    "$CSG[32167]",
+    "$CSG[32171]",
+    
+    "$CSG[32158]",
+    "$CSG[32162]",
+    "$CSG[32166]",
+    "$CSG[32170]",
+    
+    "$CSG[32160]",
+    "$CSG[32164]",
+    "$CSG[32168]",
+    "$CSG[32162]",
+    
+    "$CSG[32163..32188]",
+    
+    "$CSG[32189]",
+    "$CSG[32193]",
+    "$CSG[32197]",
+    "$CSG[32201]",
+    
+    "$CSG[32191]",
+    "$CSG[32195]",
+    "$CSG[32199]",
+    "$CSG[32203]",
+    
+    "$CSG[32190]",
+    "$CSG[32194]",
+    "$CSG[32198]",
+    "$CSG[32202]",
+    
+    "$CSG[32192]",
+    "$CSG[32196]",
+    "$CSG[32200]",
+    "$CSG[32204]",
+    
+    
+    ],
+    "strings": {
+        "name": {
+            "en-GB": "Horses"
+        },
+        "description": {
+            "en-GB": "Single cars shaped like a horse"
+        },
+        "capacity": {
+            "en-GB": "2 riders per horse"
+        }
+    }
+}
