@@ -30,11 +30,11 @@
             "frictionSoundId": 2,
             "soundRange": 0,
             "drawOrder": 9,
-                "spriteGroups":{
-                    "slopeFlat":16,
-                    "slopes12":4,
-                    "slopes25":4
-                },
+            "spriteGroups":{
+                "slopeFlat":16,
+                "slopes12":4,
+                "slopes25":4
+            },
             "hasAdditionalColour1": true,
             "hasScreamingRiders": true,
             "loadingPositions": [4, -4]
@@ -42,7 +42,7 @@
         "buildMenuPriority": 3
     },
     "images": [
-    {"path":"steeplechasethumb.png"},
+    {"path":"images/thumbnail.png"},
     "",
     "",
     "$CSG[32141..32156]",
@@ -87,7 +87,7 @@
     "$CSG[32192]",
     "$CSG[32196]",
     "$CSG[32200]",
-    "$CSG[32204]",
+    "$CSG[32204]"
     
     
     ],
