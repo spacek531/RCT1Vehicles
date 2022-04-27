@@ -21,10 +21,10 @@
                 ["black", "bright_pink", "black"]
             ],
             [
-                ["bordeaux_red", "black", "bordeaux_red"]
+                ["black", "bright_red", "black"]
             ],
             [
-                ["yellow", "grey", "bright_red"]
+                ["white", "aquamarine", "black"]
             ]
         ],
         "cars": {
@@ -33,7 +33,7 @@
             "mass": 710,
             "numSeats": 4,
             "numSeatRows": 2,
-            "frictionSoundId": 57,
+            "frictionSoundId": 2,
             "soundRange": 0,
             "drawOrder": 8,
             "spriteGroups":{
@@ -57,7 +57,6 @@
                 "corkscrews":4,
                 "restraintAnimation": 4
             },
-            "hasAdditionalColour2": true,
             "hasAdditionalColour1": true,
             "hasScreamingRiders": true,
             "loadingPositions": [-2, -4, -2, -4]

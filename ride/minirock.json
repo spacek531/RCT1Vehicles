@@ -14,19 +14,19 @@
         },
         "carColours": [
             [
-                ["grey", "bright_red", "bordeaux_red"]
+                ["grey", "bright_red", "black"]
             ],
             [
-                ["grey", "yellow", "saturated_brown"]
+                ["grey", "yellow", "black"]
             ],
             [
                 ["bright_red", "yellow", "black"]
             ]
         ],
         "cars": {
-            "rotationFrameMask": 31,
+            "rotationFrameMask": 15,
             "spacing": 322492,
-            "mass": 790,
+            "mass": 750,
             "numSeats": 4,
             "numSeatRows": 2,
             "frictionSoundId": 2,
@@ -46,7 +46,6 @@
                 "slopes12Banked22":4,
                 "slopes8Banked22":4
             },
-            "hasAdditionalColour2": true,
             "hasAdditionalColour1": true,
             "hasScreamingRiders": true,
             "loadingPositions": [4, -4, 4, -4]

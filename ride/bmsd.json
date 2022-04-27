@@ -1,5 +1,5 @@
 {
-    "id": "rctaa.ride.bmsd",
+    "id": "rct1aa.ride.bmsd",
     "authors": ["Chris Sawyer", "Simon Foster"],
     "version": "1.0",
     "sourceGame": "rct1aa",
@@ -8,7 +8,7 @@
         "type": "twister_rc",
         "category": "rollercoaster",
         "limitAirTimeBonus": true,
-        "minCarsPerTrain": 5,
+        "minCarsPerTrain": 3,
         "maxCarsPerTrain": 9,
         "numEmptyCars": 1,
         "tabCar": 1,
@@ -16,23 +16,26 @@
         "maxHeight": 40,
         "carColours": [
             [
-                ["bright_green", "yellow", "yellow"]
+                ["dark_green", "yellow", "black"]
             ],
             [
-                ["bright_red", "white", "light_orange"]
+                ["light_orange", "white", "black"]
             ],
             [
-                ["light_blue", "light_blue", "white"]
+                ["white", "light_blue", "black"]
+            ],
+            [
+                ["light_blue", "bright_red", "black"]
             ]
         ],
         "cars": [
             {
                 "rotationFrameMask": 15,
                 "spacing": 130740,
-                "mass": 650,
+                "mass": 700,
                 "numSeats": 4,
                 "numSeatRows": 2,
-                "frictionSoundId": 57,
+                "frictionSoundId": 2,
                 "soundRange": 0,
                 "drawOrder": 8,
                 "spriteGroups":{
@@ -56,7 +59,6 @@
                     "corkscrews":4,
                     "restraintAnimation": 4
                 },
-                "hasAdditionalColour2": true,
                 "hasAdditionalColour1": true,
                 "hasScreamingRiders": true,
                 "loadingPositions": [-2, -4, -2, -4]
@@ -64,8 +66,8 @@
             {
                 "rotationFrameMask": 15,
                 "spacing": 95876,
-                "mass": 525,
-                "frictionSoundId": 57,
+                "mass": 450,
+                "frictionSoundId": 2,
                 "soundRange": 0,
                 "drawOrder": 8,
                 "spriteGroups":{
@@ -88,7 +90,6 @@
                     "slopes8Banked22":4,
                     "corkscrews":4
                 },
-                "hasAdditionalColour2": true,
                 "hasAdditionalColour1": true,
                 "hasScreamingRiders": true
             }

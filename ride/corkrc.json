@@ -18,20 +18,23 @@
         },
         "carColours": [
             [
-                ["light_blue", "white", "yellow"]
+                ["bright_red", "white", "black"]
             ],
             [
-                ["bright_red", "yellow", "yellow"]
+                ["bordeaux_red", "yellow", "black"]
             ],
             [
-                ["white", "bordeaux_red", "bordeaux_red"]
+                ["dark_green", "yellow", "black"]
+            ],
+            [
+                ["white", "light_blue", "black"]
             ]
         ],
         "cars": [
             {
                 "rotationFrameMask": 15,
                 "spacing": 261480,
-                "mass": 600,
+                "mass": 550,
                 "numSeats": 4,
                 "numSeatRows": 2,
                 "frictionSoundId": 2,
@@ -57,7 +60,6 @@
                     "corkscrews":4,
                     "restraintAnimation": 4
                 },
-                "hasAdditionalColour2": true,
                 "hasAdditionalColour1": true,
                 "hasScreamingRiders": true,
                 "loadingPositions": [5, 3, -7, -9]
@@ -65,7 +67,7 @@
             {
                 "rotationFrameMask": 15,
                 "spacing": 226616,
-                "mass": 500,
+                "mass": 525,
                 "numSeats": 4,
                 "numSeatRows": 2,
                 "frictionSoundId": 2,
@@ -91,7 +93,6 @@
                     "corkscrews":4,
                     "restraintAnimation": 4
                 },
-                "hasAdditionalColour2": true,
                 "hasAdditionalColour1": true,
                 "hasScreamingRiders": true,
                 "loadingPositions": [7, 9, -3, -1]
