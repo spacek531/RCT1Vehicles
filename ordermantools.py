@@ -4,8 +4,8 @@ import json
 """Written by Spacek531 for manipulation of jobjectson files for the purposes of creating RCT1 rides in OpenRCT2. Paste a string and all numbers will be incremented by the total range, for the number of repetitions specified."""
 
 """
-
 exec(open("D:/documents/openrct2/custom rides/rct1 project/object/ordermantools.py").read())
+
 """
 
 numPattern = re.compile("\d+")
@@ -149,13 +149,13 @@ SpriteGroups = [
     SpriteGroup("slopes75", 4, 1, 1),
     SpriteGroup("slopes90", 32, 1, 1),
     SpriteGroup("slopesLoop", 4, 1, 5),
-    SpriteGroup("slopeInverted", 4, 1, 1),
+    SpriteGroup("slopeInverted", 4, 0, 1),
     SpriteGroup("slopes8", 4, 1, 1),
     SpriteGroup("slopes16", 4, 1, 1),
     SpriteGroup("slopes50", 4, 1, 1),
-    SpriteGroup("flatBanked22", 4, 2, 1),
-    SpriteGroup("flatBanked45", 32, 2, 1),
-    SpriteGroup("inlineTwists", 4, 2, 5),
+    SpriteGroup("flatBanked22", 4, 1, 1),
+    SpriteGroup("flatBanked45", 32, 1, 1),
+    SpriteGroup("inlineTwists", 4, 1, 5),
     SpriteGroup("slopes12Banked22",32, 2, 1),
     SpriteGroup("slopes8Banked22", 4, 2, 1),
     SpriteGroup("slopes25Banked22", 4, 2, 1),
@@ -195,7 +195,7 @@ def ReverseImageOrder(inString):
     images = ScrapeImages(jobject)
     if len(images) == 0:
         return
-    print(type(["images"]))
+    print("Number of images",len(images))
     carImageRanges = 3
     lengthswap = 0
     carno = 0
@@ -205,20 +205,23 @@ def ReverseImageOrder(inString):
         print("Car", carno, "Offset",carImageRanges, images[carImageRanges])
         carno += 1
         for i in range(car["numSeatRows"]+1):
-            rowstart = carImageRanges
-            if i > 0:
-                for spriteGroup in SpriteGroups:
-                    if spriteGroup.name not in spriteGroups:
-                        continue
-                    precision = spriteGroups[spriteGroup.name]
-                    print(spriteGroup.name, spriteGroups[spriteGroup.name])
-                    if spriteGroup.specialFunction is not None:
-                        spriteGroup.specialFunction(images, precision, carImageRanges)
-                    else:
-                        for i in range(spriteGroup.reverseRepetitions):
-                            Cut(images, carImageRanges, spriteGroup.group(precision),spriteGroup.reversePower)
-                    carImageRanges += spriteGroup.group(precision)
+            print("Current offset", carImageRanges)
+            for spriteGroup in SpriteGroups:
+                rowstart = carImageRanges
+                if spriteGroup.name not in spriteGroups:
+                    continue
+                precision = spriteGroups[spriteGroup.name]
+                print(spriteGroup.name, spriteGroups[spriteGroup.name])
+                if spriteGroup.specialFunction is not None:
+                    spriteGroup.specialFunction(images, precision, carImageRanges)
+                    carImageRanges += spriteGroup.sprites(precision)
+                else:
+                    for i in range(spriteGroup.reverseRepetitions):
+                        Cut(images, carImageRanges, spriteGroup.group(precision),spriteGroup.reversePower)
+                        carImageRanges += spriteGroup.group(precision)
+                print("numImages",carImageRanges - rowstart)
     
     jobject["images"] = images
     
     print(json.dumps(jobject, indent = 4))
+    
