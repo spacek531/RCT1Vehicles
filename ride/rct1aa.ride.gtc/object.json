@@ -50,7 +50,7 @@
                 "loadingPositions": [3, -3]
             },
             {
-                "rotationFrameMask": 31,
+                "rotationFrameMask": 3,
                 "spacing": 34864,
                 "poweredAcceleration": 80,
                 "poweredMaxSpeed": 9,

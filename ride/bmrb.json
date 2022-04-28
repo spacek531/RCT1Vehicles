@@ -8,7 +8,7 @@
         "type": "hyper_twister",
         "category": "rollercoaster",
         "noInversions": true,
-        "minCarsPerTrain": 5,
+        "minCarsPerTrain": 3,
         "maxCarsPerTrain": 10,
         "numEmptyCars": 1,
         "tabCar": 1,
@@ -19,16 +19,16 @@
         },
         "carColours": [
             [
-                ["dark_green", "bordeaux_red", "yellow"]
+                ["yellow", "bright_red", "black"]
             ],
             [
-                ["light_purple", "black", "grey"]
+                ["black", "bright_pink", "black"]
             ],
             [
-                ["light_orange", "bordeaux_red", "dark_yellow"]
+                ["light_blue", "white", "black"]
             ],
             [
-                ["bright_red", "light_brown", "black"]
+                ["bright_red", "dark_green", "black"]
             ]
         ],
         "cars": [
@@ -38,7 +38,7 @@
                 "mass": 680,
                 "numSeats": 4,
                 "numSeatRows": 2,
-                "frictionSoundId": 57,
+                "frictionSoundId": 2,
                 "soundRange": 0,
                 "drawOrder": 8,
                 "spriteGroups":{
@@ -56,7 +56,6 @@
                     "slopes8Banked22":4,
                     "restraintAnimation": 4
                 },
-                "hasAdditionalColour2": true,
                 "hasAdditionalColour1": true,
                 "hasScreamingRiders": true,
                 "loadingPositions": [-2, -4, -2, -4]
@@ -64,8 +63,8 @@
             {
                 "rotationFrameMask": 15,
                 "spacing": 95876,
-                "mass": 525,
-                "frictionSoundId": 57,
+                "mass": 450,
+                "frictionSoundId": 2,
                 "soundRange": 0,
                 "drawOrder": 8,
                 "spriteGroups":{
@@ -88,7 +87,6 @@
                     "slopes8Banked22":4,
                     "corkscrews":4
                 },
-                "hasAdditionalColour2": true,
                 "hasAdditionalColour1": true,
                 "hasScreamingRiders": true
             }

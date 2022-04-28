@@ -9,22 +9,25 @@
         "category": "rollercoaster",
         "noInversions": true,
         "minCarsPerTrain": 3,
-        "maxCarsPerTrain": 12,
+        "maxCarsPerTrain": 10,
         "carColours": [
             [
                 ["bright_red", "yellow", "black"]
             ],
             [
-                ["dark_green", "bordeaux_red", "black"]
+                ["bright_green", "bordeaux_red", "black"]
             ],
             [
-                ["yellow", "dark_brown", "black"]
+                ["bright_purple", "yellow", "black"]
+            ],
+            [
+                ["light_orange", "black", "black"]
             ]
         ],
         "cars": {
                 "rotationFrameMask": 15,
                 "spacing": 122024,
-                "mass": 220,
+                "mass": 300,
                 "numSeats": 2,
                 "numSeatRows": 1,
                 "frictionSoundId": 2,

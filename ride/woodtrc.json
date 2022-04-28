@@ -7,7 +7,7 @@
     "properties": {
         "type": "wooden_rc",
         "category": "rollercoaster",
-        "minCarsPerTrain": 6,
+        "minCarsPerTrain": 3,
         "maxCarsPerTrain": 12,
         "defaultCar": 1,
         "headCars": 0,
@@ -20,10 +20,13 @@
                 ["dark_green", "bordeaux_red", "black"]
             ],
             [
-                ["bordeaux_red", "dark_brown", "yellow"]
+                ["yellow", "bordeaux_red", "black"]
             ],
             [
-                ["dark_brown", "black", "bordeaux_red"]
+                ["dark_brown", "black", "black"]
+            ],
+            [
+                ["bright_red", "dark_brown", "black"]
             ]
         ],
         "cars": [
@@ -33,7 +36,7 @@
                 "mass": 350,
                 "numSeats": 2,
                 "numSeatRows": 1,
-                "frictionSoundId": 54,
+                "frictionSoundId": 1,
                 "soundRange": 2,
                 "effectVisual": 10,
                 "drawOrder": 6,
@@ -52,7 +55,6 @@
                     "slopes8Banked22":4,
                     "restraintAnimation": 4
                 },
-                "hasAdditionalColour2": true,
                 "hasAdditionalColour1": true,
                 "hasScreamingRiders": true,
                 "loadingPositions": [5, 3, -7, -9]
@@ -63,7 +65,7 @@
                 "mass": 290,
                 "numSeats": 2,
                 "numSeatRows": 1,
-                "frictionSoundId": 54,
+                "frictionSoundId": 1,
                 "soundRange": 1,
                 "drawOrder": 8,
                 "spriteGroups":{
@@ -81,7 +83,6 @@
                     "slopes8Banked22":4,
                     "restraintAnimation": 4
                 },
-                "hasAdditionalColour2": true,
                 "hasAdditionalColour1": true,
                 "hasScreamingRiders": true,
                 "loadingPositions": [7, 9, -3, -1]
