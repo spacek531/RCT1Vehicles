@@ -1,6 +1,6 @@
 {
     "id": "rct1.terrain_surface.wildflowers",
-    "authors": ["OpenRCT2 developers"],
+    "authors": ["Chris Sawyer","Simon Foster","OpenRCT2 developers"],
     "version": "1.0",
     "sourceGame": "official",
     "objectType": "terrain_surface",

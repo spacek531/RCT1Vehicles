@@ -42,7 +42,7 @@
         "buildMenuPriority": 3
     },
     "images": [
-    {"path":"images/thumbnail.png"},
+    {"path":"images/thumbnail.png","format":"raw"},
     "",
     "",
     "$CSG[32141..32156]",
