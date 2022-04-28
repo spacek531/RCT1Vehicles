@@ -11,9 +11,8 @@
         "type": "corkscrew_rc",
         "category": "rollercoaster",
         "limitAirTimeBonus": true,
-        "minCarsPerTrain": 2,
+        "minCarsPerTrain": 1,
         "maxCarsPerTrain": 8,
-        "numEmptyCars": 1,
         "defaultCar": 1,
         "tailCars": 0,
         "ratingMultipler": {
