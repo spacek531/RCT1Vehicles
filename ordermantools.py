@@ -3,6 +3,11 @@ import json
 
 """Written by Spacek531 for manipulation of jobjectson files for the purposes of creating RCT1 rides in OpenRCT2. Paste a string and all numbers will be incremented by the total range, for the number of repetitions specified."""
 
+"""
+
+exec(open("D:/documents/openrct2/custom rides/rct1 project/object/ordermantools.py").read())
+"""
+
 numPattern = re.compile("\d+")
 
 def GetNumbers(inString):
@@ -111,15 +116,65 @@ def CutThree(l, start, end):
 
 def Cut(l, start, length, depth):
     [CutOne, CutTwo, CutThree][depth](l, start, start + length - 1)
-
-DefaultImageLengths = {"flat": 32, "slopes12":4, "slopes25": 32, "slopes42":8,"slopes60":32,"slopes90":32, "slopesLoop":4, "flatBanked":32, "flatBankedTransition":8,"flatToGentleSlopeBankedTransitions":32, "restraintAnimation": 4, "inlineTwist":4, "corkscrews":4, "slopesDiag":4}
-
-def GetLength(car,rtype):
-    if "framesNumRotations" in car and rtype in car["framesNumRotations"]:
-        return car["framesNumRotations"][rtype]
-    else:
-        return DefaultImageLengths[rtype]
     
+class SpriteGroup:
+    def __init__(self, name, defaultPrecision, reversePower, reverseRepetitions):
+        self.specialFunction = None
+        self.defaultPrecision = defaultPrecision
+        self.name = name
+        self.reversePower = reversePower
+        self.reverseRepetitions = reverseRepetitions
+    
+    def sprites(self, precision):
+        return (precision * self.reverseRepetitions) << self.reversePower
+    
+    def group(self, precision):
+        return precision << self.reversePower
+        
+    def setSpecialFunction(self, function):
+        self.specialFunction = function
+
+SpriteNameIndex = ["slopeFlat", "slopes12","slopes25","slopes42","slopes60","slopes75","slopes90","slopesLoop","slopeInverted","slopes8","slopes16","slopes50","flatBanked22","flatBanked45","inlineTwists","slopes12Banked22","slopes8Banked22","slopes25Banked22","slopes25Banked45","slopes12Banked45","corkscrews","restraintAnimation","curvedLiftHill"]
+DefaultImageLengths = {"slopeFlat": 32, "slopes12":4, "slopes25": 32, "slopes42":8,"slopes60":32,"slopes75":4,"slopes90":32, "slopesLoop":4, "slopeInverted":4, "slopes8":4,"slopes16":4,"slopes50":4,"flatBanked22":8, "flatBanked45":32, "inlineTwists":4, "slopes12Banked22":32,"slopes8Banked22":4, "corkscrews":4,"restraintAnimation":4}
+
+PowerOfGroup =       [0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 255, 0, 0]
+RepetitionsOfGroup = [1, 1, 1, 1, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 5, 1, 1, 1, 1, 1, 255, 3, 1]
+
+SpriteGroups = [
+    SpriteGroup("slopeFlat", 32, 0, 1),
+    SpriteGroup("slopes12", 4, 1, 1),
+    SpriteGroup("slopes25", 32, 1, 1),
+    SpriteGroup("slopes42", 8, 1, 1),
+    SpriteGroup("slopes60", 32, 1, 1),
+    SpriteGroup("slopes75", 4, 1, 1),
+    SpriteGroup("slopes90", 32, 1, 1),
+    SpriteGroup("slopesLoop", 4, 1, 5),
+    SpriteGroup("slopeInverted", 4, 1, 1),
+    SpriteGroup("slopes8", 4, 1, 1),
+    SpriteGroup("slopes16", 4, 1, 1),
+    SpriteGroup("slopes50", 4, 1, 1),
+    SpriteGroup("flatBanked22", 4, 2, 1),
+    SpriteGroup("flatBanked45", 32, 2, 1),
+    SpriteGroup("inlineTwists", 4, 2, 5),
+    SpriteGroup("slopes12Banked22",32, 2, 1),
+    SpriteGroup("slopes8Banked22", 4, 2, 1),
+    SpriteGroup("slopes25Banked22", 4, 2, 1),
+    SpriteGroup("slopes25Banked45", 32, 2, 1),
+    SpriteGroup("slopes12Banked45", 4, 2, 1),
+    SpriteGroup("corkscrews", 4, 0, 20),
+    SpriteGroup("restraintAnimation", 4, 0, 3),
+    SpriteGroup("curvedLiftHill", 32, 0, 1)
+]
+
+def corkscrewFunction(images, precision, carImageRanges):
+    # print(images, precision, carImageRanges)
+    Cut(images, carImageRanges, precision * 10, 0)
+    Cut(images, carImageRanges + precision * 10, precision * 10, 0)
+    for j in range(0,precision * 20,precision):
+        Cut(images, carImageRanges + j, precision, 0)
+
+SpriteGroups[20].setSpecialFunction(corkscrewFunction)
+
 def ReverseImageOrder(inString):
     nums = []
     jobject = None
@@ -146,201 +201,24 @@ def ReverseImageOrder(inString):
     carno = 0
     sstart = 0
     for car in jobject['properties']['cars']:
+        spriteGroups = car['spriteGroups']
         print("Car", carno, "Offset",carImageRanges, images[carImageRanges])
         carno += 1
         for i in range(car["numSeatRows"]+1):
             rowstart = carImageRanges
             if i > 0:
-                print("Doing SeatRow",i-1)
-            if "flat" in car["frames"]:
-                sstart = carImageRanges
-                print("Doing Flat",images[carImageRanges])
-                lengthswap = GetLength(car,"flat")
-                Cut(images, carImageRanges,lengthswap, 0)
-                carImageRanges += lengthswap
-                #print(carImageRanges -  sstart)
-                
-            if "gentleSlopes" in car["frames"]:
-                sstart = carImageRanges
-                print("Doing Gentle",images[carImageRanges])
-                lengthswap = GetLength(car, "slopes12")*2
-                Cut(images, carImageRanges, lengthswap, 1)
-                carImageRanges += lengthswap
-                
-                lengthswap = GetLength(car, "slopes25")*2
-                Cut(images, carImageRanges, lengthswap, 1)
-                carImageRanges += lengthswap
-                #print(carImageRanges -  sstart)
-                
-            if "steepSlopes" in car["frames"]:
-                sstart = carImageRanges
-                print("Doing Steep",images[carImageRanges])
-                lengthswap = GetLength(car, "slopes42")*2
-                Cut(images, carImageRanges, lengthswap, 1)
-                carImageRanges += lengthswap
-                
-                lengthswap = GetLength(car, "slopes60")*2
-                Cut(images, carImageRanges, lengthswap, 1)
-                carImageRanges += lengthswap
-                #print(carImageRanges -  sstart)
-            
-            if "verticalSlopes" in car["frames"]:
-                sstart = carImageRanges
-                print("Doing Vertical",images[carImageRanges])
-                lengthswap = GetLength(car, "slopesLoop")*2
-                Cut(images, carImageRanges, lengthswap, 1)
-                carImageRanges += lengthswap
-                
-                lengthswap = GetLength(car, "slopes90")*2
-                Cut(images, carImageRanges, lengthswap, 1)
-                carImageRanges += lengthswap
-                
-                lengthswap = GetLength(car, "slopesLoop")*2
-                Cut(images, carImageRanges, lengthswap, 1)
-                carImageRanges += lengthswap
-                
-                lengthswap = GetLength(car, "slopesLoop")*2
-                Cut(images, carImageRanges, lengthswap, 1)
-                carImageRanges += lengthswap
-                
-                lengthswap = GetLength(car, "slopesLoop")*2
-                Cut(images, carImageRanges, lengthswap, 1)
-                carImageRanges += lengthswap
-                
-                lengthswap = GetLength(car, "slopesLoop")*2
-                Cut(images, carImageRanges, lengthswap, 1)
-                carImageRanges += lengthswap
-                
-                lengthswap = GetLength(car, "slopesLoop")*2
-                Cut(images, carImageRanges, lengthswap, 1)
-                carImageRanges += lengthswap
-                
-                lengthswap = GetLength(car, "slopesLoop")
-                Cut(images, carImageRanges, lengthswap, 0)
-                carImageRanges += lengthswap
-                #print(carImageRanges -  sstart)
-                
-            if "diagonalSlopes" in car["frames"]:
-                sstart = carImageRanges
-                print("Doing DiagSlopees",images[carImageRanges])
-                lengthswap = GetLength(car, "slopesDiag")*2
-                Cut(images, carImageRanges, lengthswap, 1)
-                carImageRanges += lengthswap
+                for spriteGroup in SpriteGroups:
+                    if spriteGroup.name not in spriteGroups:
+                        continue
+                    precision = spriteGroups[spriteGroup.name]
+                    print(spriteGroup.name, spriteGroups[spriteGroup.name])
+                    if spriteGroup.specialFunction is not None:
+                        spriteGroup.specialFunction(images, precision, carImageRanges)
+                    else:
+                        for i in range(spriteGroup.reverseRepetitions):
+                            Cut(images, carImageRanges, spriteGroup.group(precision),spriteGroup.reversePower)
+                    carImageRanges += spriteGroup.group(precision)
     
-                lengthswap = GetLength(car, "slopesDiag")*2
-                Cut(images, carImageRanges, lengthswap, 1)
-                carImageRanges += lengthswap
-    
-                lengthswap = GetLength(car, "slopesDiag")*2
-                Cut(images, carImageRanges, lengthswap, 1)
-                carImageRanges += lengthswap
-                #print(carImageRanges -  sstart)
-                
-            if "flatBanked" in car["frames"]:
-                sstart = carImageRanges
-                print("Doing FlatBanked",images[carImageRanges])
-                lengthswap = GetLength(car, "flatBankedTransition")*2
-                Cut(images, carImageRanges, lengthswap, 1)
-                carImageRanges += lengthswap
-                
-                lengthswap = GetLength(car, "flatBanked")*2
-                Cut(images, carImageRanges, lengthswap, 1)
-                carImageRanges += lengthswap
-                #print(carImageRanges -  sstart)
-                
-            if "inlineTwists" in car["frames"]:
-                sstart = carImageRanges
-                print("Doing InlineTwistgs",images[carImageRanges])
-                lengthswap = GetLength(car, "inlineTwist")*2
-                Cut(images, carImageRanges, lengthswap, 1)
-                carImageRanges += lengthswap
-                
-                lengthswap = GetLength(car, "inlineTwist")*2
-                Cut(images, carImageRanges, lengthswap, 1)
-                carImageRanges += lengthswap
-                
-                lengthswap = GetLength(car, "inlineTwist")*2
-                Cut(images, carImageRanges, lengthswap, 1)
-                carImageRanges += lengthswap
-                
-                lengthswap = GetLength(car, "inlineTwist")*2
-                Cut(images, carImageRanges, lengthswap, 1)
-                carImageRanges += lengthswap
-                
-                lengthswap = GetLength(car, "inlineTwist")*2
-                Cut(images, carImageRanges, lengthswap, 1)
-                carImageRanges += lengthswap
-                #print(carImageRanges -  sstart)
-                
-            if "flatToGentleSlopeBankedTransitions" in car["frames"]:
-                sstart = carImageRanges
-                print("Doing flatToGentleSlopeBankedTransitions",images[carImageRanges])
-                lengthswap = GetLength(car, "flatToGentleSlopeBankedTransitions")*4
-                Cut(images, carImageRanges, lengthswap, 2)
-                carImageRanges += lengthswap
-                #print(carImageRanges -  sstart)
-                
-            if "diagonalGentleSlopeBankedTransitions" in car["frames"]:
-                sstart = carImageRanges
-                print("Doing diagonalGentleSlopeBankedTransitions",images[carImageRanges])
-                lengthswap = 16
-                Cut(images, carImageRanges, lengthswap, 2)
-                carImageRanges += lengthswap
-                #print(carImageRanges -  sstart)
-                
-            if "gentleSlopeBankedTransitions" in car["frames"]:
-                sstart = carImageRanges
-                print("Doing gentleSlopeBankedTransitions",images[carImageRanges])
-                lengthswap = 16
-                Cut(images, carImageRanges, lengthswap, 2)
-                carImageRanges += lengthswap
-                #print(carImageRanges -  sstart)
-                
-            if "gentleSlopeBankedTurns" in car["frames"]:
-                print("Doing gentleSlopeBankedTurns",images[carImageRanges])
-                lengthswap = GetLength(car, "slopes25Curved")*4
-                Cut(images, carImageRanges, lengthswap, 2)
-                carImageRanges += lengthswap
-                #print(carImageRanges -  sstart)
-                
-            if "flatToGentleSlopeWhileBankedTransitions" in car["frames"]:
-                sstart = carImageRanges
-                print("Doing flatToGentleSlopeWhileBankedTransitions",images[carImageRanges])
-                lengthswap = 16
-                Cut(images, carImageRanges, lengthswap, 2)
-                carImageRanges += lengthswap
-                #print(carImageRanges -  sstart)
-                
-            if "corkscrews" in car["frames"]:
-                sstart = carImageRanges
-                print("Doing corkscrews",images[carImageRanges])
-                lengthswap = GetLength(car, "corkscrews")*20
-                Cut(images, carImageRanges, 40, 0)
-                Cut(images, carImageRanges + 40, 40, 0)
-                for j in range(0,80,4):
-                    Cut(images, carImageRanges + j, 4, 0)
-                carImageRanges += lengthswap
-                #print(carImageRanges -  sstart)
-                
-            if "restraintAnimation" in car["frames"]:
-                sstart = carImageRanges
-                print("Doing restraints",images[carImageRanges])
-                lengthswap = GetLength(car, "restraintAnimation")
-                Cut(images, carImageRanges, lengthswap, 0)
-                carImageRanges += lengthswap
-                
-                lengthswap = GetLength(car, "restraintAnimation")
-                Cut(images, carImageRanges, lengthswap, 0)
-                carImageRanges += lengthswap
-                
-                lengthswap = GetLength(car, "restraintAnimation")
-                Cut(images, carImageRanges, lengthswap, 0)
-                carImageRanges += lengthswap
-                #print(carImageRanges -  sstart)
-                
-            print("Images in row:",carImageRanges - rowstart)
-        
-    print(type(jobject["images"]))            
     jobject["images"] = images
     
     print(json.dumps(jobject, indent = 4))
