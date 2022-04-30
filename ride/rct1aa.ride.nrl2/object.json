@@ -1,0 +1,318 @@
+{
+    "id": "rct1aa.ride.nrl2",
+    "authors": ["Chris Sawyer", "Simon Foster"],
+    "version": "1.0",
+    "sourceGame": "rct1aa",
+    "objectType": "ride",
+    "properties": {
+        "type": "miniature_railway",
+        "category": "transport",
+        "tabScale": 0.5,
+        "hasShelter": true,
+        "playDepartSound": true,
+        "noCollisionCrashes": true,
+        "minCarsPerTrain": 3,
+        "maxCarsPerTrain": 8,
+        "numEmptyCars": 2,
+        "defaultCar": 2,
+        "headCars": [
+            0,
+            1
+        ],
+        "carColours": [
+            [
+                ["bright_red", "moss_green", "yellow"]
+            ],
+            [
+                ["light_blue", "saturated_red", "yellow"]
+            ],
+            [
+                ["bright_green", "dark_brown", "yellow"]
+            ],
+            [
+                ["dark_pink", "yellow", "yellow"]
+            ]
+        ],
+        "cars": [
+            {
+                "rotationFrameMask": 15,
+                "spacing": 296344,
+                "mass": 3000,
+                "animation": 1,
+                "frictionSoundId": 31,
+                "soundRange": 3,
+                "poweredAcceleration": 240,
+                "poweredMaxSpeed": 18,
+                "drawOrder": 5,
+                "spriteGroups": {
+                    "slopeFlat":16,
+                    "slopes12":4,
+                    "slopes25":4,
+                    "slopes8":4,
+                    "slopes16":4
+                },
+                "hasAdditionalColour1": true,
+                "isPowered": true,
+                "hasVehicleAnimation": true
+            },
+            {
+                "rotationFrameMask": 15,
+                "spacing": 183036,
+                "mass": 110,
+                "frictionSoundId": 31,
+                "soundRange": 3,
+                "drawOrder": 7,
+                "spriteGroups": {
+                    "slopeFlat":16,
+                    "slopes12":4,
+                    "slopes25":4,
+                    "slopes8":4,
+                    "slopes16":4
+                },
+                "hasAdditionalColour1": true,
+                "isPowered": true
+            },
+            {
+                "rotationFrameMask": 15,
+                "spacing": 270196,
+                "mass": 620,
+                "numSeats": 6,
+                "numSeatRows": 3,
+                "frictionSoundId": 31,
+                "soundRange": 3,
+                "drawOrder": 5,
+                "spriteGroups": {
+                    "slopeFlat":16,
+                    "slopes12":4,
+                    "slopes25":4,
+                    "slopes8":4,
+                    "slopes16":4
+                },
+                "hasAdditionalColour1": true,
+                "isPowered": true,
+                "loadingPositions": [10, 8, 1, -1, -8, -10]
+            }
+        ],
+        "buildMenuPriority": 3
+    },
+    "images": [
+        "$CSG[64200]",
+        "",
+        "",
+        "$CSG[29397..29460]",
+
+        "$CSG[29461..29464]",
+        "$CSG[29477..29480]",
+        "$CSG[29493..29496]",
+        "$CSG[29509..29512]",
+        "$CSG[29469..29472]",
+        "$CSG[29485..29488]",
+        "$CSG[29501..29504]",
+        "$CSG[29517..29520]",
+
+        "$CSG[29465..29468]",
+        "$CSG[29481..29484]",
+        "$CSG[29497..29500]",
+        "$CSG[29513..29516]",
+        "$CSG[29473..29476]",
+        "$CSG[29489..29492]",
+        "$CSG[29505..29508]",
+        "$CSG[29521..29524]",
+
+        "$CSG[29525..29540]",
+        "$CSG[29557..29572]",
+        "$CSG[29541..29556]",
+        "$CSG[29573..29588]",
+
+        "$CSG[29349..29364]",
+
+        "$CSG[29365]",
+        "$CSG[29369]",
+        "$CSG[29373]",
+        "$CSG[29377]",
+
+        "$CSG[29367]",
+        "$CSG[29371]",
+        "$CSG[29375]",
+        "$CSG[29379]", 
+
+        "$CSG[29366]",
+        "$CSG[29370]",
+        "$CSG[29374]",
+        "$CSG[29378]",
+
+        "$CSG[29368]",
+        "$CSG[29372]",
+        "$CSG[29376]",
+        "$CSG[29380]",
+
+        "$CSG[29381..29384]",
+        "$CSG[29389..29392]",
+        "$CSG[29385..29388]",
+        "$CSG[29393..29396]",
+
+        "$CSG[29989..30004]",
+
+        "$CSG[30005]",
+        "$CSG[30009]",
+        "$CSG[30013]",
+        "$CSG[30017]",
+
+        "$CSG[30007]",
+        "$CSG[30011]",
+        "$CSG[30015]",
+        "$CSG[30019]", 
+
+        "$CSG[30006]",
+        "$CSG[30010]",
+        "$CSG[30014]",
+        "$CSG[30018]",
+
+        "$CSG[30008]",
+        "$CSG[30012]",
+        "$CSG[30016]",
+        "$CSG[30020]",
+
+        "$CSG[30021..30024]",
+        "$CSG[30029..30032]",
+        "$CSG[30025..30028]",
+        "$CSG[30033..30036]",
+
+        "$CSG[30037..30052]",
+
+        "$CSG[30053]",
+        "$CSG[30057]",
+        "$CSG[30061]",
+        "$CSG[30065]",
+
+        "$CSG[30055]",
+        "$CSG[30059]",
+        "$CSG[30063]",
+        "$CSG[30067]", 
+
+        "$CSG[30054]",
+        "$CSG[30058]",
+        "$CSG[30062]",
+        "$CSG[30066]",
+
+        "$CSG[30056]",
+        "$CSG[30060]",
+        "$CSG[30064]",
+        "$CSG[30068]",
+
+        "$CSG[30069..30072]",
+        "$CSG[30077..30080]",
+        "$CSG[30073..30076]",
+        "$CSG[30081..30084]",
+
+        "$CSG[30085..30100]",
+
+        "$CSG[30101]",
+        "$CSG[30105]",
+        "$CSG[30109]",
+        "$CSG[30113]",
+
+        "$CSG[30103]",
+        "$CSG[30107]",
+        "$CSG[30111]",
+        "$CSG[30115]", 
+
+        "$CSG[30102]",
+        "$CSG[30106]",
+        "$CSG[30110]",
+        "$CSG[30114]",
+
+        "$CSG[30104]",
+        "$CSG[30108]",
+        "$CSG[30112]",
+        "$CSG[30116]",
+
+        "$CSG[30117..30120]",
+        "$CSG[30125..30128]",
+        "$CSG[30121..30124]",
+        "$CSG[30129..30132]",
+
+        "$CSG[30133..30148]",
+
+        "$CSG[30149]",
+        "$CSG[30153]",
+        "$CSG[30157]",
+        "$CSG[30161]",
+
+        "$CSG[30151]",
+        "$CSG[30155]",
+        "$CSG[30159]",
+        "$CSG[30163]", 
+
+        "$CSG[30150]",
+        "$CSG[30154]",
+        "$CSG[30158]",
+        "$CSG[30162]",
+
+        "$CSG[30152]",
+        "$CSG[30156]",
+        "$CSG[30160]",
+        "$CSG[30164]",
+
+        "$CSG[30165..30168]",
+        "$CSG[30173..30176]",
+        "$CSG[30169..30172]",
+        "$CSG[30177..30180]"
+    ],
+    "strings": {
+        "name": {
+            "en-GB": "Steam Trains with Covered Cars",
+            "fr-FR": "Trains vapeur couverts",
+            "de-DE": "Dampfzüge mit überdacht. Wagons",
+            "es-ES": "Tren de Vapor Cubierto",
+            "it-IT": "Treni a vapore con carrozze coperte",
+            "nl-NL": "Stroomtrein met overdekte wagons",
+            "sv-SE": "Ånglok med täckta vagnar",
+            "ko-KR": "천장이 있는 증기 기관차",
+            "zh-CN": "有屋顶的蒸汽火车",
+            "zh-TW": "有蓋蒸氣火車",
+            "pt-BR": "Trens a Vapor com Carros Cobertos",
+            "cs-CZ": "Parní vlaky s krytými vozy",
+            "ja-JP": "屋根の蒸気機関車",
+            "pl-PL": "Pociągi parowe z krytymi wagonami",
+            "ru-RU": "Паровозики с вагончиками",
+            "eo-ZZ": "Vaporlokomotivoj kun Kovritaj Ĉaroj"
+        },
+        "description": {
+            "en-GB": "Miniature steam trains consisting of a replica steam locomotive and tender, pulling wooden carriages with fabric roofs",
+            "fr-FR": "Trains miniatures comprenant une réplique de locomotive à vapeur et des petits wagons en bois avec des toits en tissu",
+            "de-DE": "Mini-Dampfzüge bestehend aus nachgemachter Dampflok und Tender mit Holzwagons mit Stoffdächern",
+            "es-ES": "Trenes miniatura de vapor con locomotoras réplica y vagones de madera y techos de lona",
+            "it-IT": "Treni in miniatura che replicano le locomotive a vapore e i carri scorta. Trainano carrozze di legno con i tetti in tessuto",
+            "nl-NL": "Miniatuurstroomtrein bestaande uit een replicastoomlocomotief en tender, die wagons met stoffen overdekking voorttrekt.",
+            "sv-SE": "Miniatyrångtåg bestående av en kopia på ett gammaldags ånglokomotiv med tender, som drar trävagnar med tygtak",
+            "ko-KR": "부드러운 천으로 된 지붕을 가진 나무 객차와 증기 기관차 모형으로 이루어진 모형 증기 기관차 차량",
+            "zh-CN": "微型蒸汽火车是由酷似蒸汽火车及媒车拖拉具有布织车顶的木制四轮马车所组成的",
+            "zh-TW": "配備著復刻蒸氣火車頭及煤水車的小型蒸氣火車, 拉著帶有織布車頂的木製車廂",
+            "pt-BR": "Trens a vapor em miniatura, consistindo de uma réplica de uma locomotiva a vapor e vagão de carga, puxando vagões de madeira com tetos de tecido",
+            "cs-CZ": "Miniaturní replika parní lokomotivy s tendrem táhne dřevěné vagóny s plátěnými střechami",
+            "ja-JP": "レプリカの蒸気機関車と炭水車、布製の屋根の木製客車からなるミニチュア列車です",
+            "pl-PL": "Miniaturowe pociągi składające się z lokomotywy parowej i tendra, ciągnących drewniane wagoniki z płóciennymi daszkami",
+            "ru-RU": "Miniature steam trains consisting of a replica steam locomotive and tender, pulling wooden carriages with fabric roofs",
+            "eo-ZZ": "Miniaturaj lokomotivoj, kiuj konsistas el replikaĵo de lokomotivo kaj tendro, kaj tiras lignajn kaleŝojn kun fabrikaj tegmentoj"
+        },
+        "capacity": {
+            "en-GB": "6 passengers per carriage",
+            "fr-FR": "6 passagers par voiture",
+            "de-DE": "6 Fahrgäste pro Wagon",
+            "es-ES": "6 pasajero por vagón",
+            "it-IT": "6 passeggeri a carrozza",
+            "nl-NL": "6 passagiers per wagon",
+            "sv-SE": "6 passagerare per vagn",
+            "ko-KR": "객차당 6명의 승객",
+            "zh-CN": "6 位乘客/每辆马车",
+            "zh-TW": "每車廂6位乘客",
+            "pt-BR": "6 passageiros por vagão",
+            "cs-CZ": "6 míst v každém vagónu",
+            "ja-JP": "各車両6名",
+            "pl-PL": "6 pasażerów na wagon",
+            "ru-RU": "6 пассажиров",
+            "eo-ZZ": "Po 6 pasaĝeroj por vagono"
+        }
+    }
+}
