@@ -36,8 +36,8 @@
                 "slopes25":4,
                 "restraintAnimation": 4
             },
-            "VEHICLE_ENTRY_FLAG_SWINGING": true,
-            "VEHICLE_ENTRY_FLAG_RIDERS_SCREAM": true,
+            "hasSwinging": true,
+            "hasScreamingRiders": true,
             "loadingPositions": [1]
         },
         "buildMenuPriority": 2
