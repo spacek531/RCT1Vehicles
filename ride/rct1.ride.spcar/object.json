@@ -8,8 +8,12 @@
         "type": "car_ride",
         "category": "gentle",
         "noCollisionCrashes": true,
-        "minCarsPerTrain": 1,
-        "maxCarsPerTrain": 1,
+        "minCarsPerTrain": 3,
+        "maxCarsPerTrain": 3,
+        "numEmptyCars": 2,
+        "tabCar": 1,
+        "headCars": 1,
+        "tailCars": 1,
         "carColours": [
             [
                 ["bright_red", "yellow", "black"]
@@ -28,7 +32,7 @@
                 "poweredAcceleration": 90,
                 "poweredMaxSpeed": 8,
                 "drawOrder": 9,
-                "spriteGroups":{
+                "spriteGroups": {
                     "slopeFlat":16,
                     "slopes12":4,
                     "slopes25":4
@@ -36,6 +40,18 @@
                 "hasAdditionalColour1": true,
                 "isPowered": true,
                 "loadingPositions": [4, -4]
+            },
+            {
+                "rotationFrameMask": 3,
+                "spacing": 34864,
+                "poweredAcceleration": 90,
+                "poweredMaxSpeed": 8,
+                "carVisual": 1,
+                "drawOrder": 8,
+                "spriteGroups": {
+                    "slopeFlat":4
+                },
+                "isPowered": true
             }
         ],
         "buildMenuPriority": 5
@@ -94,6 +110,12 @@
     "$CSG[33280]",
     "$CSG[33284]",
     "$CSG[33288]",
-    "$CSG[33292]"
+    "$CSG[33292]",
+
+
+    "",
+    "",
+    "",
+    ""
     ]
 }
