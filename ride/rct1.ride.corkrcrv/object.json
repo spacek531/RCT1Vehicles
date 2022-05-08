@@ -1,9 +1,6 @@
 {
     "id": "rct1.ride.corkrcrv",
-    "authors": [
-        "Chris Sawyer",
-        "Simon Foster"
-    ],
+    "authors": ["Chris Sawyer", "Simon Foster"],
     "version": "1.0",
     "sourceGame": "rct1",
     "objectType": "ride",
@@ -64,12 +61,7 @@
                 },
                 "hasAdditionalColour1": true,
                 "hasScreamingRiders": true,
-                "loadingPositions": [
-                    5,
-                    3,
-                    -7,
-                    -9
-                ]
+                "loadingPositions": [5, 3, -7, -9]
             },
             {
                 "rotationFrameMask": 15,
@@ -102,26 +94,10 @@
                 },
                 "hasAdditionalColour1": true,
                 "hasScreamingRiders": true,
-                "loadingPositions": [
-                    7,
-                    9,
-                    -3,
-                    -1
-                ]
+                "loadingPositions": [7, 9, -3, -1]
             }
         ],
         "buildMenuPriority": 2
-    },
-    "strings": {
-        "name": {
-            "en-GB": "Corkscrew Roller Coaster Trains (Reversed Seats)"
-        },
-        "description": {
-            "en-GB": "Roller coaster trains with shoulder restraints"
-        },
-        "capacity": {
-            "en-GB": "4 passengers per car"
-        }
     },
     "images": [
         "$CSG[64214]",
@@ -2287,5 +2263,16 @@
         "$CSG[15645]",
         "$CSG[15636]",
         "$CSG[15639]"
-    ]
+    ],
+    "strings": {
+        "name": {
+            "en-GB": "Corkscrew Roller Coaster Trains (Reversed Seats)"
+        },
+        "description": {
+            "en-GB": "Roller coaster trains with shoulder restraints"
+        },
+        "capacity": {
+            "en-GB": "4 passengers per car"
+        }
+    }
 }
