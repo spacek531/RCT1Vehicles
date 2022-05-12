@@ -73,6 +73,48 @@
         "$CSG[36769]",
         "$CSG[36772]"
     ],
+    "noCsgImages": [
+        "$CSG[64213]",
+        "",
+        "",
+        "$RCT2:OBJDATA/CLIFT2.DAT[3]",
+        "$RCT2:OBJDATA/CLIFT2.DAT[5]",
+        "$RCT2:OBJDATA/CLIFT2.DAT[7]",
+        "$RCT2:OBJDATA/CLIFT2.DAT[9]",
+        "$RCT2:OBJDATA/CLIFT2.DAT[11]",
+        "$RCT2:OBJDATA/CLIFT2.DAT[13]",
+        "$RCT2:OBJDATA/CLIFT2.DAT[15]",
+        "$RCT2:OBJDATA/CLIFT2.DAT[17]",
+        "$RCT2:OBJDATA/CLIFT2.DAT[19]",
+        "$RCT2:OBJDATA/CLIFT2.DAT[21]",
+        "$RCT2:OBJDATA/CLIFT2.DAT[23]",
+        "$RCT2:OBJDATA/CLIFT2.DAT[25]",
+        "$RCT2:OBJDATA/CLIFT2.DAT[27]",
+        "$RCT2:OBJDATA/CLIFT2.DAT[29]",
+        "$RCT2:OBJDATA/CLIFT2.DAT[31]",
+        "$RCT2:OBJDATA/CLIFT2.DAT[33]",
+
+        "$RCT2:OBJDATA/CLIFT2.DAT[35..46]",
+
+        "$RCT2:OBJDATA/CLIFT2.DAT[47]",
+        "$RCT2:OBJDATA/CLIFT2.DAT[49]",
+        "$RCT2:OBJDATA/CLIFT2.DAT[51]",
+        "$RCT2:OBJDATA/CLIFT2.DAT[53]",
+        "$RCT2:OBJDATA/CLIFT2.DAT[55]",
+        "$RCT2:OBJDATA/CLIFT2.DAT[57]",
+        "$RCT2:OBJDATA/CLIFT2.DAT[59]",
+        "$RCT2:OBJDATA/CLIFT2.DAT[61]",
+        "$RCT2:OBJDATA/CLIFT2.DAT[63]",
+        "$RCT2:OBJDATA/CLIFT2.DAT[65]",
+        "$RCT2:OBJDATA/CLIFT2.DAT[67]",
+        "$RCT2:OBJDATA/CLIFT2.DAT[69]",
+        "$RCT2:OBJDATA/CLIFT2.DAT[71]",
+        "$RCT2:OBJDATA/CLIFT2.DAT[73]",
+        "$RCT2:OBJDATA/CLIFT2.DAT[75]",
+        "$RCT2:OBJDATA/CLIFT2.DAT[77]",
+
+        "$RCT2:OBJDATA/CLIFT2.DAT[79..90]"
+    ],
     "strings": {
         "name": {
             "en-GB": "Ski-lift Chairs",
