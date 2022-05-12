@@ -73,6 +73,48 @@
         "$CSG[36825]",
         "$CSG[36828]"
     ],
+    "noCsgImages": [
+        "$CSG[64213]",
+        "",
+        "",
+        "$RCT2:OBJDATA/CLIFT1.DAT[3]",
+        "$RCT2:OBJDATA/CLIFT1.DAT[5]",
+        "$RCT2:OBJDATA/CLIFT1.DAT[7]",
+        "$RCT2:OBJDATA/CLIFT1.DAT[9]",
+        "$RCT2:OBJDATA/CLIFT1.DAT[11]",
+        "$RCT2:OBJDATA/CLIFT1.DAT[13]",
+        "$RCT2:OBJDATA/CLIFT1.DAT[15]",
+        "$RCT2:OBJDATA/CLIFT1.DAT[17]",
+        "$RCT2:OBJDATA/CLIFT1.DAT[19]",
+        "$RCT2:OBJDATA/CLIFT1.DAT[21]",
+        "$RCT2:OBJDATA/CLIFT1.DAT[23]",
+        "$RCT2:OBJDATA/CLIFT1.DAT[25]",
+        "$RCT2:OBJDATA/CLIFT1.DAT[27]",
+        "$RCT2:OBJDATA/CLIFT1.DAT[29]",
+        "$RCT2:OBJDATA/CLIFT1.DAT[31]",
+        "$RCT2:OBJDATA/CLIFT1.DAT[33]",
+
+        "$RCT2:OBJDATA/CLIFT1.DAT[35..46]",
+
+        "$RCT2:OBJDATA/CLIFT1.DAT[47]",
+        "$RCT2:OBJDATA/CLIFT1.DAT[49]",
+        "$RCT2:OBJDATA/CLIFT1.DAT[51]",
+        "$RCT2:OBJDATA/CLIFT1.DAT[53]",
+        "$RCT2:OBJDATA/CLIFT1.DAT[55]",
+        "$RCT2:OBJDATA/CLIFT1.DAT[57]",
+        "$RCT2:OBJDATA/CLIFT1.DAT[59]",
+        "$RCT2:OBJDATA/CLIFT1.DAT[61]",
+        "$RCT2:OBJDATA/CLIFT1.DAT[63]",
+        "$RCT2:OBJDATA/CLIFT1.DAT[65]",
+        "$RCT2:OBJDATA/CLIFT1.DAT[67]",
+        "$RCT2:OBJDATA/CLIFT1.DAT[69]",
+        "$RCT2:OBJDATA/CLIFT1.DAT[71]",
+        "$RCT2:OBJDATA/CLIFT1.DAT[73]",
+        "$RCT2:OBJDATA/CLIFT1.DAT[75]",
+        "$RCT2:OBJDATA/CLIFT1.DAT[77]",
+
+        "$RCT2:OBJDATA/CLIFT1.DAT[79..90]"
+    ],
     "strings": {
         "name": {
             "en-GB": "Chairlift Cars",
