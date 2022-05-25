@@ -62,7 +62,7 @@
         "buildMenuPriority": 3
     },
     "images": [
-        "$CSG[64206]",
+        { "path": "images/preview.png", "format": "raw" },
         "",
         "",
         "$CSG[33357..33372]",
@@ -141,7 +141,7 @@
 		""
     ],
     "noCsgImages": [
-        "$CSG[64206]",
+        { "path": "images/preview.png", "format": "raw" },
         "",
         "",
         "$RCT2:OBJDATA/TRUCK1.DAT[3]",

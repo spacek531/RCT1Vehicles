@@ -92,8 +92,9 @@
             }
         ],
         "buildMenuPriority": 2
-    },"images": [
-        "$CSG[64246]",
+    },
+    "images": [
+        { "path": "images/preview.png", "format": "raw" },
         "",
         "",
             "$CSG[9614..9629]",
