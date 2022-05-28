@@ -40,6 +40,8 @@
                     "slopeInverted":4,
                     "flatBanked22":4,
                     "flatBanked45":4,
+                    "flatBanked67":4,
+                    "flatBanked90":4,
                     "inlineTwists":4,
                     "restraintAnimation": 4
                 },
@@ -67,6 +69,8 @@
                     "slopeInverted":4,
                     "flatBanked22":4,
                     "flatBanked45":4,
+                    "flatBanked67":4,
+                    "flatBanked90":4,
                     "inlineTwists":4,
                     "restraintAnimation": 4
                 },

@@ -82,6 +82,8 @@
                     "slopes50":4,
                     "flatBanked22":8,
                     "flatBanked45":16,
+                    "flatBanked67":4,
+                    "flatBanked90":4,
                     "inlineTwists":4,
                     "slopes12Banked22":16,
                     "slopes8Banked22":4,

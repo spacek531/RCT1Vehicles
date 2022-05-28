@@ -134,12 +134,6 @@ class SpriteGroup:
     def setSpecialFunction(self, function):
         self.specialFunction = function
 
-SpriteNameIndex = ["slopeFlat", "slopes12","slopes25","slopes42","slopes60","slopes75","slopes90","slopesLoop","slopeInverted","slopes8","slopes16","slopes50","flatBanked22","flatBanked45","inlineTwists","slopes12Banked22","slopes8Banked22","slopes25Banked22","slopes25Banked45","slopes12Banked45","corkscrews","restraintAnimation","curvedLiftHill"]
-DefaultImageLengths = {"slopeFlat": 32, "slopes12":4, "slopes25": 32, "slopes42":8,"slopes60":32,"slopes75":4,"slopes90":32, "slopesLoop":4, "slopeInverted":4, "slopes8":4,"slopes16":4,"slopes50":4,"flatBanked22":8, "flatBanked45":32, "inlineTwists":4, "slopes12Banked22":32,"slopes8Banked22":4, "corkscrews":4,"restraintAnimation":4}
-
-PowerOfGroup =       [0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 255, 0, 0]
-RepetitionsOfGroup = [1, 1, 1, 1, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 5, 1, 1, 1, 1, 1, 255, 3, 1]
-
 SpriteGroups = [
     SpriteGroup("slopeFlat", 32, 0, 1),
     SpriteGroup("slopes12", 4, 1, 1),
@@ -155,7 +149,9 @@ SpriteGroups = [
     SpriteGroup("slopes50", 4, 1, 1),
     SpriteGroup("flatBanked22", 4, 1, 1),
     SpriteGroup("flatBanked45", 32, 1, 1),
-    SpriteGroup("inlineTwists", 4, 1, 5),
+    SpriteGroup("flatBanked67", 4, 1, 1),
+    SpriteGroup("flatBanked90", 4, 1, 1),
+    SpriteGroup("inlineTwists", 4, 1, 3),
     SpriteGroup("slopes12Banked22",32, 2, 1),
     SpriteGroup("slopes8Banked22", 4, 2, 1),
     SpriteGroup("slopes25Banked22", 4, 2, 1),
