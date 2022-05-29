@@ -55,14 +55,14 @@
                 "loadingPositions": [3, -3]
             },
             {
-                "rotationFrameMask": 4,
+                "rotationFrameMask": 0,
                 "spacing": 34864,
                 "poweredAcceleration": 40,
                 "poweredMaxSpeed": 5,
                 "carVisual": 1,
                 "drawOrder": 8,
                 "spriteGroups": {
-                    "slopeFlat":4
+                    "slopeFlat":1
                 },
                 "isPowered": true
             }
@@ -103,9 +103,6 @@
         "$CSG[33213..33216]",
         "$CSG[33225..33228]",
 
-		"",
-		"",
-		"",
 		""
     ],
     "strings": {

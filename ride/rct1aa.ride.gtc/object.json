@@ -50,14 +50,14 @@
                 "loadingPositions": [3, -3]
             },
             {
-                "rotationFrameMask": 3,
+                "rotationFrameMask": 0,
                 "spacing": 34864,
                 "poweredAcceleration": 80,
                 "poweredMaxSpeed": 9,
                 "carVisual": 1,
                 "drawOrder": 8,
                 "spriteGroups": {
-                    "slopeFlat":4
+                    "slopeFlat":1
                 },
                 "isPoweredRideWithUnrestrictedGravity": true,
                 "hasNoUpstopWheels": true,
@@ -114,9 +114,6 @@
         "$CSG[40413]",
         "$CSG[40417]",
 
-		"",
-		"",
-		"",
 		""
     ],
     "noCsgImages": [
@@ -179,9 +176,6 @@
         "$RCT2:OBJDATA/GTC.DAT[195]",
         "$RCT2:OBJDATA/GTC.DAT[203]",
 
-		"",
-		"",
-		"",
 		""
     ],
     "strings": {

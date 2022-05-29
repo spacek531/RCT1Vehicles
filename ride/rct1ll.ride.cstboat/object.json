@@ -58,14 +58,14 @@
                 "loadingPositions": [7, 9, 2, 4, -3, -1]
             },
             {
-                "rotationFrameMask": 3,
+                "rotationFrameMask": 0,
                 "spacing": 87160,
                 "frictionSoundId": 2,
                 "soundRange": 2,
                 "carVisual": 8,
                 "drawOrder": 8,
                 "spriteGroups": {
-                    "slopeFlat":4
+                    "slopeFlat":1
                 },
                 "hasScreamingRiders": true
             }
@@ -415,9 +415,6 @@
 
         "$CSG[31773..31788]",
 
-		"",
-		"",
-		"",
 		""
     ],
     "noCsgImages": [
@@ -904,9 +901,6 @@
 
         "$RCT2:OBJDATA/CSTBOAT.DAT[1715..1730]",
 
-		"",
-		"",
-		"",
 		""
     ],
     "strings": {

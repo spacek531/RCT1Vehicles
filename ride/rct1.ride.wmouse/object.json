@@ -51,14 +51,14 @@
                 "loadingPositions": [4, -4]
             },
             {
-                "rotationFrameMask": 3,
+                "rotationFrameMask": 0,
                 "spacing": 34864,
                 "frictionSoundId": 1,
                 "soundRange": 0,
                 "carVisual": 1,
                 "drawOrder": 8,
                 "spriteGroups": {
-                    "slopeFlat": 4
+                    "slopeFlat":1
                 },
                 "hasScreamingRiders": true
             }
@@ -272,9 +272,6 @@
         "$CSG[30532]",
         "$CSG[30532]",
 
-		"",
-		"",
-		"",
 		""
     ],
     "strings": {

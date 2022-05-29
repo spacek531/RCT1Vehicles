@@ -54,7 +54,7 @@
                 "loadingPositions": [14, 12, 14, 12, 6, 4, 6, 4, -6, -4, -6, -4, -14, -12, -14, -12]
             },
             {
-                "rotationFrameMask": 3,
+                "rotationFrameMask": 0,
                 "spacing": 87160,
                 "soundRange": 0,
                 "poweredAcceleration": 255,
@@ -63,7 +63,7 @@
                 "effectVisual": 13,
                 "drawOrder": 8,
                 "spriteGroups": {
-                    "slopeFlat":4
+                    "slopeFlat":1
                 },
                 "isPowered": true,
                 "hasScreamingRiders": true,
@@ -76,9 +76,6 @@
         "",
         "",
         "$CSG[33657..34088]",
-		"",
-		"",
-		"",
 		""
     ],
     "strings": {
