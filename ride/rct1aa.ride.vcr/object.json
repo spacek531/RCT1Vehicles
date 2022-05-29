@@ -62,7 +62,7 @@
         "buildMenuPriority": 2
     },
     "images": [
-        "$CSG[64206]",
+        { "path": "images/preview.png", "format": "raw" },
         "",
         "",
         "$CSG[32813..32828]",
@@ -115,7 +115,7 @@
 		""
     ],
     "noCsgImages": [
-        "$CSG[64206]",
+        { "path": "images/preview.png", "format": "raw" },
         "",
         "",
         "$RCT2:OBJDATA/VCR.DAT[3]",

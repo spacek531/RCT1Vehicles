@@ -65,7 +65,7 @@
         }
     },
     "images": [
-        "$CSG[64268]",
+        { "path": "images/preview.png", "format": "raw" },
         "",
         "",
         "$CSG[21282..21297]",
@@ -474,7 +474,7 @@
         "$CSG[22425]"
     ],
     "noCsgImages": [
-        "$CSG[64268]",
+        { "path": "images/preview.png", "format": "raw" },
         "",
         "",
         "$RCT2:OBJDATA/SLCFO.DAT[3]",
