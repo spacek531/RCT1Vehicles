@@ -47,14 +47,14 @@
                 "loadingPositions": [4]
             },
             {
-                "rotationFrameMask": 3,
+                "rotationFrameMask": 0,
                 "spacing": 34864,
                 "poweredAcceleration": 80,
                 "poweredMaxSpeed": 8,
                 "carVisual": 1,
                 "drawOrder": 8,
                 "spriteGroups": {
-                    "slopeFlat":4
+                    "slopeFlat":1
                 },
                 "isPowered": true
             }
@@ -135,9 +135,6 @@
         "$CSG[33441]",
         "$CSG[33444]",
 
-		"",
-		"",
-		"",
 		""
     ],
     "noCsgImages": [
@@ -204,9 +201,6 @@
 
         "$RCT2:OBJDATA/TRUCK1.DAT[223..234]",
 
-		"",
-		"",
-		"",
 		""
     ],
     "strings": {

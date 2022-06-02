@@ -42,14 +42,14 @@
                 "loadingPositions": [4, -4]
             },
             {
-                "rotationFrameMask": 3,
+                "rotationFrameMask": 0,
                 "spacing": 34864,
                 "poweredAcceleration": 90,
                 "poweredMaxSpeed": 8,
                 "carVisual": 1,
                 "drawOrder": 8,
                 "spriteGroups": {
-                    "slopeFlat":4
+                    "slopeFlat":1
                 },
                 "isPowered": true
             }
@@ -100,9 +100,6 @@
         "$CSG[33288]",
         "$CSG[33292]",
 
-        "",
-        "",
-        "",
         ""
     ],
     "noCsgImages": [
@@ -165,9 +162,6 @@
         "$RCT2:OBJDATA/SPCAR.DAT[195]",
         "$RCT2:OBJDATA/SPCAR.DAT[203]",
 
-		"",
-		"",
-		"",
 		""
     ],
     "strings": {

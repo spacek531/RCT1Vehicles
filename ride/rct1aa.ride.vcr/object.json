@@ -47,14 +47,14 @@
                 "loadingPositions": [4, -4]
             },
             {
-                "rotationFrameMask": 3,
+                "rotationFrameMask": 0,
                 "spacing": 34864,
                 "poweredAcceleration": 60,
                 "poweredMaxSpeed": 7,
                 "carVisual": 1,
                 "drawOrder": 8,
                 "spriteGroups": {
-                    "slopeFlat":4
+                    "slopeFlat":1
                 },
                 "isPowered": true
             }
@@ -109,9 +109,6 @@
         "$CSG[32872]",
         "$CSG[32876]",
 
-		"",
-		"",
-		"",
 		""
     ],
     "noCsgImages": [
@@ -174,9 +171,6 @@
         "$RCT2:OBJDATA/VCR.DAT[195]",
         "$RCT2:OBJDATA/VCR.DAT[203]",
 
-		"",
-		"",
-		"",
 		""
     ],
     "strings": {
