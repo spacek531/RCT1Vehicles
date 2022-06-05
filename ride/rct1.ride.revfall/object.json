@@ -22,7 +22,7 @@
         ],
         "cars": {
             "rotationFrameMask": 15,
-            "spacing": 348640,
+            "spacing": 348160,
             "mass": 5500,
             "numSeats": 8,
             "numSeatRows": 4,

@@ -30,7 +30,7 @@
         ],
         "cars": {
             "rotationFrameMask": 15,
-            "spacing": 200468,
+            "spacing": 199680,
             "mass": 900,
             "tabOffset": 2,
             "numSeats": 4,

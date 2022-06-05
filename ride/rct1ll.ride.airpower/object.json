@@ -27,7 +27,7 @@
         "cars": [
             {
                 "rotationFrameMask": 15,
-                "spacing": 95876,
+                "spacing": 95232,
                 "mass": 600,
                 "numSeats": 2,
                 "numSeatRows": 1,
@@ -52,7 +52,7 @@
             },
             {
                 "rotationFrameMask": 15,
-                "spacing": 95876,
+                "spacing": 95232,
                 "mass": 500,
                 "frictionSoundId": 2,
                 "soundRange": 0,
