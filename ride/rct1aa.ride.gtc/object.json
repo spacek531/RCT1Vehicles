@@ -28,7 +28,7 @@
         "cars": [
             {
                 "rotationFrameMask": 15,
-                "spacing": 148172,
+                "spacing": 174080,
                 "mass": 300,
                 "numSeats": 2,
                 "numSeatRows": 1,
@@ -51,7 +51,7 @@
             },
             {
                 "rotationFrameMask": 0,
-                "spacing": 34864,
+                "spacing": 25600,
                 "poweredAcceleration": 80,
                 "poweredMaxSpeed": 9,
                 "carVisual": 1,
