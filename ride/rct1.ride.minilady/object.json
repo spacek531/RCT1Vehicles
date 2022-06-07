@@ -52,7 +52,7 @@
                 "hasScreamingRiders": true,
                 "loadingPositions": [2, 4]
             },
-        "buildMenuPriority": 3
+        "buildMenuPriority": 4
     },
     "images": [
         { "path": "images/preview.png", "format": "raw" },
