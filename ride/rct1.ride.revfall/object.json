@@ -1,7 +1,8 @@
 {
-    "id": "rct1.ride.revfall",
+    "id": "rct1.ride.reverse_freefall_car",
     "authors": ["Chris Sawyer", "Simon Foster"],
     "version": "1.0",
+    "originalId": "00000000|#RCT1RVF|00000000",
     "sourceGame": "rct1",
     "objectType": "ride",
     "properties": {

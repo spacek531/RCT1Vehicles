@@ -1,7 +1,8 @@
 {
-    "id": "rct1aa.ride.smouse",
+    "id": "rct1aa.ride.steel_mouse_cars",
     "authors": ["Chris Sawyer", "Simon Foster"],
     "version": "1.0",
+    "originalId": "00000000|#RCT1SMC|00000000",
     "sourceGame": "rct1aa",
     "objectType": "ride",
     "properties": {

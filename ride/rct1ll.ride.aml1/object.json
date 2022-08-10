@@ -1,7 +1,8 @@
 {
-    "id": "rct1ll.ride.aml1",
+    "id": "rct1ll.ride.steam_trains_american",
     "authors": ["Chris Sawyer", "Simon Foster"],
     "version": "1.0",
+    "originalId": "00000000|#RCT1AM1|00000000",
     "sourceGame": "rct1ll",
     "objectType": "ride",
     "properties": {

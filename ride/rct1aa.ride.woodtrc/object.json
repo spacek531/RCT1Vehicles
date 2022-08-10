@@ -1,7 +1,8 @@
 {
-    "id": "rct1aa.ride.woodtrc",
+    "id": "rct1aa.ride.articulated_trains",
     "authors": ["Chris Sawyer", "Simon Foster"],
     "version": "1.0",
+    "originalId": "00000000|#RCT1MFT|00000000",
     "sourceGame": "rct1aa",
     "objectType": "ride",
     "properties": {

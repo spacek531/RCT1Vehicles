@@ -1,7 +1,8 @@
 {
-    "id": "rct1aa.ride.nrl2",
+    "id": "rct1aa.ride.steam_trains_covered",
     "authors": ["Chris Sawyer", "Simon Foster"],
     "version": "1.0",
+    "originalId": "00000000|#RCT1NR2|00000000",
     "sourceGame": "rct1aa",
     "objectType": "ride",
     "properties": {

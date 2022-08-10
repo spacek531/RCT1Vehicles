@@ -1,7 +1,8 @@
 {
-    "id": "rct1ll.ride.invhairp",
+    "id": "rct1ll.ride.inverted_hairpin_cars",
     "authors": ["Chris Sawyer", "Simon Foster"],
     "version": "1.0",
+    "originalId": "00000000|#RCT1IVM|00000000",
     "sourceGame": "rct1ll",
     "objectType": "ride",
     "properties": {

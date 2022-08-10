@@ -1,7 +1,8 @@
 {
-    "id": "rct1.ride.gioinv",
+    "id": "rct1.ride.inverted_trains",
     "authors": ["Chris Sawyer", "Simon Foster"],
     "version": "1.0",
+    "originalId": "00000000|#RCT1GIO|00000000",
     "sourceGame": ["rct1", "rct1ll"],
     "objectType": "ride",
     "properties": {

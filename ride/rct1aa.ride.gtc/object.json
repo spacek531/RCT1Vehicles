@@ -1,7 +1,8 @@
 {
-    "id": "rct1aa.ride.gtc",
+    "id": "rct1aa.ride.ghost_train_cars",
     "authors": ["Chris Sawyer", "Simon Foster"],
     "version": "1.0",
+    "originalId": "00000000|#RCT1GTC|00000000",
     "sourceGame": "rct1aa",
     "objectType": "ride",
     "properties": {

@@ -1,7 +1,8 @@
 {
-    "id": "rct1aa.ride.utcar",
+    "id": "rct1aa.ride.heartline_twister_cars",
     "authors": ["Chris Sawyer", "Simon Foster"],
     "version": "1.0",
+    "originalId": "00000000|#RCT1UTC|00000000",
     "sourceGame": "rct1aa",
     "objectType": "ride",
     "properties": {

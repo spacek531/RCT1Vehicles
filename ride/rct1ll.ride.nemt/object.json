@@ -1,7 +1,8 @@
 {
-    "id": "rct1ll.ride.nemt",
+    "id": "rct1ll.ride.4_across_inverted_trains",
     "authors": ["Chris Sawyer", "Simon Foster"],
     "version": "1.0",
+    "originalId": "00000000|#RCT1NEM|00000000",
     "sourceGame": "rct1ll",
     "objectType": "ride",
     "properties": {

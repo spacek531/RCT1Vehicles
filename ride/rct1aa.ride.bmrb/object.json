@@ -1,7 +1,8 @@
 {
-    "id": "rct1aa.ride.bmrb",
+    "id": "rct1aa.ride.hyper_twister_trains",
     "authors": ["Chris Sawyer", "Simon Foster"],
     "version": "1.0",
+    "originalId": "00000000|#RCT1BMR|00000000",
     "sourceGame": "rct1aa",
     "objectType": "ride",
     "properties": {

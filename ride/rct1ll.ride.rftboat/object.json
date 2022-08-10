@@ -1,7 +1,8 @@
 {
-    "id": "rct1ll.ride.rftboat",
+    "id": "rct1ll.ride.rafts",
     "authors": ["Chris Sawyer", "Simon Foster"],
     "version": "1.0",
+    "originalId": "00000000|#RCT1RFT|00000000",
     "sourceGame": "rct1ll",
     "objectType": "ride",
     "properties": {

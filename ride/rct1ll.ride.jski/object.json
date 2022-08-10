@@ -1,7 +1,8 @@
 {
-    "id": "rct1ll.ride.jski",
+    "id": "rct1ll.ride.jet_skis",
     "authors": ["Chris Sawyer", "Simon Foster"],
     "version": "1.0",
+    "originalId": "00000000|#RCT1JSK|00000000",
     "sourceGame": "rct1ll",
     "objectType": "ride",
     "properties": {

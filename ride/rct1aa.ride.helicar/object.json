@@ -1,7 +1,8 @@
 {
-    "id": "rct1aa.ride.helicar",
+    "id": "rct1aa.ride.mini_helicopters",
     "authors": ["Chris Sawyer", "Simon Foster"],
     "version": "1.0",
+    "originalId": "00000000|#RCT1HEL|00000000",
     "sourceGame": "rct1aa",
     "objectType": "ride",
     "properties": {
