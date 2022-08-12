@@ -1,0 +1,179 @@
+{
+    "id": "rct1.ride.sports_cars",
+    "authors": ["Chris Sawyer", "Simon Foster"],
+    "version": "1.0",
+    "originalId": "00000000|#RCT1SPC|00000000",
+    "sourceGame": "rct1",
+    "objectType": "ride",
+    "properties": {
+        "type": "car_ride",
+        "category": "gentle",
+        "noCollisionCrashes": true,
+        "minCarsPerTrain": 3,
+        "maxCarsPerTrain": 3,
+        "numEmptyCars": 2,
+        "tabCar": 1,
+        "headCars": 1,
+        "tailCars": 1,
+        "carColours": [
+            [
+                ["bright_red", "yellow", "black"]
+            ],
+            [
+                ["dark_green", "olive_green", "black"]
+            ]
+        ],
+        "cars": [
+            {
+                "rotationFrameMask": 15,
+                "spacing": 174320,
+                "mass": 300,
+                "numSeats": 2,
+                "numSeatRows": 1,
+                "poweredAcceleration": 90,
+                "poweredMaxSpeed": 8,
+                "drawOrder": 9,
+                "spriteGroups": {
+                    "slopeFlat":16,
+                    "slopes12":4,
+                    "slopes25":4
+                },
+                "hasAdditionalColour1": true,
+                "isPowered": true,
+                "loadingPositions": [4, -4]
+            },
+            {
+                "rotationFrameMask": 0,
+                "spacing": 34864,
+                "poweredAcceleration": 90,
+                "poweredMaxSpeed": 8,
+                "carVisual": 1,
+                "drawOrder": 8,
+                "spriteGroups": {
+                    "slopeFlat":1
+                },
+                "isPowered": true
+            }
+        ],
+        "buildMenuPriority": 5
+    },
+    "images": [
+        "$CSG[64206]",
+        "",
+        "",
+            "$CSG[33229..33244]",
+
+        "$CSG[33245]",
+        "$CSG[33249]",
+        "$CSG[33253]",
+        "$CSG[33257]",
+        "$CSG[33247]",
+        "$CSG[33251]",
+        "$CSG[33255]",
+        "$CSG[33259]",
+
+        "$CSG[33246]",
+        "$CSG[33250]",
+        "$CSG[33254]",
+        "$CSG[33258]",
+        "$CSG[33248]",
+        "$CSG[33252]",
+        "$CSG[33256]",
+        "$CSG[33260]",
+
+            "$CSG[33261..33276]",
+
+        "$CSG[33277]",
+        "$CSG[33281]",
+        "$CSG[33285]",
+        "$CSG[33289]",
+        "$CSG[33279]",
+        "$CSG[33283]",
+        "$CSG[33287]",
+        "$CSG[33291]",
+
+        "$CSG[33278]",
+        "$CSG[33282]",
+        "$CSG[33286]",
+        "$CSG[33290]",
+        "$CSG[33280]",
+        "$CSG[33284]",
+        "$CSG[33288]",
+        "$CSG[33292]",
+
+        ""
+    ],
+    "noCsgImages": [
+        "$CSG[64206]",
+        "",
+        "",
+        "$RCT2:OBJDATA/SPCAR.DAT[3]",
+        "$RCT2:OBJDATA/SPCAR.DAT[5]",
+        "$RCT2:OBJDATA/SPCAR.DAT[7]",
+        "$RCT2:OBJDATA/SPCAR.DAT[9]",
+        "$RCT2:OBJDATA/SPCAR.DAT[11]",
+        "$RCT2:OBJDATA/SPCAR.DAT[13]",
+        "$RCT2:OBJDATA/SPCAR.DAT[15]",
+        "$RCT2:OBJDATA/SPCAR.DAT[17]",
+        "$RCT2:OBJDATA/SPCAR.DAT[19]",
+        "$RCT2:OBJDATA/SPCAR.DAT[21]",
+        "$RCT2:OBJDATA/SPCAR.DAT[23]",
+        "$RCT2:OBJDATA/SPCAR.DAT[25]",
+        "$RCT2:OBJDATA/SPCAR.DAT[27]",
+        "$RCT2:OBJDATA/SPCAR.DAT[29]",
+        "$RCT2:OBJDATA/SPCAR.DAT[31]",
+        "$RCT2:OBJDATA/SPCAR.DAT[33]",
+
+        "$RCT2:OBJDATA/SPCAR.DAT[35..42]",
+
+        "$RCT2:OBJDATA/SPCAR.DAT[43]",
+        "$RCT2:OBJDATA/SPCAR.DAT[51]",
+        "$RCT2:OBJDATA/SPCAR.DAT[59]",
+        "$RCT2:OBJDATA/SPCAR.DAT[67]",
+        "$RCT2:OBJDATA/SPCAR.DAT[75]",
+        "$RCT2:OBJDATA/SPCAR.DAT[83]",
+        "$RCT2:OBJDATA/SPCAR.DAT[91]",
+        "$RCT2:OBJDATA/SPCAR.DAT[99]",
+
+        "$RCT2:OBJDATA/SPCAR.DAT[107]",
+        "$RCT2:OBJDATA/SPCAR.DAT[109]",
+        "$RCT2:OBJDATA/SPCAR.DAT[111]",
+        "$RCT2:OBJDATA/SPCAR.DAT[113]",
+        "$RCT2:OBJDATA/SPCAR.DAT[115]",
+        "$RCT2:OBJDATA/SPCAR.DAT[117]",
+        "$RCT2:OBJDATA/SPCAR.DAT[119]",
+        "$RCT2:OBJDATA/SPCAR.DAT[121]",
+        "$RCT2:OBJDATA/SPCAR.DAT[123]",
+        "$RCT2:OBJDATA/SPCAR.DAT[125]",
+        "$RCT2:OBJDATA/SPCAR.DAT[127]",
+        "$RCT2:OBJDATA/SPCAR.DAT[129]",
+        "$RCT2:OBJDATA/SPCAR.DAT[131]",
+        "$RCT2:OBJDATA/SPCAR.DAT[133]",
+        "$RCT2:OBJDATA/SPCAR.DAT[135]",
+        "$RCT2:OBJDATA/SPCAR.DAT[137]",
+
+        "$RCT2:OBJDATA/SPCAR.DAT[139..146]",
+
+        "$RCT2:OBJDATA/SPCAR.DAT[147]",
+        "$RCT2:OBJDATA/SPCAR.DAT[155]",
+        "$RCT2:OBJDATA/SPCAR.DAT[163]",
+        "$RCT2:OBJDATA/SPCAR.DAT[171]",
+        "$RCT2:OBJDATA/SPCAR.DAT[179]",
+        "$RCT2:OBJDATA/SPCAR.DAT[187]",
+        "$RCT2:OBJDATA/SPCAR.DAT[195]",
+        "$RCT2:OBJDATA/SPCAR.DAT[203]",
+
+		""
+    ],
+    "strings": {
+        "name": {
+            "en-GB": "Sports Cars"
+        },
+        "description": {
+            "en-GB": "Powered vehicles in the shape of sports cars"
+        },
+        "capacity": {
+            "en-GB": "2 passengers per car"
+        }
+    }
+}
