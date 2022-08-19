@@ -47,7 +47,7 @@
         "buildMenuPriority": 5
     },
     "images": [
-        "$CSG[64203]",
+        { "path": "images/preview.png", "format": "raw" },
         "",
         "",
         "$CSG[32685..32716]"
