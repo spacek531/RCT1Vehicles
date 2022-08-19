@@ -94,7 +94,7 @@
         ]
     },
     "images": [
-        "$CSG[64210]",
+        { "path": "images/preview.png", "format": "raw" },
         "",
         "",
         "$CSG[2066]",
