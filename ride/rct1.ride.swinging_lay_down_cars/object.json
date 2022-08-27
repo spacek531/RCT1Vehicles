@@ -1,6 +1,9 @@
 {
     "id": "rct1.ride.swinging_lay_down_cars",
-    "authors": ["Chris Sawyer", "Simon Foster"],
+    "authors": [
+        "Chris Sawyer",
+        "Simon Foster"
+    ],
     "version": "1.0",
     "originalId": "00000000|#RCT1SKY|00000000",
     "sourceGame": "rct1",
@@ -17,13 +20,25 @@
         },
         "carColours": [
             [
-                ["bright_red", "yellow", "black"]
+                [
+                    "bright_red",
+                    "yellow",
+                    "black"
+                ]
             ],
             [
-                ["dark_green", "yellow", "black"]
+                [
+                    "dark_green",
+                    "yellow",
+                    "black"
+                ]
             ],
             [
-                ["bordeaux_red", "bright_red", "black"]
+                [
+                    "bordeaux_red",
+                    "bright_red",
+                    "black"
+                ]
             ]
         ],
         "cars": {
@@ -37,44 +52,44 @@
             "soundRange": 0,
             "drawOrder": 2,
             "spriteGroups": {
-                "slopeFlat":16,
-                "slopes12":4,
-                "slopes25":4,
+                "slopeFlat": 16,
+                "slopes12": 4,
+                "slopes25": 4,
                 "restraintAnimation": 4
             },
             "hasAdditionalColour1": true,
             "hasSwinging": true,
             "hasScreamingRiders": true,
-            "loadingPositions": [1]
+            "loadingPositions": [
+                1
+            ]
         },
         "buildMenuPriority": 1
     },
     "images": [
-        { "path": "images/preview.png", "format": "raw" },
+        {
+            "path": "images/preview.png",
+            "format": "raw"
+        },
         "",
         "",
         "$CSG[31797..31876]",
-
         "$CSG[31877..31881]",
         "$CSG[31897..31901]",
         "$CSG[31917..31921]",
         "$CSG[31937..31941]",
-
         "$CSG[31887..31891]",
         "$CSG[31907..31911]",
         "$CSG[31927..31931]",
         "$CSG[31947..31951]",
-
         "$CSG[31882..31886]",
         "$CSG[31902..31906]",
         "$CSG[31922..31926]",
         "$CSG[31942..31946]",
-
         "$CSG[31892..31896]",
         "$CSG[31912..31916]",
         "$CSG[31932..31936]",
         "$CSG[31952..31956]",
-
         "$CSG[31957]",
         "$CSG[31957]",
         "$CSG[31957]",
@@ -135,29 +150,23 @@
         "$CSG[31968]",
         "$CSG[31968]",
         "$CSG[31968]",
-
         "$CSG[31969..32048]",
-
         "$CSG[32049..32053]",
         "$CSG[32069..32073]",
         "$CSG[32089..32093]",
         "$CSG[32109..32113]",
-
         "$CSG[32059..32063]",
         "$CSG[32079..32083]",
         "$CSG[32099..32103]",
         "$CSG[32119..32123]",
-
         "$CSG[32054..32058]",
         "$CSG[32074..32078]",
         "$CSG[32094..32098]",
         "$CSG[32114..32118]",
-
         "$CSG[32064..32068]",
         "$CSG[32084..32088]",
         "$CSG[32104..32108]",
         "$CSG[32124..32128]",
-
         "$CSG[32129]",
         "$CSG[32129]",
         "$CSG[32129]",
@@ -276,5 +285,62 @@
             "ru-RU": "1 пассажир",
             "eo-ZZ": "Po 1 pasaĝero por ĉaro"
         }
-    }
+    },
+    "noCsgImages": [
+        {
+            "path": "images/preview.png",
+            "format": "raw"
+        },
+        "",
+        "",
+        "$RCT2:OBJDATA/SKYTR.DAT[3..7]",
+        "$RCT2:OBJDATA/SKYTR.DAT[13..17]",
+        "$RCT2:OBJDATA/SKYTR.DAT[23..27]",
+        "$RCT2:OBJDATA/SKYTR.DAT[33..37]",
+        "$RCT2:OBJDATA/SKYTR.DAT[43..47]",
+        "$RCT2:OBJDATA/SKYTR.DAT[53..57]",
+        "$RCT2:OBJDATA/SKYTR.DAT[63..67]",
+        "$RCT2:OBJDATA/SKYTR.DAT[73..77]",
+        "$RCT2:OBJDATA/SKYTR.DAT[83..87]",
+        "$RCT2:OBJDATA/SKYTR.DAT[93..97]",
+        "$RCT2:OBJDATA/SKYTR.DAT[103..107]",
+        "$RCT2:OBJDATA/SKYTR.DAT[113..117]",
+        "$RCT2:OBJDATA/SKYTR.DAT[123..127]",
+        "$RCT2:OBJDATA/SKYTR.DAT[133..137]",
+        "$RCT2:OBJDATA/SKYTR.DAT[143..147]",
+        "$RCT2:OBJDATA/SKYTR.DAT[153..157]",
+        "$RCT2:OBJDATA/SKYTR.DAT[163..207]",
+        "$RCT2:OBJDATA/SKYTR.DAT[243..247]",
+        "$RCT2:OBJDATA/SKYTR.DAT[283..287]",
+        "$RCT2:OBJDATA/SKYTR.DAT[323..327]",
+        "$RCT2:OBJDATA/SKYTR.DAT[363..367]",
+        "$RCT2:OBJDATA/SKYTR.DAT[403..407]",
+        "$RCT2:OBJDATA/SKYTR.DAT[443..447]",
+        "$RCT2:OBJDATA/SKYTR.DAT[483..487]",
+        "$RCT2:OBJDATA/SKYTR.DAT[643..707]",
+        "$RCT2:OBJDATA/SKYTR.DAT[713..717]",
+        "$RCT2:OBJDATA/SKYTR.DAT[723..727]",
+        "$RCT2:OBJDATA/SKYTR.DAT[733..737]",
+        "$RCT2:OBJDATA/SKYTR.DAT[743..747]",
+        "$RCT2:OBJDATA/SKYTR.DAT[753..757]",
+        "$RCT2:OBJDATA/SKYTR.DAT[763..767]",
+        "$RCT2:OBJDATA/SKYTR.DAT[773..777]",
+        "$RCT2:OBJDATA/SKYTR.DAT[783..787]",
+        "$RCT2:OBJDATA/SKYTR.DAT[793..797]",
+        "$RCT2:OBJDATA/SKYTR.DAT[803..807]",
+        "$RCT2:OBJDATA/SKYTR.DAT[813..817]",
+        "$RCT2:OBJDATA/SKYTR.DAT[823..827]",
+        "$RCT2:OBJDATA/SKYTR.DAT[833..837]",
+        "$RCT2:OBJDATA/SKYTR.DAT[843..847]",
+        "$RCT2:OBJDATA/SKYTR.DAT[853..857]",
+        "$RCT2:OBJDATA/SKYTR.DAT[863..907]",
+        "$RCT2:OBJDATA/SKYTR.DAT[943..947]",
+        "$RCT2:OBJDATA/SKYTR.DAT[983..987]",
+        "$RCT2:OBJDATA/SKYTR.DAT[1023..1027]",
+        "$RCT2:OBJDATA/SKYTR.DAT[1063..1067]",
+        "$RCT2:OBJDATA/SKYTR.DAT[1103..1107]",
+        "$RCT2:OBJDATA/SKYTR.DAT[1143..1147]",
+        "$RCT2:OBJDATA/SKYTR.DAT[1183..1187]",
+        "$RCT2:OBJDATA/SKYTR.DAT[1343..1402]"
+    ]
 }

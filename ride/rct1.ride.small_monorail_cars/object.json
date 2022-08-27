@@ -1,6 +1,9 @@
 {
     "id": "rct1.ride.small_monorail_cars",
-    "authors": ["Chris Sawyer", "Simon Foster"],
+    "authors": [
+        "Chris Sawyer",
+        "Simon Foster"
+    ],
     "version": "1.0",
     "originalId": "00000000|#RCT1MO1|00000000",
     "sourceGame": "rct1",
@@ -17,16 +20,32 @@
         },
         "carColours": [
             [
-                ["bright_red", "white", "black"]
+                [
+                    "bright_red",
+                    "white",
+                    "black"
+                ]
             ],
             [
-                ["white", "light_brown", "black"]
+                [
+                    "white",
+                    "light_brown",
+                    "black"
+                ]
             ],
             [
-                ["light_purple", "bordeaux_red", "black"]
+                [
+                    "light_purple",
+                    "bordeaux_red",
+                    "black"
+                ]
             ],
             [
-                ["yellow", "grey", "black"]
+                [
+                    "yellow",
+                    "grey",
+                    "black"
+                ]
             ]
         ],
         "cars": {
@@ -41,16 +60,21 @@
             "poweredMaxSpeed": 27,
             "drawOrder": 7,
             "spriteGroups": {
-                "slopeFlat":16,
-                "slopes12":4,
-                "slopes25":4,
-                "slopes8":4,
-                "slopes16":4,
+                "slopeFlat": 16,
+                "slopes12": 4,
+                "slopes25": 4,
+                "slopes8": 4,
+                "slopes16": 4,
                 "restraintAnimation": 4
             },
             "hasAdditionalColour1": true,
             "isPowered": true,
-            "loadingPositions": [3, -3, 3, -3]
+            "loadingPositions": [
+                3,
+                -3,
+                3,
+                -3
+            ]
         },
         "buildMenuPriority": 2
     },
@@ -59,32 +83,26 @@
         "",
         "",
         "$CSG[29169..29184]",
-
         "$CSG[29185]",
         "$CSG[29189]",
         "$CSG[29193]",
         "$CSG[29197]",
-
         "$CSG[29187]",
         "$CSG[29191]",
         "$CSG[29195]",
-        "$CSG[29199]", 
-
+        "$CSG[29199]",
         "$CSG[29186]",
         "$CSG[29190]",
         "$CSG[29194]",
         "$CSG[29198]",
-
         "$CSG[29188]",
         "$CSG[29192]",
         "$CSG[29196]",
         "$CSG[29200]",
-
         "$CSG[29213..29216]",
         "$CSG[29221..29224]",
         "$CSG[29217..29220]",
         "$CSG[29225..29228]",
-
         "$CSG[29201]",
         "$CSG[29204]",
         "$CSG[29207]",
@@ -97,34 +115,27 @@
         "$CSG[29206]",
         "$CSG[29209]",
         "$CSG[29212]",
-
         "$CSG[29229..29244]",
-
         "$CSG[29245]",
         "$CSG[29249]",
         "$CSG[29253]",
         "$CSG[29257]",
-
         "$CSG[29247]",
         "$CSG[29251]",
         "$CSG[29255]",
-        "$CSG[29259]", 
-
+        "$CSG[29259]",
         "$CSG[29246]",
         "$CSG[29250]",
         "$CSG[29254]",
         "$CSG[29258]",
-
         "$CSG[29248]",
         "$CSG[29252]",
         "$CSG[29256]",
         "$CSG[29260]",
-
         "$CSG[29273..29276]",
         "$CSG[29281..29284]",
         "$CSG[29277..29280]",
         "$CSG[29285..29288]",
-
         "$CSG[29261]",
         "$CSG[29264]",
         "$CSG[29267]",
@@ -137,34 +148,27 @@
         "$CSG[29266]",
         "$CSG[29269]",
         "$CSG[29272]",
-
         "$CSG[29289..29304]",
-
         "$CSG[29305]",
         "$CSG[29309]",
         "$CSG[29313]",
         "$CSG[29317]",
-
         "$CSG[29307]",
         "$CSG[29311]",
         "$CSG[29315]",
-        "$CSG[29319]", 
-
+        "$CSG[29319]",
         "$CSG[29306]",
         "$CSG[29310]",
         "$CSG[29314]",
         "$CSG[29318]",
-
         "$CSG[29308]",
         "$CSG[29312]",
         "$CSG[29316]",
         "$CSG[29320]",
-
         "$CSG[29333..29336]",
         "$CSG[29341..29344]",
         "$CSG[29337..29340]",
         "$CSG[29345..29348]",
-
         "$CSG[29321]",
         "$CSG[29324]",
         "$CSG[29327]",
@@ -233,5 +237,91 @@
             "ru-RU": "4 пассажира",
             "eo-ZZ": "Po 4 pasaĝeroj por ĉaro"
         }
-    }
+    },
+    "noCsgImages": [
+        "$CSG[64201]",
+        "",
+        "",
+        "$RCT2:OBJDATA/MONO2.DAT[3]",
+        "$RCT2:OBJDATA/MONO2.DAT[5]",
+        "$RCT2:OBJDATA/MONO2.DAT[7]",
+        "$RCT2:OBJDATA/MONO2.DAT[9]",
+        "$RCT2:OBJDATA/MONO2.DAT[11]",
+        "$RCT2:OBJDATA/MONO2.DAT[13]",
+        "$RCT2:OBJDATA/MONO2.DAT[15]",
+        "$RCT2:OBJDATA/MONO2.DAT[17]",
+        "$RCT2:OBJDATA/MONO2.DAT[19]",
+        "$RCT2:OBJDATA/MONO2.DAT[21]",
+        "$RCT2:OBJDATA/MONO2.DAT[23]",
+        "$RCT2:OBJDATA/MONO2.DAT[25]",
+        "$RCT2:OBJDATA/MONO2.DAT[27]",
+        "$RCT2:OBJDATA/MONO2.DAT[29]",
+        "$RCT2:OBJDATA/MONO2.DAT[31]",
+        "$RCT2:OBJDATA/MONO2.DAT[33]",
+        "$RCT2:OBJDATA/MONO2.DAT[35..42]",
+        "$RCT2:OBJDATA/MONO2.DAT[43]",
+        "$RCT2:OBJDATA/MONO2.DAT[51]",
+        "$RCT2:OBJDATA/MONO2.DAT[59]",
+        "$RCT2:OBJDATA/MONO2.DAT[67]",
+        "$RCT2:OBJDATA/MONO2.DAT[75]",
+        "$RCT2:OBJDATA/MONO2.DAT[3]",
+        "$RCT2:OBJDATA/MONO2.DAT[91]",
+        "$RCT2:OBJDATA/MONO2.DAT[99]",
+        "$RCT2:OBJDATA/MONO2.DAT[107..122]",
+        "$RCT2:OBJDATA/MONO2.DAT[131..142]",
+        "$RCT2:OBJDATA/MONO2.DAT[143]",
+        "$RCT2:OBJDATA/MONO2.DAT[145]",
+        "$RCT2:OBJDATA/MONO2.DAT[147]",
+        "$RCT2:OBJDATA/MONO2.DAT[149]",
+        "$RCT2:OBJDATA/MONO2.DAT[151]",
+        "$RCT2:OBJDATA/MONO2.DAT[153]",
+        "$RCT2:OBJDATA/MONO2.DAT[155]",
+        "$RCT2:OBJDATA/MONO2.DAT[157]",
+        "$RCT2:OBJDATA/MONO2.DAT[159]",
+        "$RCT2:OBJDATA/MONO2.DAT[161]",
+        "$RCT2:OBJDATA/MONO2.DAT[163]",
+        "$RCT2:OBJDATA/MONO2.DAT[165]",
+        "$RCT2:OBJDATA/MONO2.DAT[167]",
+        "$RCT2:OBJDATA/MONO2.DAT[169]",
+        "$RCT2:OBJDATA/MONO2.DAT[171]",
+        "$RCT2:OBJDATA/MONO2.DAT[173]",
+        "$RCT2:OBJDATA/MONO2.DAT[175..182]",
+        "$RCT2:OBJDATA/MONO2.DAT[183]",
+        "$RCT2:OBJDATA/MONO2.DAT[191]",
+        "$RCT2:OBJDATA/MONO2.DAT[199]",
+        "$RCT2:OBJDATA/MONO2.DAT[207]",
+        "$RCT2:OBJDATA/MONO2.DAT[215]",
+        "$RCT2:OBJDATA/MONO2.DAT[143]",
+        "$RCT2:OBJDATA/MONO2.DAT[231]",
+        "$RCT2:OBJDATA/MONO2.DAT[239]",
+        "$RCT2:OBJDATA/MONO2.DAT[247..262]",
+        "$RCT2:OBJDATA/MONO2.DAT[271..282]",
+        "$RCT2:OBJDATA/MONO2.DAT[283]",
+        "$RCT2:OBJDATA/MONO2.DAT[285]",
+        "$RCT2:OBJDATA/MONO2.DAT[287]",
+        "$RCT2:OBJDATA/MONO2.DAT[289]",
+        "$RCT2:OBJDATA/MONO2.DAT[291]",
+        "$RCT2:OBJDATA/MONO2.DAT[293]",
+        "$RCT2:OBJDATA/MONO2.DAT[295]",
+        "$RCT2:OBJDATA/MONO2.DAT[297]",
+        "$RCT2:OBJDATA/MONO2.DAT[299]",
+        "$RCT2:OBJDATA/MONO2.DAT[301]",
+        "$RCT2:OBJDATA/MONO2.DAT[303]",
+        "$RCT2:OBJDATA/MONO2.DAT[305]",
+        "$RCT2:OBJDATA/MONO2.DAT[307]",
+        "$RCT2:OBJDATA/MONO2.DAT[309]",
+        "$RCT2:OBJDATA/MONO2.DAT[311]",
+        "$RCT2:OBJDATA/MONO2.DAT[313]",
+        "$RCT2:OBJDATA/MONO2.DAT[315..322]",
+        "$RCT2:OBJDATA/MONO2.DAT[323]",
+        "$RCT2:OBJDATA/MONO2.DAT[331]",
+        "$RCT2:OBJDATA/MONO2.DAT[339]",
+        "$RCT2:OBJDATA/MONO2.DAT[347]",
+        "$RCT2:OBJDATA/MONO2.DAT[355]",
+        "$RCT2:OBJDATA/MONO2.DAT[283]",
+        "$RCT2:OBJDATA/MONO2.DAT[371]",
+        "$RCT2:OBJDATA/MONO2.DAT[379]",
+        "$RCT2:OBJDATA/MONO2.DAT[387..402]",
+        "$RCT2:OBJDATA/MONO2.DAT[411..422]"
+    ]
 }
