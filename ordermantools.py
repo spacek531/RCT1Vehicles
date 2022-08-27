@@ -1,6 +1,6 @@
 import re
 import json
-
+import pathlib
 """Written by Spacek531 for manipulation of jobjectson files for the purposes of creating RCT1 rides in OpenRCT2. Paste a string and all numbers will be incremented by the total range, for the number of repetitions specified."""
 
 """
@@ -255,7 +255,7 @@ OldSpriteGroupLengths = {
     "restraintAnimation": 12
     }
 
-def GetOffsets(spriteGroups, offset):
+def GetOffsets(spriteGroups, animationFrames, offset):
     m = {}
     highestindex = 0
     for group in spriteGroups:
@@ -264,12 +264,13 @@ def GetOffsets(spriteGroups, offset):
         highestindex = max(sindex, highestindex)
         for i in reversed(range(sindex)):
             if OldSpriteGroupOrder[i] in spriteGroups:
-                start += OldSpriteGroupLengths[OldSpriteGroupOrder[i]]
+                start += OldSpriteGroupLengths[OldSpriteGroupOrder[i]] * animationFrames
         m[group] = start
-    m["length"] = OldSpriteGroupLengths[OldSpriteGroupOrder[highestindex]]
+    m["length"] = OldSpriteGroupLengths[OldSpriteGroupOrder[highestindex]] * animationFrames
     for i in reversed(range(highestindex)):
         if OldSpriteGroupOrder[i] in spriteGroups:
-            m["length"] += OldSpriteGroupLengths[OldSpriteGroupOrder[i]]
+            m["length"] += OldSpriteGroupLengths[OldSpriteGroupOrder[i]] * animationFrames
+    print("Car sequence start, end",offset, offset + m["length"])
     return m
 
 class FallbackSpriteGroup:
@@ -280,11 +281,12 @@ class FallbackSpriteGroup:
         self.precision = precision
         self.repetitions = repetitions
         
-    def getIndices(self, newPrecision):
+    def getIndices(self, animationFrames, newPrecision):
         payload = []
         for i in range(self.repetitions):
-            for j in range(0,self.precision, self.precision // newPrecision):
-                payload.append(self.startOffset + i * self.precision + j)
+            for j in range(0,self.precision, animationFrames * self.precision // newPrecision):
+                for k in range(animationFrames):
+                    payload.append(self.startOffset * animationFrames + i * self.precision + j + k)
         return payload
     
 SPMap = [
@@ -315,15 +317,19 @@ SPMap = [
 ]
 
 def loadJSON(inputfile):
+    if not inputfile.exists():
+        raise Exception("Inputfile does not exist")
     try:
-        with open(inputfile,"r", encoding="utf-8") as file:
+        with inputfile.open("r", encoding="utf-8") as file:
             return json.load(file)
     except Exception as e:
         print("Could not load JSON file:", e)
 
 def writeJSON(outputfile, data):
+    if not outputfile.exists():
+        raise Exception("outputfile does not exist")
     try:
-        with open(outputfile,"w", encoding="utf-8") as file:
+        with outputfile.open("w", encoding="utf-8") as file:
             json.dump(data, file, ensure_ascii=False, indent=4)
     except Exception as e:
         print("Could not write JSON file:", e)
@@ -390,11 +396,63 @@ class ImageConsolidator:
         self.endRun(imageList)
         self.currentIndex += 1
         return 0
-        
+
+def GetVerticalFrames(car):
+    flags = car
+    VEHICLE_ENTRY_FLAG_OVERRIDE_NUM_VERTICAL_FRAMES = flags.get("overrideNumberOfVerticalFrames")
+    VEHICLE_ENTRY_FLAG_SPINNING_ADDITIONAL_FRAMES = flags.get("hasAdditionalSpinningFrames")
+    VEHICLE_ENTRY_FLAG_VEHICLE_ANIMATION = flags.get("hasVehicleAnimation")
+    VEHICLE_ENTRY_FLAG_DODGEM_INUSE_LIGHTS = flags.get("hasDodgemInUseLights")
+    VEHICLE_ENTRY_ANIMATION_OBSERVATION_TOWER = car.get("animation") == 6
+    numVerticalFrames = 1;
+    if VEHICLE_ENTRY_FLAG_OVERRIDE_NUM_VERTICAL_FRAMES:
+        numVerticalFrames = car.get("numVerticalFramesOverride",0)
+    elif not VEHICLE_ENTRY_FLAG_SPINNING_ADDITIONAL_FRAMES:
+        if VEHICLE_ENTRY_FLAG_VEHICLE_ANIMATION and not VEHICLE_ENTRY_ANIMATION_OBSERVATION_TOWER:
+            if not VEHICLE_ENTRY_FLAG_DODGEM_INUSE_LIGHTS:
+                numVerticalFrames = 4;
+            else:
+                numVerticalFrames = 2;
+        else:
+            numVerticalFrames = 1;
+    else:
+        numVerticalFrames = 32;
+    return numVerticalFrames;    
+    
+def GetHorizontalFrames(car):
+    flags = car
+    VEHICLE_ENTRY_FLAG_SWINGING = flags.get("hasSwinging")
+    VEHICLE_ENTRY_FLAG_SLIDE_SWING = flags.get("useSlideSwing")
+    VEHICLE_ENTRY_FLAG_SUSPENDED_SWING = flags.get("useSuspendedSwing")
+    VEHICLE_ENTRY_FLAG_WOODEN_WILD_MOUSE_SWING = flags.get("useWoodenWildMouseSwing")
+    numHorizontalFrames = 1
+    if (VEHICLE_ENTRY_FLAG_SWINGING):
+        if not(EHICLE_ENTRY_FLAG_SUSPENDED_SWING) and not(VEHICLE_ENTRY_FLAG_SLIDE_SWING):
+            if (VEHICLE_ENTRY_FLAG_WOODEN_WILD_MOUSE_SWING):
+                numHorizontalFrames = 3
+            else:
+                numHorizontalFrames = 5
+        elif not (VEHICLE_ENTRY_FLAG_SUSPENDED_SWING) or not (VEHICLE_ENTRY_FLAG_SLIDE_SWING):
+            numHorizontalFrames = 7
+        else:
+            numHorizontalFrames = 13
+    else:
+        numHorizontalFrames = 1
+
+    return numHorizontalFrames;
 
 def GetFallbackImages(inputfile, fallbackfile):
+    
+    inputfile = pathlib.Path(inputfile)
+    fallbackfile = pathlib.Path(fallbackfile)
     newf = loadJSON(inputfile)
     falf = loadJSON(fallbackfile)
+    if not newf:
+        print("Newf Nonetype")
+    if not falf:
+        print("Falf Nonetype")
+    if not newf or not falf:
+        raise Exception("Newf or Falf are Nonetype")
     myCars = newf["properties"]["cars"]
     theirCars = falf["properties"]["cars"]
     if type(myCars) == type(dict()):
@@ -413,13 +471,14 @@ def GetFallbackImages(inputfile, fallbackfile):
         if car.get("numSeatRows",0) > ocar.get("numSeatRows",0):
             raise Exception("Car {0} has more seat rows than fallback car".format(carno))
         
-        otherCarSpriteOffsets = GetOffsets(ocar["frames"], fpointer)
+        animationFrames = GetHorizontalFrames(car) * GetVerticalFrames(car)
+        otherCarSpriteOffsets = GetOffsets(ocar["frames"], animationFrames, fpointer)
         for i in range(1 + car.get("numSeatRows",0)):
             newOffset = i * otherCarSpriteOffsets["length"]
             for group in SPMap:
-                precision = car["spriteGroups"].get(group.newGroup,0)
+                precision = car["spriteGroups"].get(group.newGroup, 0)
                 if precision > 0:
-                    manifest = group.getIndices(precision)
+                    manifest = group.getIndices(animationFrames, precision)
                     for index in manifest:
                         myImages.append(theirImages[newOffset + otherCarSpriteOffsets[group.oldGroup] + index])
                         
