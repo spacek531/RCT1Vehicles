@@ -1,12 +1,74 @@
 import re
 import json
-
+import pathlib
 """Written by Spacek531 for manipulation of jobjectson files for the purposes of creating RCT1 rides in OpenRCT2. Paste a string and all numbers will be incremented by the total range, for the number of repetitions specified."""
 
 """
 exec(open("D:/documents/openrct2/custom rides/rct1 project/object/ordermantools.py").read())
 
 """
+def aresame(a,b):
+    return a == b
+
+"""accepts individual images only, no image ranges"""
+def ConsolidateImages(imageList):
+    for i in range(len(imageList)):
+        if type(imageList[i]) != type(""):
+            continue
+class ImageConsolidator:
+    def __init__(self, imageList):
+        self.previousPrefix = None
+        self.currentIndex = 0
+        self.runStartIndex = 0
+        self.runStartNumber = 0
+        self.currentNumber = 0
+        self.onARun = False
+        self.getn = re.compile(r"(?<=[[])(\d+)(?=[\]])")
+        self.getp = re.compile(r".*(?=[[])")
+        while not self.increment(imageList):
+            pass
+        
+    def endRun(self, imageList):
+        if not self.onARun:
+            return
+        imageList[self.runStartIndex] = "{0}[{1}..{2}]".format(self.previousPrefix,self.runStartNumber, self.currentNumber)
+        del imageList[self.runStartIndex+1 : self.currentIndex ]
+        self.previousPrefix = None
+        self.currentIndex = self.runStartIndex + 1
+        self.runStartIndex = 0
+        self.currentNumber = 0
+        self.runStartNumber = 0
+        self.runStartIndex = 0
+        self.onARun = False
+        
+    def increment(self, imageList):
+        if self.currentIndex >= len(imageList):
+            self.endRun(imageList)
+            return 1
+        if type(imageList[self.currentIndex]) != str:
+            self.endRun(imageList)
+            self.currentIndex += 1
+            return 0
+        prex = self.getp.search(imageList[self.currentIndex])
+        prex = prex and prex.group(0)
+        nrex = self.getn.search(imageList[self.currentIndex])
+        nrex = nrex and int(nrex.group(0))
+        
+        if nrex and prex:
+            if aresame(prex, self.previousPrefix) and aresame(nrex, self.currentNumber + 1):
+                self.onARun = True
+                self.currentNumber = nrex
+            else:
+                self.endRun(imageList)
+                self.previousPrefix = prex
+                self.runStartIndex = self.currentIndex
+                self.runStartNumber = nrex
+                self.currentNumber = nrex
+            self.currentIndex += 1
+            return 0
+        self.endRun(imageList)
+        self.currentIndex += 1
+        return 0
 
 numPattern = re.compile("\d+")
 
@@ -221,3 +283,218 @@ def ReverseImageOrder(inString):
     
     print(json.dumps(jobject, indent = 4))
     
+OldSpriteGroupOrder = [
+    "flat",
+    "gentleSlopes",
+    "steepSlopes",
+    "verticalSlopes",
+    "diagonalSlopes",
+    "flatBanked",
+    "inlineTwists",
+    "flatToGentleSlopeBankedTransitions",
+    "diagonalGentleSlopeBankedTransitions",
+    "gentleSlopeBankedTransitions",
+    "gentleSlopeBankedTurns",
+    "flatToGentleSlopeWhileBankedTransitions",
+    "corkscrews",
+    "restraintAnimation"]
+
+OldSpriteGroupLengths = {
+    "flat": 32,
+    "gentleSlopes": 72, 
+    "steepSlopes": 80,
+    "verticalSlopes": 116,
+    "diagonalSlopes": 24,
+    "flatBanked": 80,
+    "inlineTwists": 40,
+    "flatToGentleSlopeBankedTransitions": 128,
+    "diagonalGentleSlopeBankedTransitions": 16,
+    "gentleSlopeBankedTransitions": 16,
+    "gentleSlopeBankedTurns": 128,
+    "flatToGentleSlopeWhileBankedTransitions": 16,
+    "corkscrews": 80,
+    "restraintAnimation": 12
+    }
+
+def GetOffsets(spriteGroups, animationFrames, offset):
+    m = {}
+    highestindex = 0
+    for group in spriteGroups:
+        start = offset
+        sindex = OldSpriteGroupOrder.index(group)
+        highestindex = max(sindex, highestindex)
+        for i in reversed(range(sindex)):
+            if spriteGroups.get(OldSpriteGroupOrder[i], None):
+                #print("Adding sprites from", OldSpriteGroupOrder[i])
+                start += OldSpriteGroupLengths[OldSpriteGroupOrder[i]] * animationFrames
+        #print("Sprite Group {0} start {1}".format(group, start))
+        m[group] = start
+    m["length"] = OldSpriteGroupLengths[OldSpriteGroupOrder[highestindex]] * animationFrames
+    for i in reversed(range(highestindex)):
+        if OldSpriteGroupOrder[i] in spriteGroups:
+            m["length"] += OldSpriteGroupLengths[OldSpriteGroupOrder[i]] * animationFrames
+    #print("Car sequence start, end",offset, offset + m["length"])
+    return m
+
+class FallbackSpriteGroup:
+    def __init__(self, newgroup, oldgroup, startOffset, precision, repetitions):
+        self.newGroup = newgroup
+        self.oldGroup = oldgroup
+        self.startOffset = startOffset
+        self.precision = precision
+        self.repetitions = repetitions
+        
+    def getIndices(self, animationFrames, newPrecision):
+        payload = []
+        for i in range(self.repetitions):
+            for j in range(0,self.precision * animationFrames, animationFrames * self.precision // newPrecision):
+                for k in range(animationFrames):
+                    payload.append((self.startOffset + i * self.precision)*  animationFrames + j + k)
+        return payload
+    
+SPMap = [
+    FallbackSpriteGroup("slopeFlat", "flat", 0, 32, 1),
+    FallbackSpriteGroup("slopes12", "gentleSlopes", 0, 4, 2),
+    FallbackSpriteGroup("slopes25", "gentleSlopes", 8, 32, 2),
+    FallbackSpriteGroup("slopes42", "steepSlopes", 0, 8, 2),
+    FallbackSpriteGroup("slopes60", "steepSlopes", 16, 32,2),
+    FallbackSpriteGroup("slopes75", "verticalSlopes", 0, 4, 2),
+    FallbackSpriteGroup("slopes90", "verticalSlopes", 8, 32, 2),
+    FallbackSpriteGroup("slopesLoop", "verticalSlopes", 72, 4, 10),
+    FallbackSpriteGroup("slopeInverted", "verticalSlopes", 112, 4, 1),
+    FallbackSpriteGroup("slopes8", "diagonalSlopes", 0, 4, 2),
+    FallbackSpriteGroup("slopes16", "diagonalSlopes", 8, 4, 2),
+    FallbackSpriteGroup("slopes50", "diagonalSlopes", 16, 4, 2),
+    FallbackSpriteGroup("flatBanked22", "flatBanked", 0, 8, 2),
+    FallbackSpriteGroup("flatBanked45", "flatBanked", 16, 32, 2),
+    FallbackSpriteGroup("flatBanked67", "inlineTwists", 0, 4, 2),
+    FallbackSpriteGroup("flatBanked90", "inlineTwists", 8, 4, 2),
+    FallbackSpriteGroup("inlineTwists", "inlineTwists", 16, 4, 10),
+    FallbackSpriteGroup("slopes12Banked22", "flatToGentleSlopeBankedTransitions", 0, 32, 4),
+    FallbackSpriteGroup("slopes8Banked22", "diagonalGentleSlopeBankedTransitions", 0, 4, 4),
+    FallbackSpriteGroup("slopes25Banked22", "gentleSlopeBankedTransitions", 0,4, 4),
+    FallbackSpriteGroup("slopes25Banked45", "gentleSlopeBankedTurns", 0,32, 4),
+    FallbackSpriteGroup("slopes12Banked45", "flatToGentleSlopeWhileBankedTransitions", 0,4, 4),
+    FallbackSpriteGroup("corkscrews", "corkscrews", 0, 4, 20),
+    FallbackSpriteGroup("restraintAnimation", "restraintAnimation", 0, 4, 3)
+]
+
+def loadJSON(inputfile):
+    if not inputfile.exists():
+        raise Exception("Inputfile does not exist")
+    try:
+        with inputfile.open("r", encoding="utf-8") as file:
+            return json.load(file)
+    except Exception as e:
+        print("Could not load JSON file:", e)
+
+def writeJSON(outputfile, data):
+    if not outputfile.exists():
+        raise Exception("outputfile does not exist")
+    try:
+        with outputfile.open("w", encoding="utf-8") as file:
+            json.dump(data, file, ensure_ascii=False, indent=4)
+    except Exception as e:
+        print("Could not write JSON file:", e)
+
+def GetVerticalFrames(car):
+    flags = car
+    VEHICLE_ENTRY_FLAG_OVERRIDE_NUM_VERTICAL_FRAMES = flags.get("overrideNumberOfVerticalFrames")
+    VEHICLE_ENTRY_FLAG_SPINNING_ADDITIONAL_FRAMES = flags.get("hasAdditionalSpinningFrames")
+    VEHICLE_ENTRY_FLAG_VEHICLE_ANIMATION = flags.get("hasVehicleAnimation")
+    VEHICLE_ENTRY_FLAG_DODGEM_INUSE_LIGHTS = flags.get("hasDodgemInUseLights")
+    VEHICLE_ENTRY_ANIMATION_OBSERVATION_TOWER = car.get("animation") == 6
+    numVerticalFrames = 1;
+    if VEHICLE_ENTRY_FLAG_OVERRIDE_NUM_VERTICAL_FRAMES:
+        numVerticalFrames = car.get("numVerticalFramesOverride",0)
+    elif not VEHICLE_ENTRY_FLAG_SPINNING_ADDITIONAL_FRAMES:
+        if VEHICLE_ENTRY_FLAG_VEHICLE_ANIMATION and not VEHICLE_ENTRY_ANIMATION_OBSERVATION_TOWER:
+            if not VEHICLE_ENTRY_FLAG_DODGEM_INUSE_LIGHTS:
+                numVerticalFrames = 4;
+            else:
+                numVerticalFrames = 2;
+        else:
+            numVerticalFrames = 1;
+    else:
+        numVerticalFrames = 32;
+    return numVerticalFrames;    
+    
+def GetHorizontalFrames(car):
+    flags = car
+    VEHICLE_ENTRY_FLAG_SWINGING = flags.get("hasSwinging", None)
+    VEHICLE_ENTRY_FLAG_SLIDE_SWING = flags.get("useSlideSwing", None)
+    VEHICLE_ENTRY_FLAG_SUSPENDED_SWING = flags.get("useSuspendedSwing", None)
+    VEHICLE_ENTRY_FLAG_WOODEN_WILD_MOUSE_SWING = flags.get("useWoodenWildMouseSwing", None)
+    numHorizontalFrames = 1
+    if VEHICLE_ENTRY_FLAG_SWINGING:
+        if not VEHICLE_ENTRY_FLAG_SUSPENDED_SWING and not VEHICLE_ENTRY_FLAG_SLIDE_SWING:
+            if VEHICLE_ENTRY_FLAG_WOODEN_WILD_MOUSE_SWING:
+                numHorizontalFrames = 3
+            else:
+                numHorizontalFrames = 5
+        elif not VEHICLE_ENTRY_FLAG_SUSPENDED_SWING or not VEHICLE_ENTRY_FLAG_SLIDE_SWING:
+            numHorizontalFrames = 7
+        else:
+            numHorizontalFrames = 13
+    else:
+        numHorizontalFrames = 1
+
+    return numHorizontalFrames;
+
+def GetFallbackImages(inputfile, fallbackfile):
+    
+    inputfile = pathlib.Path(inputfile)
+    fallbackfile = pathlib.Path(fallbackfile)
+    newf = loadJSON(inputfile)
+    falf = loadJSON(fallbackfile)
+    if not newf:
+        print("Newf Nonetype")
+    if not falf:
+        print("Falf Nonetype")
+    if not newf or not falf:
+        raise Exception("Newf or Falf are Nonetype")
+    myCars = newf["properties"]["cars"]
+    theirCars = falf["properties"]["cars"]
+    if type(myCars) == type(dict()):
+        myCars = [myCars]
+    if type(theirCars) == type(dict()):
+        theirCars = [theirCars]
+    if len(myCars) > len(theirCars):
+        raise Exception("More cars in input file than in fallback file")
+    
+    theirImages = ScrapeImages(falf)
+    myImages = [ newf["images"][0], newf["images"][1], newf["images"][2] ]
+    fpointer = 3 # the sprite of the current car being served
+    carno = 0 # the fallback car referenced
+    for car in myCars:
+        ocar = theirCars[carno]
+        if car.get("numSeatRows",0) > ocar.get("numSeatRows",0):
+            raise Exception("Car {0} has more seat rows than fallback car".format(carno))
+        
+        animationFrames = GetHorizontalFrames(car) * GetVerticalFrames(car)
+        if not ocar.get("frames"):
+            print("Skipping car {0} - frames field not present in othercar".format(carno))
+            continue
+        otherCarSpriteOffsets = GetOffsets(ocar["frames"], animationFrames, fpointer)
+        for i in range(1 + car.get("numSeatRows",0)):
+            newOffset = i * otherCarSpriteOffsets["length"]
+            for group in SPMap:
+                precision = car["spriteGroups"].get(group.newGroup, 0)
+                if precision > 0:
+                    manifest = group.getIndices(animationFrames, precision)
+                    for index in manifest:
+                        try:
+                            myImages.append(theirImages[newOffset + otherCarSpriteOffsets[group.oldGroup] + index])
+                            #print("Add othercar sprite {0}: {4} (car {1} repetition {2} sprite group {3})".format(newOffset + otherCarSpriteOffsets[group.oldGroup] + index, carno, i, group.newGroup, theirImages[newOffset + otherCarSpriteOffsets[group.oldGroup] + index]))
+                        except Exception as e:
+                            print("Could not add othercar sprite {0} (car {1} repetition {2} sprite group {3})".format(newOffset + otherCarSpriteOffsets[group.oldGroup] + index, carno, i, group.newGroup), e)
+                        
+
+        carno += 1
+        fpointer += otherCarSpriteOffsets["length"] * (ocar.get("numSeatRows",0) + 1)
+    
+    ImageConsolidator(myImages)
+    newf["noCsgImages"] = myImages
+    
+    writeJSON(inputfile, newf)
+    print("Creating fallbacks complete")
