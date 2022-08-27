@@ -284,9 +284,9 @@ class FallbackSpriteGroup:
     def getIndices(self, animationFrames, newPrecision):
         payload = []
         for i in range(self.repetitions):
-            for j in range(0,self.precision, animationFrames * self.precision // newPrecision):
+            for j in range(0,self.precision * animationFrames, animationFrames * self.precision // newPrecision):
                 for k in range(animationFrames):
-                    payload.append(self.startOffset * animationFrames + i * self.precision + j + k)
+                    payload.append((self.startOffset + i * self.precision)*  animationFrames + j + k)
         return payload
     
 SPMap = [
@@ -472,6 +472,9 @@ def GetFallbackImages(inputfile, fallbackfile):
             raise Exception("Car {0} has more seat rows than fallback car".format(carno))
         
         animationFrames = GetHorizontalFrames(car) * GetVerticalFrames(car)
+        if not ocar.get("frames"):
+            print("Skipping car {0} - frames field not present in othercar".format(carno))
+            continue
         otherCarSpriteOffsets = GetOffsets(ocar["frames"], animationFrames, fpointer)
         for i in range(1 + car.get("numSeatRows",0)):
             newOffset = i * otherCarSpriteOffsets["length"]
@@ -484,7 +487,7 @@ def GetFallbackImages(inputfile, fallbackfile):
                         
 
         carno += 1
-        fpointer += otherCarSpriteOffsets["length"] * ocar.get("numSeatRows",0)
+        fpointer += otherCarSpriteOffsets["length"] * (ocar.get("numSeatRows",0) + 1)
     
     ImageConsolidator(myImages)
     newf["noCsgImages"] = myImages
