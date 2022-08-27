@@ -431,4 +431,3 @@ def GetFallbackImages(inputfile, fallbackfile):
     newf["noCsgImages"] = myImages
     
     writeJSON(inputfile, newf)
-    
