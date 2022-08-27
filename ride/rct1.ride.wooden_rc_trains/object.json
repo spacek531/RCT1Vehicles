@@ -6,7 +6,7 @@
     "sourceGame": "rct1",
     "objectType": "ride",
     "properties": {
-        "type": "wooden_rc",
+        "type": "classic_wooden_rc",
         "category": "rollercoaster",
         "minCarsPerTrain": 2,
         "maxCarsPerTrain": 7,
