@@ -221,3 +221,213 @@ def ReverseImageOrder(inString):
     
     print(json.dumps(jobject, indent = 4))
     
+OldSpriteGroupOrder = [
+    "flat",
+    "gentleSlopes",
+    "steepSlopes",
+    "verticalSlopes",
+    "diagonalSlopes",
+    "flatBanked",
+    "inlineTwists",
+    "flatToGentleSlopeBankedTransitions",
+    "flatToGentleSlopeBankedTransitions",
+    "diagonalGentleSlopeBankedTransitions",
+    "gentleSlopeBankedTransitions",
+    "gentleSlopeBankedTurns",
+    "flatToGentleSlopeWhileBankedTransitions",
+    "corkscrews",
+    "restraintAnimation"]
+
+OldSpriteGroupLengths = {
+    "flat": 32,
+    "gentleSlopes": 72, 
+    "steepSlopes": 80,
+    "verticalSlopes": 116,
+    "diagonalSlopes": 24,
+    "flatBanked": 80,
+    "inlineTwists": 40,
+    "flatToGentleSlopeBankedTransitions": 128,
+    "diagonalGentleSlopeBankedTransitions": 16,
+    "gentleSlopeBankedTransitions": 16,
+    "gentleSlopeBankedTurns": 128,
+    "flatToGentleSlopeWhileBankedTransitions": 16,
+    "corkscrews": 80,
+    "restraintAnimation": 12
+    }
+
+def GetOffsets(spriteGroups, offset):
+    m = {}
+    highestindex = 0
+    for group in spriteGroups:
+        start = offset
+        sindex = OldSpriteGroupOrder.index(group)
+        highestindex = max(sindex, highestindex)
+        for i in reversed(range(sindex)):
+            if OldSpriteGroupOrder[i] in spriteGroups:
+                start += OldSpriteGroupLengths[OldSpriteGroupOrder[i]]
+        m[group] = start
+    m["length"] = OldSpriteGroupLengths[OldSpriteGroupOrder[highestindex]]
+    for i in reversed(range(highestindex)):
+        if OldSpriteGroupOrder[i] in spriteGroups:
+            m["length"] += OldSpriteGroupLengths[OldSpriteGroupOrder[i]]
+    return m
+
+class FallbackSpriteGroup:
+    def __init__(self, newgroup, oldgroup, startOffset, precision, repetitions):
+        self.newGroup = newgroup
+        self.oldGroup = oldgroup
+        self.startOffset = startOffset
+        self.precision = precision
+        self.repetitions = repetitions
+        
+    def getIndices(self, newPrecision):
+        payload = []
+        for i in range(self.repetitions):
+            for j in range(0,self.precision, self.precision // newPrecision):
+                payload.append(self.startOffset + i * self.precision + j)
+        return payload
+    
+SPMap = [
+    FallbackSpriteGroup("slopeFlat", "flat", 0, 32, 1),
+    FallbackSpriteGroup("slopes12", "gentleSlopes", 0, 4, 2),
+    FallbackSpriteGroup("slopes25", "gentleSlopes", 8, 32, 2),
+    FallbackSpriteGroup("slopes42", "steepSlopes", 0, 8, 2),
+    FallbackSpriteGroup("slopes60", "steepSlopes", 16, 32,2),
+    FallbackSpriteGroup("slopes75", "verticalSlopes", 0, 4, 2),
+    FallbackSpriteGroup("slopes90", "verticalSlopes", 8, 32, 2),
+    FallbackSpriteGroup("slopesLoop", "verticalSlopes", 40, 4, 18),
+    FallbackSpriteGroup("slopeInverted", "verticalSlopes", 112, 4, 1),
+    FallbackSpriteGroup("slopes8", "diagonalSlopes", 0, 4, 2),
+    FallbackSpriteGroup("slopes16", "diagonalSlopes", 8, 4, 2),
+    FallbackSpriteGroup("slopes50", "diagonalSlopes", 16, 4, 2),
+    FallbackSpriteGroup("flatBanked22", "flatBanked", 0, 8, 2),
+    FallbackSpriteGroup("flatBanked45", "flatBanked", 16, 32, 2),
+    FallbackSpriteGroup("flatBanked67", "inlineTwists", 0, 4, 2),
+    FallbackSpriteGroup("flatBanked90", "inlineTwists", 8, 4, 2),
+    FallbackSpriteGroup("inlineTwists", "inlineTwists", 16, 4, 10),
+    FallbackSpriteGroup("slopes12Banked22", "flatToGentleSlopeBankedTransitions", 0, 32, 4),
+    FallbackSpriteGroup("slopes8Banked22", "diagonalGentleSlopeBankedTransitions", 0, 4, 4),
+    FallbackSpriteGroup("slopes25Banked22", "gentleSlopeBankedTransitions", 0,4, 4),
+    FallbackSpriteGroup("slopes25Banked45", "gentleSlopeBankedTurns", 0,32, 4),
+    FallbackSpriteGroup("slopes12Banked45", "flatToGentleSlopeWhileBankedTransitions", 0,4, 4),
+    FallbackSpriteGroup("corkscrews", "corkscrews", 0, 4, 20),
+    FallbackSpriteGroup("restraintAnimation", "restraintAnimation", 0, 4, 3)
+]
+
+def loadJSON(inputfile):
+    try:
+        with open(inputfile,"r", encoding="utf-8") as file:
+            return json.load(file)
+    except Exception as e:
+        print("Could not load JSON file:", e)
+
+def writeJSON(outputfile, data):
+    try:
+        with open(outputfile,"w", encoding="utf-8") as file:
+            json.dump(data, file, ensure_ascii=False, indent=4)
+    except Exception as e:
+        print("Could not write JSON file:", e)
+        
+def aresame(a,b):
+    return a == b
+
+"""accepts individual images only, no image ranges"""
+def ConsolidateImages(imageList):
+    for i in range(len(imageList)):
+        if type(imageList[i]) != type(""):
+            continue
+class ImageConsolidator:
+    def __init__(self, imageList):
+        self.previousPrefix = None
+        self.currentIndex = 0
+        self.runStartIndex = 0
+        self.runStartNumber = 0
+        self.currentNumber = 0
+        self.onARun = False
+        self.getn = re.compile(r"(?<=[[])(\d+)(?=[\]])")
+        self.getp = re.compile(r".*(?=[[])")
+        while not self.increment(imageList):
+            pass
+        
+    def endRun(self, imageList):
+        if not self.onARun:
+            return
+        imageList[self.runStartIndex] = "{0}[{1}..{2}]".format(self.previousPrefix,self.runStartNumber, self.currentNumber)
+        del imageList[self.runStartIndex+1 : self.currentIndex ]
+        self.previousPrefix = None
+        self.currentIndex = self.runStartIndex + 1
+        self.runStartIndex = 0
+        self.currentNumber = 0
+        self.runStartNumber = 0
+        self.runStartIndex = 0
+        self.onARun = False
+        
+    def increment(self, imageList):
+        if self.currentIndex >= len(imageList):
+            self.endRun(imageList)
+            return 1
+        if type(imageList[self.currentIndex]) != str:
+            self.endRun(imageList)
+            self.currentIndex += 1
+            return 0
+        prex = self.getp.search(imageList[self.currentIndex])
+        prex = prex and prex.group(0)
+        nrex = self.getn.search(imageList[self.currentIndex])
+        nrex = nrex and int(nrex.group(0))
+        
+        if nrex and prex:
+            if aresame(prex, self.previousPrefix) and aresame(nrex, self.currentNumber + 1):
+                self.onARun = True
+                self.currentNumber = nrex
+            else:
+                self.endRun(imageList)
+                self.previousPrefix = prex
+                self.runStartIndex = self.currentIndex
+                self.runStartNumber = nrex
+                self.currentNumber = nrex
+            self.currentIndex += 1
+            return 0
+        self.endRun(imageList)
+        self.currentIndex += 1
+        return 0
+        
+
+def GetFallbackImages(inputfile, fallbackfile):
+    newf = loadJSON(inputfile)
+    falf = loadJSON(fallbackfile)
+    myCars = newf["properties"]["cars"]
+    theirCars = falf["properties"]["cars"]
+    if type(myCars) == type(dict()):
+        myCars = [myCars]
+    if type(theirCars) == type(dict()):
+        theirCars = [theirCars]
+    if len(myCars) > len(theirCars):
+        raise Exception("More cars in input file than in fallback file")
+    
+    theirImages = ScrapeImages(falf)
+    myImages = [ newf["images"][0], newf["images"][1], newf["images"][2] ]
+    fpointer = 3 # the sprite of the current car being served
+    carno = 0 # the fallback car referenced
+    for car in myCars:
+        ocar = theirCars[carno]
+        if car.get("numSeatRows",0) > ocar.get("numSeatRows",0):
+            raise Exception("Car {0} has more seat rows than fallback car".format(carno))
+        
+        otherCarSpriteOffsets = GetOffsets(ocar["frames"], fpointer)
+        for i in range(1 + car.get("numSeatRows",0)):
+            newOffset = i * otherCarSpriteOffsets["length"]
+            for group in SPMap:
+                precision = car["spriteGroups"].get(group.newGroup,0)
+                if precision > 0:
+                    manifest = group.getIndices(precision)
+                    for index in manifest:
+                        myImages.append(theirImages[newOffset + otherCarSpriteOffsets[group.oldGroup] + index])
+                        
+
+        carno += 1
+        fpointer += otherCarSpriteOffsets["length"] * ocar.get("numSeatRows",0)
+    
+    ImageConsolidator(myImages)
+    newf["noCsgImages"] = myImages
+    
+    writeJSON(inputfile, newf)
