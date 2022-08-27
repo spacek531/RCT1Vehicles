@@ -7,6 +7,68 @@ import pathlib
 exec(open("D:/documents/openrct2/custom rides/rct1 project/object/ordermantools.py").read())
 
 """
+def aresame(a,b):
+    return a == b
+
+"""accepts individual images only, no image ranges"""
+def ConsolidateImages(imageList):
+    for i in range(len(imageList)):
+        if type(imageList[i]) != type(""):
+            continue
+class ImageConsolidator:
+    def __init__(self, imageList):
+        self.previousPrefix = None
+        self.currentIndex = 0
+        self.runStartIndex = 0
+        self.runStartNumber = 0
+        self.currentNumber = 0
+        self.onARun = False
+        self.getn = re.compile(r"(?<=[[])(\d+)(?=[\]])")
+        self.getp = re.compile(r".*(?=[[])")
+        while not self.increment(imageList):
+            pass
+        
+    def endRun(self, imageList):
+        if not self.onARun:
+            return
+        imageList[self.runStartIndex] = "{0}[{1}..{2}]".format(self.previousPrefix,self.runStartNumber, self.currentNumber)
+        del imageList[self.runStartIndex+1 : self.currentIndex ]
+        self.previousPrefix = None
+        self.currentIndex = self.runStartIndex + 1
+        self.runStartIndex = 0
+        self.currentNumber = 0
+        self.runStartNumber = 0
+        self.runStartIndex = 0
+        self.onARun = False
+        
+    def increment(self, imageList):
+        if self.currentIndex >= len(imageList):
+            self.endRun(imageList)
+            return 1
+        if type(imageList[self.currentIndex]) != str:
+            self.endRun(imageList)
+            self.currentIndex += 1
+            return 0
+        prex = self.getp.search(imageList[self.currentIndex])
+        prex = prex and prex.group(0)
+        nrex = self.getn.search(imageList[self.currentIndex])
+        nrex = nrex and int(nrex.group(0))
+        
+        if nrex and prex:
+            if aresame(prex, self.previousPrefix) and aresame(nrex, self.currentNumber + 1):
+                self.onARun = True
+                self.currentNumber = nrex
+            else:
+                self.endRun(imageList)
+                self.previousPrefix = prex
+                self.runStartIndex = self.currentIndex
+                self.runStartNumber = nrex
+                self.currentNumber = nrex
+            self.currentIndex += 1
+            return 0
+        self.endRun(imageList)
+        self.currentIndex += 1
+        return 0
 
 numPattern = re.compile("\d+")
 
@@ -230,7 +292,6 @@ OldSpriteGroupOrder = [
     "flatBanked",
     "inlineTwists",
     "flatToGentleSlopeBankedTransitions",
-    "flatToGentleSlopeBankedTransitions",
     "diagonalGentleSlopeBankedTransitions",
     "gentleSlopeBankedTransitions",
     "gentleSlopeBankedTurns",
@@ -263,14 +324,16 @@ def GetOffsets(spriteGroups, animationFrames, offset):
         sindex = OldSpriteGroupOrder.index(group)
         highestindex = max(sindex, highestindex)
         for i in reversed(range(sindex)):
-            if OldSpriteGroupOrder[i] in spriteGroups:
+            if spriteGroups.get(OldSpriteGroupOrder[i], None):
+                #print("Adding sprites from", OldSpriteGroupOrder[i])
                 start += OldSpriteGroupLengths[OldSpriteGroupOrder[i]] * animationFrames
+        #print("Sprite Group {0} start {1}".format(group, start))
         m[group] = start
     m["length"] = OldSpriteGroupLengths[OldSpriteGroupOrder[highestindex]] * animationFrames
     for i in reversed(range(highestindex)):
         if OldSpriteGroupOrder[i] in spriteGroups:
             m["length"] += OldSpriteGroupLengths[OldSpriteGroupOrder[i]] * animationFrames
-    print("Car sequence start, end",offset, offset + m["length"])
+    #print("Car sequence start, end",offset, offset + m["length"])
     return m
 
 class FallbackSpriteGroup:
@@ -297,7 +360,7 @@ SPMap = [
     FallbackSpriteGroup("slopes60", "steepSlopes", 16, 32,2),
     FallbackSpriteGroup("slopes75", "verticalSlopes", 0, 4, 2),
     FallbackSpriteGroup("slopes90", "verticalSlopes", 8, 32, 2),
-    FallbackSpriteGroup("slopesLoop", "verticalSlopes", 40, 4, 18),
+    FallbackSpriteGroup("slopesLoop", "verticalSlopes", 72, 4, 10),
     FallbackSpriteGroup("slopeInverted", "verticalSlopes", 112, 4, 1),
     FallbackSpriteGroup("slopes8", "diagonalSlopes", 0, 4, 2),
     FallbackSpriteGroup("slopes16", "diagonalSlopes", 8, 4, 2),
@@ -333,69 +396,6 @@ def writeJSON(outputfile, data):
             json.dump(data, file, ensure_ascii=False, indent=4)
     except Exception as e:
         print("Could not write JSON file:", e)
-        
-def aresame(a,b):
-    return a == b
-
-"""accepts individual images only, no image ranges"""
-def ConsolidateImages(imageList):
-    for i in range(len(imageList)):
-        if type(imageList[i]) != type(""):
-            continue
-class ImageConsolidator:
-    def __init__(self, imageList):
-        self.previousPrefix = None
-        self.currentIndex = 0
-        self.runStartIndex = 0
-        self.runStartNumber = 0
-        self.currentNumber = 0
-        self.onARun = False
-        self.getn = re.compile(r"(?<=[[])(\d+)(?=[\]])")
-        self.getp = re.compile(r".*(?=[[])")
-        while not self.increment(imageList):
-            pass
-        
-    def endRun(self, imageList):
-        if not self.onARun:
-            return
-        imageList[self.runStartIndex] = "{0}[{1}..{2}]".format(self.previousPrefix,self.runStartNumber, self.currentNumber)
-        del imageList[self.runStartIndex+1 : self.currentIndex ]
-        self.previousPrefix = None
-        self.currentIndex = self.runStartIndex + 1
-        self.runStartIndex = 0
-        self.currentNumber = 0
-        self.runStartNumber = 0
-        self.runStartIndex = 0
-        self.onARun = False
-        
-    def increment(self, imageList):
-        if self.currentIndex >= len(imageList):
-            self.endRun(imageList)
-            return 1
-        if type(imageList[self.currentIndex]) != str:
-            self.endRun(imageList)
-            self.currentIndex += 1
-            return 0
-        prex = self.getp.search(imageList[self.currentIndex])
-        prex = prex and prex.group(0)
-        nrex = self.getn.search(imageList[self.currentIndex])
-        nrex = nrex and int(nrex.group(0))
-        
-        if nrex and prex:
-            if aresame(prex, self.previousPrefix) and aresame(nrex, self.currentNumber + 1):
-                self.onARun = True
-                self.currentNumber = nrex
-            else:
-                self.endRun(imageList)
-                self.previousPrefix = prex
-                self.runStartIndex = self.currentIndex
-                self.runStartNumber = nrex
-                self.currentNumber = nrex
-            self.currentIndex += 1
-            return 0
-        self.endRun(imageList)
-        self.currentIndex += 1
-        return 0
 
 def GetVerticalFrames(car):
     flags = car
@@ -421,18 +421,18 @@ def GetVerticalFrames(car):
     
 def GetHorizontalFrames(car):
     flags = car
-    VEHICLE_ENTRY_FLAG_SWINGING = flags.get("hasSwinging")
-    VEHICLE_ENTRY_FLAG_SLIDE_SWING = flags.get("useSlideSwing")
-    VEHICLE_ENTRY_FLAG_SUSPENDED_SWING = flags.get("useSuspendedSwing")
-    VEHICLE_ENTRY_FLAG_WOODEN_WILD_MOUSE_SWING = flags.get("useWoodenWildMouseSwing")
+    VEHICLE_ENTRY_FLAG_SWINGING = flags.get("hasSwinging", None)
+    VEHICLE_ENTRY_FLAG_SLIDE_SWING = flags.get("useSlideSwing", None)
+    VEHICLE_ENTRY_FLAG_SUSPENDED_SWING = flags.get("useSuspendedSwing", None)
+    VEHICLE_ENTRY_FLAG_WOODEN_WILD_MOUSE_SWING = flags.get("useWoodenWildMouseSwing", None)
     numHorizontalFrames = 1
-    if (VEHICLE_ENTRY_FLAG_SWINGING):
-        if not(EHICLE_ENTRY_FLAG_SUSPENDED_SWING) and not(VEHICLE_ENTRY_FLAG_SLIDE_SWING):
-            if (VEHICLE_ENTRY_FLAG_WOODEN_WILD_MOUSE_SWING):
+    if VEHICLE_ENTRY_FLAG_SWINGING:
+        if not VEHICLE_ENTRY_FLAG_SUSPENDED_SWING and not VEHICLE_ENTRY_FLAG_SLIDE_SWING:
+            if VEHICLE_ENTRY_FLAG_WOODEN_WILD_MOUSE_SWING:
                 numHorizontalFrames = 3
             else:
                 numHorizontalFrames = 5
-        elif not (VEHICLE_ENTRY_FLAG_SUSPENDED_SWING) or not (VEHICLE_ENTRY_FLAG_SLIDE_SWING):
+        elif not VEHICLE_ENTRY_FLAG_SUSPENDED_SWING or not VEHICLE_ENTRY_FLAG_SLIDE_SWING:
             numHorizontalFrames = 7
         else:
             numHorizontalFrames = 13
@@ -483,7 +483,11 @@ def GetFallbackImages(inputfile, fallbackfile):
                 if precision > 0:
                     manifest = group.getIndices(animationFrames, precision)
                     for index in manifest:
-                        myImages.append(theirImages[newOffset + otherCarSpriteOffsets[group.oldGroup] + index])
+                        try:
+                            myImages.append(theirImages[newOffset + otherCarSpriteOffsets[group.oldGroup] + index])
+                            #print("Add othercar sprite {0}: {4} (car {1} repetition {2} sprite group {3})".format(newOffset + otherCarSpriteOffsets[group.oldGroup] + index, carno, i, group.newGroup, theirImages[newOffset + otherCarSpriteOffsets[group.oldGroup] + index]))
+                        except Exception as e:
+                            print("Could not add othercar sprite {0} (car {1} repetition {2} sprite group {3})".format(newOffset + otherCarSpriteOffsets[group.oldGroup] + index, carno, i, group.newGroup), e)
                         
 
         carno += 1
@@ -493,3 +497,4 @@ def GetFallbackImages(inputfile, fallbackfile):
     newf["noCsgImages"] = myImages
     
     writeJSON(inputfile, newf)
+    print("Creating fallbacks complete")
