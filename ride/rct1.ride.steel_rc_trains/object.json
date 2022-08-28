@@ -13,7 +13,7 @@
         "numEmptyCars": 0,
         "defaultCar": 1,
         "headCars": 0,
-        "buildMenuPriority": 1,
+        "buildMenuPriority": 2,
         "carColours": [
             [
                 ["light_blue", "white", "black"]
@@ -60,7 +60,6 @@
             },
             {
                 "rotationFrameMask": 15,
-                "numRotationFrames":16,
                 "spacing": 208896,
                 "mass": 525,
                 "numSeats": 4,
@@ -94,7 +93,7 @@
         ]
     },
     "images": [
-        "$CSG[64210]",
+        { "path": "images/preview.png", "format": "raw" },
         "",
         "",
             "$CSG[2058..2073]",
@@ -938,7 +937,7 @@
         "$CSG[3681]"
     ],
     "noCsgImages": [
-        "$CSG[64195]",
+        { "path": "images/preview.png", "format": "raw" },
         "",
         "",
         "$RCT2:OBJDATA/SCHT1.DAT[3]",
