@@ -129,6 +129,8 @@ def ScrapeImages(jobject):
                         images.append(prefix+"["+str(i)+"]")
                 except Exception as e:
                     print("Error with string \""+s+"\"",rng, e)
+            else:
+                images.append(s)
         elif type(s) == dict:
             images.append(s)
     return images
@@ -369,7 +371,7 @@ SPMap = [
     FallbackSpriteGroup("flatBanked45", "flatBanked", 16, 32, 2),
     FallbackSpriteGroup("flatBanked67", "inlineTwists", 0, 4, 2),
     FallbackSpriteGroup("flatBanked90", "inlineTwists", 8, 4, 2),
-    FallbackSpriteGroup("inlineTwists", "inlineTwists", 16, 4, 10),
+    FallbackSpriteGroup("inlineTwists", "inlineTwists", 16, 4, 6),
     FallbackSpriteGroup("slopes12Banked22", "flatToGentleSlopeBankedTransitions", 0, 32, 4),
     FallbackSpriteGroup("slopes8Banked22", "diagonalGentleSlopeBankedTransitions", 0, 4, 4),
     FallbackSpriteGroup("slopes25Banked22", "gentleSlopeBankedTransitions", 0,4, 4),
@@ -394,6 +396,7 @@ def writeJSON(outputfile, data):
     try:
         with outputfile.open("w", encoding="utf-8") as file:
             json.dump(data, file, ensure_ascii=False, indent=4)
+            file.write("\n")
     except Exception as e:
         print("Could not write JSON file:", e)
 
@@ -401,12 +404,13 @@ def GetVerticalFrames(car):
     flags = car
     VEHICLE_ENTRY_FLAG_OVERRIDE_NUM_VERTICAL_FRAMES = flags.get("overrideNumberOfVerticalFrames")
     VEHICLE_ENTRY_FLAG_SPINNING_ADDITIONAL_FRAMES = flags.get("hasAdditionalSpinningFrames")
-    VEHICLE_ENTRY_FLAG_VEHICLE_ANIMATION = flags.get("hasVehicleAnimation")
+    VEHICLE_ENTRY_FLAG_VEHICLE_ANIMATION = flags.get("hasVehicleAnimation6")
     VEHICLE_ENTRY_FLAG_DODGEM_INUSE_LIGHTS = flags.get("hasDodgemInUseLights")
     VEHICLE_ENTRY_ANIMATION_OBSERVATION_TOWER = car.get("animation") == 6
+    print("override",VEHICLE_ENTRY_FLAG_OVERRIDE_NUM_VERTICAL_FRAMES,"additional",VEHICLE_ENTRY_FLAG_SPINNING_ADDITIONAL_FRAMES,"animation",VEHICLE_ENTRY_FLAG_VEHICLE_ANIMATION,"dodgems",VEHICLE_ENTRY_FLAG_DODGEM_INUSE_LIGHTS, "obs1",VEHICLE_ENTRY_ANIMATION_OBSERVATION_TOWER)
     numVerticalFrames = 1;
     if VEHICLE_ENTRY_FLAG_OVERRIDE_NUM_VERTICAL_FRAMES:
-        numVerticalFrames = car.get("numVerticalFramesOverride",0)
+        numVerticalFrames = car.get("numVerticalFramesOverride",1)
     elif not VEHICLE_ENTRY_FLAG_SPINNING_ADDITIONAL_FRAMES:
         if VEHICLE_ENTRY_FLAG_VEHICLE_ANIMATION and not VEHICLE_ENTRY_ANIMATION_OBSERVATION_TOWER:
             if not VEHICLE_ENTRY_FLAG_DODGEM_INUSE_LIGHTS:
@@ -481,6 +485,8 @@ def GetFallbackImages(inputfile, fallbackfile):
             for group in SPMap:
                 precision = car["spriteGroups"].get(group.newGroup, 0)
                 if precision > 0:
+                    if not otherCarSpriteOffsets.get(group.oldGroup):
+                        raise Exception("Car {0} does not have oldSpriteGroup {1} for newSpriteGroup {2}".format(carno, group.oldGroup,group.newGroup))
                     manifest = group.getIndices(animationFrames, precision)
                     for index in manifest:
                         try:
