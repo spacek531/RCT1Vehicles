@@ -1,6 +1,9 @@
 {
     "id": "rct1aa.ride.mini_helicopters",
-    "authors": ["Chris Sawyer", "Simon Foster"],
+    "authors": [
+        "Chris Sawyer",
+        "Simon Foster"
+    ],
     "version": "1.0",
     "originalId": "00000000|#RCT1HEL|00000000",
     "sourceGame": "rct1aa",
@@ -18,19 +21,39 @@
         "tailCars": 1,
         "carColours": [
             [
-                ["light_blue", "yellow", "black"]
+                [
+                    "light_blue",
+                    "yellow",
+                    "black"
+                ]
             ],
             [
-                ["bright_green", "white", "black"]
+                [
+                    "bright_green",
+                    "white",
+                    "black"
+                ]
             ],
             [
-                ["bright_red", "white", "black"]
+                [
+                    "bright_red",
+                    "white",
+                    "black"
+                ]
             ],
             [
-                ["yellow", "bright_red", "black"]
+                [
+                    "yellow",
+                    "bright_red",
+                    "black"
+                ]
             ],
             [
-                ["light_purple", "bright_red", "black"]
+                [
+                    "light_purple",
+                    "bright_red",
+                    "black"
+                ]
             ]
         ],
         "cars": [
@@ -45,15 +68,18 @@
                 "poweredMaxSpeed": 5,
                 "drawOrder": 6,
                 "spriteGroups": {
-                    "slopeFlat":16,
-                    "slopes12":4,
-                    "slopes25":4,
+                    "slopeFlat": 16,
+                    "slopes12": 4,
+                    "slopes25": 4,
                     "restraintAnimation": 4
                 },
                 "hasAdditionalColour1": true,
                 "isPowered": true,
                 "hasVehicleAnimation": true,
-                "loadingPositions": [3, -3]
+                "loadingPositions": [
+                    3,
+                    -3
+                ]
             },
             {
                 "rotationFrameMask": 0,
@@ -63,7 +89,7 @@
                 "carVisual": 1,
                 "drawOrder": 8,
                 "spriteGroups": {
-                    "slopeFlat":1
+                    "slopeFlat": 1
                 },
                 "isPowered": true
             }
@@ -75,7 +101,6 @@
         "",
         "",
         "$CSG[32877..33004]",
-
         "$CSG[33005..33008]",
         "$CSG[33017..33020]",
         "$CSG[33029..33032]",
@@ -88,9 +113,7 @@
         "$CSG[33025..33028]",
         "$CSG[33037..33040]",
         "$CSG[33049..33052]",
-
         "$CSG[33053..33180]",
-
         "$CSG[33181..33184]",
         "$CSG[33193..33196]",
         "$CSG[33205..33208]",
@@ -103,8 +126,7 @@
         "$CSG[33201..33204]",
         "$CSG[33213..33216]",
         "$CSG[33225..33228]",
-
-		""
+        ""
     ],
     "strings": {
         "name": {
@@ -163,5 +185,83 @@
             "ru-RU": "2 passengers per car",
             "eo-ZZ": "Po 2 pasaĝeroj por ĉaro"
         }
-    }
+    },
+    "noCsgImages": [
+        "$CSG[64256]",
+        "",
+        "",
+        "$RCT2:OBJDATA/HELICAR.DAT[3..6]",
+        "$RCT2:OBJDATA/HELICAR.DAT[11..14]",
+        "$RCT2:OBJDATA/HELICAR.DAT[19..22]",
+        "$RCT2:OBJDATA/HELICAR.DAT[27..30]",
+        "$RCT2:OBJDATA/HELICAR.DAT[35..38]",
+        "$RCT2:OBJDATA/HELICAR.DAT[43..46]",
+        "$RCT2:OBJDATA/HELICAR.DAT[51..54]",
+        "$RCT2:OBJDATA/HELICAR.DAT[59..62]",
+        "$RCT2:OBJDATA/HELICAR.DAT[67..70]",
+        "$RCT2:OBJDATA/HELICAR.DAT[75..78]",
+        "$RCT2:OBJDATA/HELICAR.DAT[83..86]",
+        "$RCT2:OBJDATA/HELICAR.DAT[91..94]",
+        "$RCT2:OBJDATA/HELICAR.DAT[99..102]",
+        "$RCT2:OBJDATA/HELICAR.DAT[107..110]",
+        "$RCT2:OBJDATA/HELICAR.DAT[115..118]",
+        "$RCT2:OBJDATA/HELICAR.DAT[123..126]",
+        "$RCT2:OBJDATA/HELICAR.DAT[131..166]",
+        "$RCT2:OBJDATA/HELICAR.DAT[195..198]",
+        "$RCT2:OBJDATA/HELICAR.DAT[227..230]",
+        "$RCT2:OBJDATA/HELICAR.DAT[259..262]",
+        "$RCT2:OBJDATA/HELICAR.DAT[291..294]",
+        "$RCT2:OBJDATA/HELICAR.DAT[323..326]",
+        "$RCT2:OBJDATA/HELICAR.DAT[355..358]",
+        "$RCT2:OBJDATA/HELICAR.DAT[387..390]",
+        "$RCT2:OBJDATA/HELICAR.DAT[3..6]",
+        "$RCT2:OBJDATA/HELICAR.DAT[35..38]",
+        "$RCT2:OBJDATA/HELICAR.DAT[67..70]",
+        "$RCT2:OBJDATA/HELICAR.DAT[99..102]",
+        "$RCT2:OBJDATA/HELICAR.DAT[3..6]",
+        "$RCT2:OBJDATA/HELICAR.DAT[35..38]",
+        "$RCT2:OBJDATA/HELICAR.DAT[67..70]",
+        "$RCT2:OBJDATA/HELICAR.DAT[99..102]",
+        "$RCT2:OBJDATA/HELICAR.DAT[3..6]",
+        "$RCT2:OBJDATA/HELICAR.DAT[35..38]",
+        "$RCT2:OBJDATA/HELICAR.DAT[67..70]",
+        "$RCT2:OBJDATA/HELICAR.DAT[99..102]",
+        "$RCT2:OBJDATA/HELICAR.DAT[419..422]",
+        "$RCT2:OBJDATA/HELICAR.DAT[427..430]",
+        "$RCT2:OBJDATA/HELICAR.DAT[435..438]",
+        "$RCT2:OBJDATA/HELICAR.DAT[443..446]",
+        "$RCT2:OBJDATA/HELICAR.DAT[451..454]",
+        "$RCT2:OBJDATA/HELICAR.DAT[459..462]",
+        "$RCT2:OBJDATA/HELICAR.DAT[467..470]",
+        "$RCT2:OBJDATA/HELICAR.DAT[475..478]",
+        "$RCT2:OBJDATA/HELICAR.DAT[483..486]",
+        "$RCT2:OBJDATA/HELICAR.DAT[491..494]",
+        "$RCT2:OBJDATA/HELICAR.DAT[499..502]",
+        "$RCT2:OBJDATA/HELICAR.DAT[507..510]",
+        "$RCT2:OBJDATA/HELICAR.DAT[515..518]",
+        "$RCT2:OBJDATA/HELICAR.DAT[523..526]",
+        "$RCT2:OBJDATA/HELICAR.DAT[531..534]",
+        "$RCT2:OBJDATA/HELICAR.DAT[539..542]",
+        "$RCT2:OBJDATA/HELICAR.DAT[547..582]",
+        "$RCT2:OBJDATA/HELICAR.DAT[611..614]",
+        "$RCT2:OBJDATA/HELICAR.DAT[643..646]",
+        "$RCT2:OBJDATA/HELICAR.DAT[675..678]",
+        "$RCT2:OBJDATA/HELICAR.DAT[707..710]",
+        "$RCT2:OBJDATA/HELICAR.DAT[739..742]",
+        "$RCT2:OBJDATA/HELICAR.DAT[771..774]",
+        "$RCT2:OBJDATA/HELICAR.DAT[803..806]",
+        "$RCT2:OBJDATA/HELICAR.DAT[419..422]",
+        "$RCT2:OBJDATA/HELICAR.DAT[443..446]",
+        "$RCT2:OBJDATA/HELICAR.DAT[475..478]",
+        "$RCT2:OBJDATA/HELICAR.DAT[507..510]",
+        "$RCT2:OBJDATA/HELICAR.DAT[419..422]",
+        "$RCT2:OBJDATA/HELICAR.DAT[443..446]",
+        "$RCT2:OBJDATA/HELICAR.DAT[475..478]",
+        "$RCT2:OBJDATA/HELICAR.DAT[507..510]",
+        "$RCT2:OBJDATA/HELICAR.DAT[419..422]",
+        "$RCT2:OBJDATA/HELICAR.DAT[443..446]",
+        "$RCT2:OBJDATA/HELICAR.DAT[475..478]",
+        "$RCT2:OBJDATA/HELICAR.DAT[507..510]",
+        ""
+    ]
 }

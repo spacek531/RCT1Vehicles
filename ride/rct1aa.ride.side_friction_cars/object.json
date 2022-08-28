@@ -1,6 +1,9 @@
 {
     "id": "rct1aa.ride.side_friction_cars",
-    "authors": ["Chris Sawyer", "Simon Foster"],
+    "authors": [
+        "Chris Sawyer",
+        "Simon Foster"
+    ],
     "version": "1.0",
     "originalId": "00000000|#RCT1SFR|00000000",
     "sourceGame": "rct1aa",
@@ -11,16 +14,32 @@
         "maxCarsPerTrain": 3,
         "carColours": [
             [
-                ["bright_red", "light_brown", "black"]
+                [
+                    "bright_red",
+                    "light_brown",
+                    "black"
+                ]
             ],
             [
-                ["dark_green", "bordeaux_red", "black"]
+                [
+                    "dark_green",
+                    "bordeaux_red",
+                    "black"
+                ]
             ],
             [
-                ["yellow", "saturated_brown", "black"]
+                [
+                    "yellow",
+                    "saturated_brown",
+                    "black"
+                ]
             ],
             [
-                ["light_blue", "grey", "black"]
+                [
+                    "light_blue",
+                    "grey",
+                    "black"
+                ]
             ]
         ],
         "cars": {
@@ -33,19 +52,24 @@
             "soundRange": 1,
             "drawOrder": 6,
             "spriteGroups": {
-                "slopeFlat":16,
-                "slopes12":4,
-                "slopes25":8,
-                "slopes42":8,
-                "slopes60":4,
-                "slopes8":4,
-                "slopes16":4,
-                "slopes50":4
+                "slopeFlat": 16,
+                "slopes12": 4,
+                "slopes25": 8,
+                "slopes42": 8,
+                "slopes60": 4,
+                "slopes8": 4,
+                "slopes16": 4,
+                "slopes50": 4
             },
             "hasNoUpstopWheelsBobsleigh": true,
             "hasAdditionalColour1": true,
             "hasScreamingRiders": true,
-            "loadingPositions": [5, 3, -7, -9]
+            "loadingPositions": [
+                5,
+                3,
+                -7,
+                -9
+            ]
         },
         "buildMenuPriority": 1
     },
@@ -54,7 +78,6 @@
         "",
         "",
         "$CSG[18766..18781]",
-
         "$CSG[18782]",
         "$CSG[18790]",
         "$CSG[18798]",
@@ -63,7 +86,6 @@
         "$CSG[18794]",
         "$CSG[18802]",
         "$CSG[18810]",
-
         "$CSG[18783]",
         "$CSG[18846]",
         "$CSG[18791]",
@@ -80,7 +102,6 @@
         "$CSG[18852]",
         "$CSG[18811]",
         "$CSG[18853]",
-
         "$CSG[18784]",
         "$CSG[18822]",
         "$CSG[18792]",
@@ -97,7 +118,6 @@
         "$CSG[18840]",
         "$CSG[18812]",
         "$CSG[18841]",
-
         "$CSG[18785]",
         "$CSG[18793]",
         "$CSG[18801]",
@@ -106,16 +126,13 @@
         "$CSG[18797]",
         "$CSG[18805]",
         "$CSG[18813]",
-
         "$CSG[18814..18817]",
         "$CSG[18830..18833]",
         "$CSG[18818..18821]",
         "$CSG[18834..18837]",
         "$CSG[18826..18829]",
         "$CSG[18842..18845]",
-
         "$CSG[18854..18869]",
-
         "$CSG[18870]",
         "$CSG[18878]",
         "$CSG[18886]",
@@ -124,7 +141,6 @@
         "$CSG[18882]",
         "$CSG[18890]",
         "$CSG[18898]",
-
         "$CSG[18871]",
         "$CSG[18934]",
         "$CSG[18879]",
@@ -141,7 +157,6 @@
         "$CSG[18940]",
         "$CSG[18899]",
         "$CSG[18941]",
-
         "$CSG[18872]",
         "$CSG[18910]",
         "$CSG[18880]",
@@ -158,7 +173,6 @@
         "$CSG[18928]",
         "$CSG[18900]",
         "$CSG[18929]",
-
         "$CSG[18873]",
         "$CSG[18881]",
         "$CSG[18889]",
@@ -167,16 +181,13 @@
         "$CSG[18885]",
         "$CSG[18893]",
         "$CSG[18901]",
-
         "$CSG[18902..18905]",
         "$CSG[18918..18921]",
         "$CSG[18906..18909]",
         "$CSG[18922..18925]",
         "$CSG[18914..18917]",
         "$CSG[18930..18933]",
-
         "$CSG[18942..18957]",
-
         "$CSG[18958]",
         "$CSG[18966]",
         "$CSG[18974]",
@@ -185,7 +196,6 @@
         "$CSG[18970]",
         "$CSG[18978]",
         "$CSG[18986]",
-
         "$CSG[18959]",
         "$CSG[19022]",
         "$CSG[18967]",
@@ -202,7 +212,6 @@
         "$CSG[19028]",
         "$CSG[18987]",
         "$CSG[19029]",
-
         "$CSG[18960]",
         "$CSG[18998]",
         "$CSG[18968]",
@@ -219,7 +228,6 @@
         "$CSG[19016]",
         "$CSG[18988]",
         "$CSG[19017]",
-
         "$CSG[18961]",
         "$CSG[18969]",
         "$CSG[18977]",
@@ -228,7 +236,6 @@
         "$CSG[18973]",
         "$CSG[18981]",
         "$CSG[18989]",
-
         "$CSG[18990..18993]",
         "$CSG[19006..19009]",
         "$CSG[18994..18997]",
@@ -291,5 +298,131 @@
             "ru-RU": "4 пассажира",
             "eo-ZZ": "Po 4 pasaĝeroj por ĉaro"
         }
-    }
+    },
+    "noCsgImages": [
+        "$CSG[64248]",
+        "",
+        "",
+        "$RCT2:OBJDATA/SFRIC1.DAT[3]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[5]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[7]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[9]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[11]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[13]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[15]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[17]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[19]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[21]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[23]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[25]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[27]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[29]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[31]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[33]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[35..43]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[47]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[51]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[55]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[59]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[63]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[67]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[71]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[75]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[79]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[83]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[87]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[91]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[95]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[99]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[103]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[107..123]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[131]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[139]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[147]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[155]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[163]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[171]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[179]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[187..211]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[213]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[215]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[217]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[219]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[221]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[223]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[225]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[227]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[229]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[231]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[233]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[235]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[237]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[239]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[241]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[243..251]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[255]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[259]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[263]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[267]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[271]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[275]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[279]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[283]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[287]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[291]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[295]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[299]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[303]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[307]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[311]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[315..331]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[339]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[347]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[355]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[363]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[371]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[379]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[387]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[395..419]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[421]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[423]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[425]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[427]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[429]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[431]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[433]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[435]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[437]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[439]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[441]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[443]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[445]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[447]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[449]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[451..459]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[463]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[467]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[471]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[475]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[479]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[483]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[487]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[491]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[495]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[499]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[503]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[507]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[511]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[515]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[519]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[523..539]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[547]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[555]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[563]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[571]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[579]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[587]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[595]",
+        "$RCT2:OBJDATA/SFRIC1.DAT[603..626]"
+    ]
 }
