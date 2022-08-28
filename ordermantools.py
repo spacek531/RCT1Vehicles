@@ -112,26 +112,20 @@ def IncrementValue(inString, oldOffset, newOffset):
     print("----------")
     
 def ScrapeImages(jobject):
-    if "images" not in jobject:
-        print("Error: images not in jobjectson")
-        return []
     images = []
-    for s in jobject["images"]:
+    for s in jobject:
         if type(s) == str:
             if len(s) == 0:
                 images.append(s)
                 continue
             prefix = s.split("[")[0]
-            rng = GetRange(s)
+            rng = GetRange(s.split("[")[1])
             if len(rng) > 0:
-                try:
-                    for i in range(rng[0], rng[-1] + 1):
-                        images.append(prefix+"["+str(i)+"]")
-                except Exception as e:
-                    print("Error with string \""+s+"\"",rng, e)
+                for i in rng:
+                    images.append(prefix+"["+str(i)+"]")
             else:
                 images.append(s)
-        elif type(s) == dict:
+        else:
             images.append(s)
     return images
 
@@ -252,9 +246,13 @@ def ReverseImageOrder(inString):
     if "cars" not in jobject["properties"]:
         print("Error: cars not in properties dict")
         return
-    images = ScrapeImages(jobject)
+    images = ScrapeImages(jobject["images"])
     if len(images) == 0:
         return
+    fimages = ["" for _ in range(len(images))]
+    if jobject.get("noCsgImages"):
+        fimages = ScrapeImages(jobject["noCsgImages"])
+        
     print("Number of images",len(images))
     carImageRanges = 3
     lengthswap = 0
@@ -274,14 +272,19 @@ def ReverseImageOrder(inString):
                 print(spriteGroup.name, spriteGroups[spriteGroup.name])
                 if spriteGroup.specialFunction is not None:
                     spriteGroup.specialFunction(images, precision, carImageRanges)
+                    spriteGroup.specialFunction(fimages, precision, carImageRanges)
                     carImageRanges += spriteGroup.sprites(precision)
                 else:
                     for i in range(spriteGroup.reverseRepetitions):
                         Cut(images, carImageRanges, spriteGroup.group(precision),spriteGroup.reversePower)
+                        Cut(fimages, carImageRanges, spriteGroup.group(precision),spriteGroup.reversePower)
                         carImageRanges += spriteGroup.group(precision)
                 print("numImages",carImageRanges - rowstart)
-    
+    ImageConsolidator(images)
     jobject["images"] = images
+    if jobject.get("noCsgImages"):
+        ImageConsolidator(fimages)
+        jobject["noCsgImages"] = fimages
     
     print(json.dumps(jobject, indent = 4))
     
@@ -371,7 +374,7 @@ SPMap = [
     FallbackSpriteGroup("flatBanked45", "flatBanked", 16, 32, 2),
     FallbackSpriteGroup("flatBanked67", "inlineTwists", 0, 4, 2),
     FallbackSpriteGroup("flatBanked90", "inlineTwists", 8, 4, 2),
-    FallbackSpriteGroup("inlineTwists", "inlineTwists", 16, 4, 6),
+    FallbackSpriteGroup("inlineTwists", "inlineTwists", 16, 4, 10),
     FallbackSpriteGroup("slopes12Banked22", "flatToGentleSlopeBankedTransitions", 0, 32, 4),
     FallbackSpriteGroup("slopes8Banked22", "diagonalGentleSlopeBankedTransitions", 0, 4, 4),
     FallbackSpriteGroup("slopes25Banked22", "gentleSlopeBankedTransitions", 0,4, 4),
@@ -396,7 +399,6 @@ def writeJSON(outputfile, data):
     try:
         with outputfile.open("w", encoding="utf-8") as file:
             json.dump(data, file, ensure_ascii=False, indent=4)
-            file.write("\n")
     except Exception as e:
         print("Could not write JSON file:", e)
 
@@ -404,13 +406,12 @@ def GetVerticalFrames(car):
     flags = car
     VEHICLE_ENTRY_FLAG_OVERRIDE_NUM_VERTICAL_FRAMES = flags.get("overrideNumberOfVerticalFrames")
     VEHICLE_ENTRY_FLAG_SPINNING_ADDITIONAL_FRAMES = flags.get("hasAdditionalSpinningFrames")
-    VEHICLE_ENTRY_FLAG_VEHICLE_ANIMATION = flags.get("hasVehicleAnimation6")
+    VEHICLE_ENTRY_FLAG_VEHICLE_ANIMATION = flags.get("hasVehicleAnimation")
     VEHICLE_ENTRY_FLAG_DODGEM_INUSE_LIGHTS = flags.get("hasDodgemInUseLights")
     VEHICLE_ENTRY_ANIMATION_OBSERVATION_TOWER = car.get("animation") == 6
-    print("override",VEHICLE_ENTRY_FLAG_OVERRIDE_NUM_VERTICAL_FRAMES,"additional",VEHICLE_ENTRY_FLAG_SPINNING_ADDITIONAL_FRAMES,"animation",VEHICLE_ENTRY_FLAG_VEHICLE_ANIMATION,"dodgems",VEHICLE_ENTRY_FLAG_DODGEM_INUSE_LIGHTS, "obs1",VEHICLE_ENTRY_ANIMATION_OBSERVATION_TOWER)
     numVerticalFrames = 1;
     if VEHICLE_ENTRY_FLAG_OVERRIDE_NUM_VERTICAL_FRAMES:
-        numVerticalFrames = car.get("numVerticalFramesOverride",1)
+        numVerticalFrames = car.get("numVerticalFramesOverride",0)
     elif not VEHICLE_ENTRY_FLAG_SPINNING_ADDITIONAL_FRAMES:
         if VEHICLE_ENTRY_FLAG_VEHICLE_ANIMATION and not VEHICLE_ENTRY_ANIMATION_OBSERVATION_TOWER:
             if not VEHICLE_ENTRY_FLAG_DODGEM_INUSE_LIGHTS:
@@ -466,7 +467,7 @@ def GetFallbackImages(inputfile, fallbackfile):
     if len(myCars) > len(theirCars):
         raise Exception("More cars in input file than in fallback file")
     
-    theirImages = ScrapeImages(falf)
+    theirImages = ScrapeImages(falf["images"])
     myImages = [ newf["images"][0], newf["images"][1], newf["images"][2] ]
     fpointer = 3 # the sprite of the current car being served
     carno = 0 # the fallback car referenced
@@ -485,8 +486,6 @@ def GetFallbackImages(inputfile, fallbackfile):
             for group in SPMap:
                 precision = car["spriteGroups"].get(group.newGroup, 0)
                 if precision > 0:
-                    if not otherCarSpriteOffsets.get(group.oldGroup):
-                        raise Exception("Car {0} does not have oldSpriteGroup {1} for newSpriteGroup {2}".format(carno, group.oldGroup,group.newGroup))
                     manifest = group.getIndices(animationFrames, precision)
                     for index in manifest:
                         try:
