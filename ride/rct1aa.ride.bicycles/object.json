@@ -1,6 +1,9 @@
 {
     "id": "rct1aa.ride.bicycles",
-    "authors": ["Chris Sawyer", "Simon Foster"],
+    "authors": [
+        "Chris Sawyer",
+        "Simon Foster"
+    ],
     "version": "1.0",
     "originalId": "00000000|#RCT1BIK|00000000",
     "sourceGame": "rct1aa",
@@ -14,10 +17,18 @@
         "noCollisionCrashes": true,
         "carColours": [
             [
-                ["bordeaux_red", "black", "black"]
+                [
+                    "bordeaux_red",
+                    "black",
+                    "black"
+                ]
             ],
             [
-                ["dark_green", "black", "black"]
+                [
+                    "dark_green",
+                    "black",
+                    "black"
+                ]
             ]
         ],
         "cars": {
@@ -31,11 +42,13 @@
             "poweredMaxSpeed": 5,
             "drawOrder": 6,
             "spriteGroups": {
-                "slopeFlat":16
+                "slopeFlat": 16
             },
             "isPowered": true,
             "hasRiderAnimation": true,
-            "loadingPositions": [0]
+            "loadingPositions": [
+                0
+            ]
         },
         "buildMenuPriority": 1
     },
@@ -101,5 +114,91 @@
             "ru-RU": "1 человек",
             "eo-ZZ": "Po 1 rajdanto por biciklo"
         }
-    }
+    },
+    "noCsgImages": [
+        "$CSG[64267]",
+        "",
+        "",
+        "$RCT2:OBJDATA/MONBK.DAT[3]",
+        "$RCT2:OBJDATA/MONBK.DAT[11]",
+        "$RCT2:OBJDATA/MONBK.DAT[19]",
+        "$RCT2:OBJDATA/MONBK.DAT[27]",
+        "$RCT2:OBJDATA/MONBK.DAT[35]",
+        "$RCT2:OBJDATA/MONBK.DAT[43]",
+        "$RCT2:OBJDATA/MONBK.DAT[51]",
+        "$RCT2:OBJDATA/MONBK.DAT[59]",
+        "$RCT2:OBJDATA/MONBK.DAT[67]",
+        "$RCT2:OBJDATA/MONBK.DAT[75]",
+        "$RCT2:OBJDATA/MONBK.DAT[83]",
+        "$RCT2:OBJDATA/MONBK.DAT[91]",
+        "$RCT2:OBJDATA/MONBK.DAT[99]",
+        "$RCT2:OBJDATA/MONBK.DAT[107]",
+        "$RCT2:OBJDATA/MONBK.DAT[115]",
+        "$RCT2:OBJDATA/MONBK.DAT[123]",
+
+        "$RCT2:OBJDATA/MONBK.DAT[131]",
+        "$RCT2:OBJDATA/MONBK.DAT[139]",
+        "$RCT2:OBJDATA/MONBK.DAT[147]",
+        "$RCT2:OBJDATA/MONBK.DAT[155]",
+        "$RCT2:OBJDATA/MONBK.DAT[163]",
+        "$RCT2:OBJDATA/MONBK.DAT[171]",
+        "$RCT2:OBJDATA/MONBK.DAT[179]",
+        "$RCT2:OBJDATA/MONBK.DAT[187]",
+        "$RCT2:OBJDATA/MONBK.DAT[195]",
+        "$RCT2:OBJDATA/MONBK.DAT[203]",
+        "$RCT2:OBJDATA/MONBK.DAT[211]",
+        "$RCT2:OBJDATA/MONBK.DAT[219]",
+        "$RCT2:OBJDATA/MONBK.DAT[227]",
+        "$RCT2:OBJDATA/MONBK.DAT[235]",
+        "$RCT2:OBJDATA/MONBK.DAT[243]",
+        "$RCT2:OBJDATA/MONBK.DAT[251]",
+        "$RCT2:OBJDATA/MONBK.DAT[132]",
+        "$RCT2:OBJDATA/MONBK.DAT[140]",
+        "$RCT2:OBJDATA/MONBK.DAT[148]",
+        "$RCT2:OBJDATA/MONBK.DAT[156]",
+        "$RCT2:OBJDATA/MONBK.DAT[164]",
+        "$RCT2:OBJDATA/MONBK.DAT[172]",
+        "$RCT2:OBJDATA/MONBK.DAT[180]",
+        "$RCT2:OBJDATA/MONBK.DAT[188]",
+        "$RCT2:OBJDATA/MONBK.DAT[196]",
+        "$RCT2:OBJDATA/MONBK.DAT[204]",
+        "$RCT2:OBJDATA/MONBK.DAT[212]",
+        "$RCT2:OBJDATA/MONBK.DAT[220]",
+        "$RCT2:OBJDATA/MONBK.DAT[228]",
+        "$RCT2:OBJDATA/MONBK.DAT[236]",
+        "$RCT2:OBJDATA/MONBK.DAT[244]",
+        "$RCT2:OBJDATA/MONBK.DAT[252]",
+        "$RCT2:OBJDATA/MONBK.DAT[133]",
+        "$RCT2:OBJDATA/MONBK.DAT[141]",
+        "$RCT2:OBJDATA/MONBK.DAT[149]",
+        "$RCT2:OBJDATA/MONBK.DAT[157]",
+        "$RCT2:OBJDATA/MONBK.DAT[165]",
+        "$RCT2:OBJDATA/MONBK.DAT[173]",
+        "$RCT2:OBJDATA/MONBK.DAT[181]",
+        "$RCT2:OBJDATA/MONBK.DAT[189]",
+        "$RCT2:OBJDATA/MONBK.DAT[197]",
+        "$RCT2:OBJDATA/MONBK.DAT[205]",
+        "$RCT2:OBJDATA/MONBK.DAT[213]",
+        "$RCT2:OBJDATA/MONBK.DAT[221]",
+        "$RCT2:OBJDATA/MONBK.DAT[229]",
+        "$RCT2:OBJDATA/MONBK.DAT[237]",
+        "$RCT2:OBJDATA/MONBK.DAT[245]",
+        "$RCT2:OBJDATA/MONBK.DAT[253]",
+        "$RCT2:OBJDATA/MONBK.DAT[134]",
+        "$RCT2:OBJDATA/MONBK.DAT[142]",
+        "$RCT2:OBJDATA/MONBK.DAT[150]",
+        "$RCT2:OBJDATA/MONBK.DAT[158]",
+        "$RCT2:OBJDATA/MONBK.DAT[166]",
+        "$RCT2:OBJDATA/MONBK.DAT[174]",
+        "$RCT2:OBJDATA/MONBK.DAT[182]",
+        "$RCT2:OBJDATA/MONBK.DAT[190]",
+        "$RCT2:OBJDATA/MONBK.DAT[198]",
+        "$RCT2:OBJDATA/MONBK.DAT[206]",
+        "$RCT2:OBJDATA/MONBK.DAT[214]",
+        "$RCT2:OBJDATA/MONBK.DAT[222]",
+        "$RCT2:OBJDATA/MONBK.DAT[230]",
+        "$RCT2:OBJDATA/MONBK.DAT[238]",
+        "$RCT2:OBJDATA/MONBK.DAT[246]",
+        "$RCT2:OBJDATA/MONBK.DAT[254]"
+    ]
 }
