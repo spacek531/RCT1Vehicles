@@ -61,7 +61,7 @@
         "buildMenuPriority": 1
     },
     "images": [
-        "$CSG[64206]",
+        { "path": "images/preview.png", "format": "raw" },
         "",
         "",
         "$CSG[40289..40304]",
@@ -111,7 +111,7 @@
 		""
     ],
     "noCsgImages": [
-        "$CSG[64206]",
+        { "path": "images/preview.png", "format": "raw" },
         "",
         "",
         "$RCT2:OBJDATA/CTCAR.DAT[3]",
@@ -170,7 +170,7 @@
         "$RCT2:OBJDATA/CTCAR.DAT[195]",
         "$RCT2:OBJDATA/CTCAR.DAT[203]",
 
-		""
+        ""
     ],
     "strings": {
         "name": {
