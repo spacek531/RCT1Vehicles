@@ -1,6 +1,9 @@
 {
     "id": "rct1.ride.streamlined_monorail_trains",
-    "authors": ["Chris Sawyer", "Simon Foster"],
+    "authors": [
+        "Chris Sawyer",
+        "Simon Foster"
+    ],
     "version": "1.0",
     "originalId": "00000000|#RCT1MO2|00000000",
     "sourceGame": "rct1",
@@ -17,16 +20,32 @@
         "tailCars": 2,
         "carColours": [
             [
-                ["white", "bright_red", "black"]
+                [
+                    "white",
+                    "bright_red",
+                    "black"
+                ]
             ],
             [
-                ["white", "yellow", "black"]
+                [
+                    "white",
+                    "yellow",
+                    "black"
+                ]
             ],
             [
-                ["bordeaux_red", "yellow", "black"]
+                [
+                    "bordeaux_red",
+                    "yellow",
+                    "black"
+                ]
             ],
             [
-                ["black", "bright_red", "black"]
+                [
+                    "black",
+                    "bright_red",
+                    "black"
+                ]
             ]
         ],
         "cars": [
@@ -42,15 +61,26 @@
                 "poweredMaxSpeed": 44,
                 "drawOrder": 5,
                 "spriteGroups": {
-                    "slopeFlat":16,
-                    "slopes12":4,
-                    "slopes25":4,
-                    "slopes8":4,
-                    "slopes16":4,
+                    "slopeFlat": 16,
+                    "slopes12": 4,
+                    "slopes25": 4,
+                    "slopes8": 4,
+                    "slopes16": 4,
                     "restraintAnimation": 4
                 },
                 "hasAdditionalColour1": true,
-                "loadingPositions": [10, -10, 8, -8, 10, -10, 8, -8, 10, -10]
+                "loadingPositions": [
+                    10,
+                    -10,
+                    8,
+                    -8,
+                    10,
+                    -10,
+                    8,
+                    -8,
+                    10,
+                    -10
+                ]
             },
             {
                 "rotationFrameMask": 15,
@@ -64,16 +94,22 @@
                 "poweredMaxSpeed": 44,
                 "drawOrder": 5,
                 "spriteGroups": {
-                    "slopeFlat":16,
-                    "slopes12":4,
-                    "slopes25":4,
-                    "slopes8":4,
-                    "slopes16":4,
+                    "slopeFlat": 16,
+                    "slopes12": 4,
+                    "slopes25": 4,
+                    "slopes8": 4,
+                    "slopes16": 4,
                     "restraintAnimation": 4
                 },
                 "hasAdditionalColour1": true,
                 "isPowered": true,
-                "loadingPositions": [-10, -8, -10, -8, -10]
+                "loadingPositions": [
+                    -10,
+                    -8,
+                    -10,
+                    -8,
+                    -10
+                ]
             },
             {
                 "rotationFrameMask": 15,
@@ -87,15 +123,21 @@
                 "poweredMaxSpeed": 44,
                 "drawOrder": 5,
                 "spriteGroups": {
-                    "slopeFlat":16,
-                    "slopes12":4,
-                    "slopes25":4,
-                    "slopes8":4,
-                    "slopes16":4,
+                    "slopeFlat": 16,
+                    "slopes12": 4,
+                    "slopes25": 4,
+                    "slopes8": 4,
+                    "slopes16": 4,
                     "restraintAnimation": 4
                 },
                 "hasAdditionalColour1": true,
-                "loadingPositions": [10, 8, 10, 8, 10]
+                "loadingPositions": [
+                    10,
+                    8,
+                    10,
+                    8,
+                    10
+                ]
             }
         ],
         "buildMenuPriority": 1
@@ -106,35 +148,28 @@
         "",
         "$CSG[29079..29086]",
         "$CSG[29079..29086]",
-
         "$CSG[29093]",
         "$CSG[29095]",
         "$CSG[29097]",
         "$CSG[29099]",
-
         "$CSG[29097]",
         "$CSG[29099]",
         "$CSG[29093]",
         "$CSG[29095]",
-
         "$CSG[29094]",
         "$CSG[29096]",
         "$CSG[29098]",
         "$CSG[29100]",
-
         "$CSG[29098]",
         "$CSG[29100]",
         "$CSG[29094]",
         "$CSG[29096]",
-
         "$CSG[29101..29104]",
         "$CSG[29103..29104]",
         "$CSG[29101..29102]",
-
         "$CSG[29105..29108]",
         "$CSG[29107..29108]",
         "$CSG[29105..29106]",
-
         "$CSG[29087]",
         "$CSG[29090]",
         "$CSG[29087]",
@@ -147,34 +182,27 @@
         "$CSG[29092]",
         "$CSG[29089]",
         "$CSG[29092]",
-
         "$CSG[29109..29124]",
-
         "$CSG[29137]",
         "$CSG[29141]",
         "$CSG[29145]",
         "$CSG[29149]",
-
         "$CSG[29139]",
         "$CSG[29143]",
         "$CSG[29147]",
-        "$CSG[29151]", 
-
+        "$CSG[29151]",
         "$CSG[29138]",
         "$CSG[29142]",
         "$CSG[29146]",
         "$CSG[29150]",
-
         "$CSG[29140]",
         "$CSG[29144]",
         "$CSG[29148]",
         "$CSG[29152]",
-
         "$CSG[29153..29156]",
         "$CSG[29161..29164]",
         "$CSG[29157..29160]",
         "$CSG[29165..29168]",
-
         "$CSG[29125]",
         "$CSG[29128]",
         "$CSG[29131]",
@@ -187,7 +215,6 @@
         "$CSG[29130]",
         "$CSG[29133]",
         "$CSG[29136]",
-
         "$CSG[29117]",
         "$CSG[29118]",
         "$CSG[29119]",
@@ -304,5 +331,86 @@
             "ru-RU": "5 или 10 пассажиров",
             "eo-ZZ": "Po 5 aŭ 10 pasaĝeroj por ĉaro"
         }
-    }
+    },
+    "noCsgImages": [
+        "$CSG[64201]",
+        "",
+        "",
+        "$RCT2:OBJDATA/MONO1.DAT[3]",
+        "$RCT2:OBJDATA/MONO1.DAT[5]",
+        "$RCT2:OBJDATA/MONO1.DAT[7]",
+        "$RCT2:OBJDATA/MONO1.DAT[9]",
+        "$RCT2:OBJDATA/MONO1.DAT[11]",
+        "$RCT2:OBJDATA/MONO1.DAT[13]",
+        "$RCT2:OBJDATA/MONO1.DAT[15]",
+        "$RCT2:OBJDATA/MONO1.DAT[17]",
+        "$RCT2:OBJDATA/MONO1.DAT[19]",
+        "$RCT2:OBJDATA/MONO1.DAT[21]",
+        "$RCT2:OBJDATA/MONO1.DAT[23]",
+        "$RCT2:OBJDATA/MONO1.DAT[25]",
+        "$RCT2:OBJDATA/MONO1.DAT[27]",
+        "$RCT2:OBJDATA/MONO1.DAT[29]",
+        "$RCT2:OBJDATA/MONO1.DAT[31]",
+        "$RCT2:OBJDATA/MONO1.DAT[33]",
+        "$RCT2:OBJDATA/MONO1.DAT[35..43]",
+        "$RCT2:OBJDATA/MONO1.DAT[51]",
+        "$RCT2:OBJDATA/MONO1.DAT[59]",
+        "$RCT2:OBJDATA/MONO1.DAT[67]",
+        "$RCT2:OBJDATA/MONO1.DAT[75]",
+        "$RCT2:OBJDATA/MONO1.DAT[83]",
+        "$RCT2:OBJDATA/MONO1.DAT[91]",
+        "$RCT2:OBJDATA/MONO1.DAT[99]",
+        "$RCT2:OBJDATA/MONO1.DAT[107..122]",
+        "$RCT2:OBJDATA/MONO1.DAT[131..143]",
+        "$RCT2:OBJDATA/MONO1.DAT[145]",
+        "$RCT2:OBJDATA/MONO1.DAT[147]",
+        "$RCT2:OBJDATA/MONO1.DAT[149]",
+        "$RCT2:OBJDATA/MONO1.DAT[151]",
+        "$RCT2:OBJDATA/MONO1.DAT[153]",
+        "$RCT2:OBJDATA/MONO1.DAT[155]",
+        "$RCT2:OBJDATA/MONO1.DAT[157]",
+        "$RCT2:OBJDATA/MONO1.DAT[159]",
+        "$RCT2:OBJDATA/MONO1.DAT[161]",
+        "$RCT2:OBJDATA/MONO1.DAT[163]",
+        "$RCT2:OBJDATA/MONO1.DAT[165]",
+        "$RCT2:OBJDATA/MONO1.DAT[167]",
+        "$RCT2:OBJDATA/MONO1.DAT[169]",
+        "$RCT2:OBJDATA/MONO1.DAT[171]",
+        "$RCT2:OBJDATA/MONO1.DAT[173]",
+        "$RCT2:OBJDATA/MONO1.DAT[175..183]",
+        "$RCT2:OBJDATA/MONO1.DAT[191]",
+        "$RCT2:OBJDATA/MONO1.DAT[199]",
+        "$RCT2:OBJDATA/MONO1.DAT[207]",
+        "$RCT2:OBJDATA/MONO1.DAT[215]",
+        "$RCT2:OBJDATA/MONO1.DAT[223]",
+        "$RCT2:OBJDATA/MONO1.DAT[231]",
+        "$RCT2:OBJDATA/MONO1.DAT[239]",
+        "$RCT2:OBJDATA/MONO1.DAT[247..262]",
+        "$RCT2:OBJDATA/MONO1.DAT[271..283]",
+        "$RCT2:OBJDATA/MONO1.DAT[285]",
+        "$RCT2:OBJDATA/MONO1.DAT[287]",
+        "$RCT2:OBJDATA/MONO1.DAT[289]",
+        "$RCT2:OBJDATA/MONO1.DAT[291]",
+        "$RCT2:OBJDATA/MONO1.DAT[293]",
+        "$RCT2:OBJDATA/MONO1.DAT[295]",
+        "$RCT2:OBJDATA/MONO1.DAT[297]",
+        "$RCT2:OBJDATA/MONO1.DAT[299]",
+        "$RCT2:OBJDATA/MONO1.DAT[301]",
+        "$RCT2:OBJDATA/MONO1.DAT[303]",
+        "$RCT2:OBJDATA/MONO1.DAT[305]",
+        "$RCT2:OBJDATA/MONO1.DAT[307]",
+        "$RCT2:OBJDATA/MONO1.DAT[309]",
+        "$RCT2:OBJDATA/MONO1.DAT[311]",
+        "$RCT2:OBJDATA/MONO1.DAT[313]",
+        "$RCT2:OBJDATA/MONO1.DAT[315..323]",
+        "$RCT2:OBJDATA/MONO1.DAT[331]",
+        "$RCT2:OBJDATA/MONO1.DAT[339]",
+        "$RCT2:OBJDATA/MONO1.DAT[347]",
+        "$RCT2:OBJDATA/MONO1.DAT[355]",
+        "$RCT2:OBJDATA/MONO1.DAT[363]",
+        "$RCT2:OBJDATA/MONO1.DAT[371]",
+        "$RCT2:OBJDATA/MONO1.DAT[379]",
+        "$RCT2:OBJDATA/MONO1.DAT[387..402]",
+        "$RCT2:OBJDATA/MONO1.DAT[411..422]"
+    ]
 }

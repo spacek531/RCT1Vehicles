@@ -1,6 +1,9 @@
 {
     "id": "rct1.ride.mine_cars",
-    "authors": ["Chris Sawyer", "Simon Foster"],
+    "authors": [
+        "Chris Sawyer",
+        "Simon Foster"
+    ],
     "version": "1.0",
     "originalId": "00000000|#RCT1WMN|00000000",
     "sourceGame": "rct1",
@@ -19,13 +22,25 @@
         },
         "carColours": [
             [
-                ["saturated_brown", "black", "black"]
+                [
+                    "saturated_brown",
+                    "black",
+                    "black"
+                ]
             ],
             [
-                ["bordeaux_red", "black", "black"]
+                [
+                    "bordeaux_red",
+                    "black",
+                    "black"
+                ]
             ],
             [
-                ["black", "black", "black"]
+                [
+                    "black",
+                    "black",
+                    "black"
+                ]
             ]
         ],
         "cars": [
@@ -39,16 +54,19 @@
                 "soundRange": 0,
                 "drawOrder": 6,
                 "spriteGroups": {
-                    "slopeFlat":16,
-                    "slopes12":4,
-                    "slopes25":4,
-                    "slopes42":4,
-                    "slopes60":4
+                    "slopeFlat": 16,
+                    "slopes12": 4,
+                    "slopes25": 4,
+                    "slopes42": 4,
+                    "slopes60": 4
                 },
                 "hasSwinging": true,
                 "hasScreamingRiders": true,
                 "useWoodenWildMouseSwing": true,
-                "loadingPositions": [4, -4]
+                "loadingPositions": [
+                    4,
+                    -4
+                ]
             },
             {
                 "rotationFrameMask": 0,
@@ -58,18 +76,20 @@
                 "carVisual": 1,
                 "drawOrder": 8,
                 "spriteGroups": {
-                    "slopeFlat":1
+                    "slopeFlat": 1
                 },
                 "hasScreamingRiders": true
             }
         ]
     },
     "images": [
-        { "path": "images/preview.png", "format": "raw" },
+        {
+            "path": "images/preview.png",
+            "format": "raw"
+        },
         "",
         "",
         "$CSG[30533..30580]",
-
         "$CSG[30581]",
         "$CSG[30581]",
         "$CSG[30581]",
@@ -94,7 +114,6 @@
         "$CSG[30609]",
         "$CSG[30609]",
         "$CSG[30609]",
-
         "$CSG[30582]",
         "$CSG[30582]",
         "$CSG[30582]",
@@ -119,7 +138,6 @@
         "$CSG[30610]",
         "$CSG[30610]",
         "$CSG[30610]",
-
         "$CSG[30583]",
         "$CSG[30583]",
         "$CSG[30583]",
@@ -144,7 +162,6 @@
         "$CSG[30611]",
         "$CSG[30611]",
         "$CSG[30611]",
-
         "$CSG[30584]",
         "$CSG[30584]",
         "$CSG[30584]",
@@ -169,9 +186,7 @@
         "$CSG[30612]",
         "$CSG[30612]",
         "$CSG[30612]",
-
         "$CSG[30613..30660]",
-
         "$CSG[30661]",
         "$CSG[30661]",
         "$CSG[30661]",
@@ -196,7 +211,6 @@
         "$CSG[30689]",
         "$CSG[30689]",
         "$CSG[30689]",
-
         "$CSG[30662]",
         "$CSG[30662]",
         "$CSG[30662]",
@@ -221,7 +235,6 @@
         "$CSG[30690]",
         "$CSG[30690]",
         "$CSG[30690]",
-
         "$CSG[30663]",
         "$CSG[30663]",
         "$CSG[30663]",
@@ -246,7 +259,6 @@
         "$CSG[30691]",
         "$CSG[30691]",
         "$CSG[30691]",
-
         "$CSG[30664]",
         "$CSG[30664]",
         "$CSG[30664]",
@@ -271,8 +283,7 @@
         "$CSG[30692]",
         "$CSG[30692]",
         "$CSG[30692]",
-
-		""
+        ""
     ],
     "strings": {
         "name": {
@@ -329,5 +340,94 @@
             "ru-RU": "2 пассажира",
             "eo-ZZ": "Po 2 pasaĝeroj por ĉaro"
         }
-    }
+    },
+    "noCsgImages": [
+        {
+            "path": "images/preview.png",
+            "format": "raw"
+        },
+        "",
+        "",
+        "$RCT2:OBJDATA/WMMINE.DAT[3..5]",
+        "$RCT2:OBJDATA/WMMINE.DAT[9..11]",
+        "$RCT2:OBJDATA/WMMINE.DAT[15..17]",
+        "$RCT2:OBJDATA/WMMINE.DAT[21..23]",
+        "$RCT2:OBJDATA/WMMINE.DAT[27..29]",
+        "$RCT2:OBJDATA/WMMINE.DAT[33..35]",
+        "$RCT2:OBJDATA/WMMINE.DAT[39..41]",
+        "$RCT2:OBJDATA/WMMINE.DAT[45..47]",
+        "$RCT2:OBJDATA/WMMINE.DAT[51..53]",
+        "$RCT2:OBJDATA/WMMINE.DAT[57..59]",
+        "$RCT2:OBJDATA/WMMINE.DAT[63..65]",
+        "$RCT2:OBJDATA/WMMINE.DAT[69..71]",
+        "$RCT2:OBJDATA/WMMINE.DAT[75..77]",
+        "$RCT2:OBJDATA/WMMINE.DAT[81..83]",
+        "$RCT2:OBJDATA/WMMINE.DAT[87..89]",
+        "$RCT2:OBJDATA/WMMINE.DAT[93..95]",
+        "$RCT2:OBJDATA/WMMINE.DAT[99..125]",
+        "$RCT2:OBJDATA/WMMINE.DAT[147..149]",
+        "$RCT2:OBJDATA/WMMINE.DAT[171..173]",
+        "$RCT2:OBJDATA/WMMINE.DAT[195..197]",
+        "$RCT2:OBJDATA/WMMINE.DAT[219..221]",
+        "$RCT2:OBJDATA/WMMINE.DAT[243..245]",
+        "$RCT2:OBJDATA/WMMINE.DAT[267..269]",
+        "$RCT2:OBJDATA/WMMINE.DAT[291..293]",
+        "$RCT2:OBJDATA/WMMINE.DAT[315..317]",
+        "$RCT2:OBJDATA/WMMINE.DAT[321..323]",
+        "$RCT2:OBJDATA/WMMINE.DAT[327..329]",
+        "$RCT2:OBJDATA/WMMINE.DAT[333..335]",
+        "$RCT2:OBJDATA/WMMINE.DAT[339..341]",
+        "$RCT2:OBJDATA/WMMINE.DAT[345..347]",
+        "$RCT2:OBJDATA/WMMINE.DAT[351..353]",
+        "$RCT2:OBJDATA/WMMINE.DAT[357..359]",
+        "$RCT2:OBJDATA/WMMINE.DAT[363..365]",
+        "$RCT2:OBJDATA/WMMINE.DAT[387..389]",
+        "$RCT2:OBJDATA/WMMINE.DAT[411..413]",
+        "$RCT2:OBJDATA/WMMINE.DAT[435..437]",
+        "$RCT2:OBJDATA/WMMINE.DAT[459..461]",
+        "$RCT2:OBJDATA/WMMINE.DAT[483..485]",
+        "$RCT2:OBJDATA/WMMINE.DAT[507..509]",
+        "$RCT2:OBJDATA/WMMINE.DAT[531..533]",
+        "$RCT2:OBJDATA/WMMINE.DAT[555..557]",
+        "$RCT2:OBJDATA/WMMINE.DAT[561..563]",
+        "$RCT2:OBJDATA/WMMINE.DAT[567..569]",
+        "$RCT2:OBJDATA/WMMINE.DAT[573..575]",
+        "$RCT2:OBJDATA/WMMINE.DAT[579..581]",
+        "$RCT2:OBJDATA/WMMINE.DAT[585..587]",
+        "$RCT2:OBJDATA/WMMINE.DAT[591..593]",
+        "$RCT2:OBJDATA/WMMINE.DAT[597..599]",
+        "$RCT2:OBJDATA/WMMINE.DAT[603..605]",
+        "$RCT2:OBJDATA/WMMINE.DAT[609..611]",
+        "$RCT2:OBJDATA/WMMINE.DAT[615..617]",
+        "$RCT2:OBJDATA/WMMINE.DAT[621..623]",
+        "$RCT2:OBJDATA/WMMINE.DAT[627..629]",
+        "$RCT2:OBJDATA/WMMINE.DAT[633..635]",
+        "$RCT2:OBJDATA/WMMINE.DAT[639..641]",
+        "$RCT2:OBJDATA/WMMINE.DAT[645..647]",
+        "$RCT2:OBJDATA/WMMINE.DAT[651..677]",
+        "$RCT2:OBJDATA/WMMINE.DAT[699..701]",
+        "$RCT2:OBJDATA/WMMINE.DAT[723..725]",
+        "$RCT2:OBJDATA/WMMINE.DAT[747..749]",
+        "$RCT2:OBJDATA/WMMINE.DAT[771..773]",
+        "$RCT2:OBJDATA/WMMINE.DAT[795..797]",
+        "$RCT2:OBJDATA/WMMINE.DAT[819..821]",
+        "$RCT2:OBJDATA/WMMINE.DAT[843..845]",
+        "$RCT2:OBJDATA/WMMINE.DAT[867..869]",
+        "$RCT2:OBJDATA/WMMINE.DAT[873..875]",
+        "$RCT2:OBJDATA/WMMINE.DAT[879..881]",
+        "$RCT2:OBJDATA/WMMINE.DAT[885..887]",
+        "$RCT2:OBJDATA/WMMINE.DAT[891..893]",
+        "$RCT2:OBJDATA/WMMINE.DAT[897..899]",
+        "$RCT2:OBJDATA/WMMINE.DAT[903..905]",
+        "$RCT2:OBJDATA/WMMINE.DAT[909..911]",
+        "$RCT2:OBJDATA/WMMINE.DAT[915..917]",
+        "$RCT2:OBJDATA/WMMINE.DAT[939..941]",
+        "$RCT2:OBJDATA/WMMINE.DAT[963..965]",
+        "$RCT2:OBJDATA/WMMINE.DAT[987..989]",
+        "$RCT2:OBJDATA/WMMINE.DAT[1011..1013]",
+        "$RCT2:OBJDATA/WMMINE.DAT[1035..1037]",
+        "$RCT2:OBJDATA/WMMINE.DAT[1059..1061]",
+        "$RCT2:OBJDATA/WMMINE.DAT[1083..1085]",
+        ""
+    ]
 }

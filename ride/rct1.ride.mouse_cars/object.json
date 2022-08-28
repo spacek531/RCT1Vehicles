@@ -1,6 +1,9 @@
 {
     "id": "rct1.ride.mouse_cars",
-    "authors": ["Chris Sawyer", "Simon Foster"],
+    "authors": [
+        "Chris Sawyer",
+        "Simon Foster"
+    ],
     "version": "1.0",
     "originalId": "00000000|#RCT1WMS|00000000",
     "sourceGame": "rct1",
@@ -19,13 +22,25 @@
         },
         "carColours": [
             [
-                ["bright_red", "white", "black"]
+                [
+                    "bright_red",
+                    "white",
+                    "black"
+                ]
             ],
             [
-                ["saturated_brown", "yellow", "black"]
+                [
+                    "saturated_brown",
+                    "yellow",
+                    "black"
+                ]
             ],
             [
-                ["white", "bright_pink", "black"]
+                [
+                    "white",
+                    "bright_pink",
+                    "black"
+                ]
             ]
         ],
         "cars": [
@@ -39,17 +54,20 @@
                 "soundRange": 0,
                 "drawOrder": 6,
                 "spriteGroups": {
-                    "slopeFlat":16,
-                    "slopes12":4,
-                    "slopes25":4,
-                    "slopes42":4,
-                    "slopes60":4
+                    "slopeFlat": 16,
+                    "slopes12": 4,
+                    "slopes25": 4,
+                    "slopes42": 4,
+                    "slopes60": 4
                 },
                 "hasAdditionalColour1": true,
                 "hasSwinging": true,
                 "hasScreamingRiders": true,
                 "useWoodenWildMouseSwing": true,
-                "loadingPositions": [4, -4]
+                "loadingPositions": [
+                    4,
+                    -4
+                ]
             },
             {
                 "rotationFrameMask": 0,
@@ -59,7 +77,7 @@
                 "carVisual": 1,
                 "drawOrder": 8,
                 "spriteGroups": {
-                    "slopeFlat":1
+                    "slopeFlat": 1
                 },
                 "hasScreamingRiders": true
             }
@@ -70,7 +88,6 @@
         "",
         "",
         "$CSG[30373..30420]",
-
         "$CSG[30421]",
         "$CSG[30421]",
         "$CSG[30421]",
@@ -95,7 +112,6 @@
         "$CSG[30449]",
         "$CSG[30449]",
         "$CSG[30449]",
-
         "$CSG[30422]",
         "$CSG[30422]",
         "$CSG[30422]",
@@ -120,7 +136,6 @@
         "$CSG[30450]",
         "$CSG[30450]",
         "$CSG[30450]",
-
         "$CSG[30423]",
         "$CSG[30423]",
         "$CSG[30423]",
@@ -145,7 +160,6 @@
         "$CSG[30451]",
         "$CSG[30451]",
         "$CSG[30451]",
-
         "$CSG[30424]",
         "$CSG[30424]",
         "$CSG[30424]",
@@ -170,9 +184,7 @@
         "$CSG[30452]",
         "$CSG[30452]",
         "$CSG[30452]",
-
         "$CSG[30453..30500]",
-
         "$CSG[30501]",
         "$CSG[30501]",
         "$CSG[30501]",
@@ -197,7 +209,6 @@
         "$CSG[30529]",
         "$CSG[30529]",
         "$CSG[30529]",
-
         "$CSG[30502]",
         "$CSG[30502]",
         "$CSG[30502]",
@@ -222,7 +233,6 @@
         "$CSG[30530]",
         "$CSG[30530]",
         "$CSG[30530]",
-
         "$CSG[30503]",
         "$CSG[30503]",
         "$CSG[30503]",
@@ -247,7 +257,6 @@
         "$CSG[30531]",
         "$CSG[30531]",
         "$CSG[30531]",
-
         "$CSG[30504]",
         "$CSG[30504]",
         "$CSG[30504]",
@@ -272,8 +281,7 @@
         "$CSG[30532]",
         "$CSG[30532]",
         "$CSG[30532]",
-
-		""
+        ""
     ],
     "strings": {
         "name": {
@@ -332,5 +340,91 @@
             "ru-RU": "2 пассажира",
             "eo-ZZ": "Po 2 pasaĝeroj por ĉaro"
         }
-    }
+    },
+    "noCsgImages": [
+        "$CSG[64204]",
+        "",
+        "",
+        "$RCT2:OBJDATA/WMOUSE.DAT[3..5]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[9..11]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[15..17]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[21..23]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[27..29]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[33..35]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[39..41]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[45..47]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[51..53]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[57..59]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[63..65]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[69..71]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[75..77]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[81..83]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[87..89]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[93..95]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[99..125]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[147..149]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[171..173]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[195..197]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[219..221]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[243..245]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[267..269]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[291..293]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[315..317]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[321..323]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[327..329]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[333..335]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[339..341]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[345..347]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[351..353]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[357..359]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[363..365]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[387..389]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[411..413]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[435..437]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[459..461]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[483..485]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[507..509]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[531..533]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[555..557]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[561..563]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[567..569]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[573..575]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[579..581]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[585..587]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[591..593]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[597..599]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[603..605]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[609..611]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[615..617]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[621..623]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[627..629]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[633..635]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[639..641]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[645..647]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[651..677]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[699..701]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[723..725]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[747..749]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[771..773]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[795..797]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[819..821]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[843..845]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[867..869]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[873..875]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[879..881]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[885..887]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[891..893]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[897..899]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[903..905]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[909..911]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[915..917]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[939..941]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[963..965]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[987..989]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[1011..1013]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[1035..1037]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[1059..1061]",
+        "$RCT2:OBJDATA/WMOUSE.DAT[1083..1085]",
+        ""
+    ]
 }
