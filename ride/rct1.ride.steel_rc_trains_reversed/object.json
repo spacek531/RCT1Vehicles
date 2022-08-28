@@ -65,7 +65,6 @@
             },
             {
                 "rotationFrameMask": 15,
-                "numRotationFrames":16,
                 "spacing": 208896,
                 "mass": 525,
                 "numSeats": 4,
