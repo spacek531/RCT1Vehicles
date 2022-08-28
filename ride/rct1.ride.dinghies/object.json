@@ -73,7 +73,7 @@
         }
     },
     "images": [
-        "$CSG[64211]",
+        { "path": "images/preview.png", "format": "raw" },
         "",
         "",
         "$CSG[35065..35176]",
@@ -200,7 +200,7 @@
         }
     },
     "noCsgImages": [
-        "$CSG[64211]",
+        { "path": "images/preview.png", "format": "raw" },
         "",
         "",
         "$RCT2:OBJDATA/DING1.DAT[3..9]",
