@@ -176,8 +176,8 @@ def Cut(l, start, length, depth):
     [CutOne, CutTwo, CutThree][depth](l, start, start + length - 1)
     
 class SpriteGroup:
-    def __init__(self, name, defaultPrecision, reversePower, reverseRepetitions):
-        self.specialFunction = None
+    def __init__(self, name, defaultPrecision, reversePower, reverseRepetitions, specialFunction = None):
+        self.specialFunction = specialFunction
         self.defaultPrecision = defaultPrecision
         self.name = name
         self.reversePower = reversePower
@@ -191,6 +191,14 @@ class SpriteGroup:
         
     def setSpecialFunction(self, function):
         self.specialFunction = function
+
+def corkscrewFunction(images, precision, carImageRanges):
+    print("Corkscrew function called", precision, carImageRanges)
+    # print(images, precision, carImageRanges)
+    Cut(images, carImageRanges, precision * 10, 0)
+    Cut(images, carImageRanges + precision * 10, precision * 10, 0)
+    for j in range(0,precision * 20,precision):
+        Cut(images, carImageRanges + j, precision, 0)
 
 SpriteGroups = [
     SpriteGroup("slopeFlat", 32, 0, 1),
@@ -215,17 +223,10 @@ SpriteGroups = [
     SpriteGroup("slopes25Banked22", 4, 2, 1),
     SpriteGroup("slopes25Banked45", 32, 2, 1),
     SpriteGroup("slopes12Banked45", 4, 2, 1),
-    SpriteGroup("corkscrews", 4, 0, 20),
+    SpriteGroup("corkscrews", 4, 0, 20, corkscrewFunction),
     SpriteGroup("restraintAnimation", 4, 0, 3),
     SpriteGroup("curvedLiftHill", 32, 0, 1)
 ]
-
-def corkscrewFunction(images, precision, carImageRanges):
-    # print(images, precision, carImageRanges)
-    Cut(images, carImageRanges, precision * 10, 0)
-    Cut(images, carImageRanges + precision * 10, precision * 10, 0)
-    for j in range(0,precision * 20,precision):
-        Cut(images, carImageRanges + j, precision, 0)
 
 SpriteGroups[20].setSpecialFunction(corkscrewFunction)
 
@@ -269,7 +270,7 @@ def ReverseImageOrder(inString):
                 if spriteGroup.name not in spriteGroups:
                     continue
                 precision = spriteGroups[spriteGroup.name]
-                print(spriteGroup.name, spriteGroups[spriteGroup.name])
+                print(spriteGroup.name, spriteGroups[spriteGroup.name], spriteGroup.specialFunction)
                 if spriteGroup.specialFunction is not None:
                     spriteGroup.specialFunction(images, precision, carImageRanges)
                     spriteGroup.specialFunction(fimages, precision, carImageRanges)
@@ -279,7 +280,6 @@ def ReverseImageOrder(inString):
                         Cut(images, carImageRanges, spriteGroup.group(precision),spriteGroup.reversePower)
                         Cut(fimages, carImageRanges, spriteGroup.group(precision),spriteGroup.reversePower)
                         carImageRanges += spriteGroup.group(precision)
-                print("numImages",carImageRanges - rowstart)
     ImageConsolidator(images)
     jobject["images"] = images
     if jobject.get("noCsgImages"):
