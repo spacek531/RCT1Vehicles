@@ -13,7 +13,12 @@
         "numEmptyCars": 0,
         "defaultCar": 1,
         "tailCars":0,
-        "buildMenuPriority": 2,
+        "buildMenuPriority": 1,
+        "ratingMultipler": {
+            "excitement": 2,
+            "intensity": 15,
+            "nausea": 30
+        },
         "carColours": [
             [
                 ["light_blue", "white", "black"]
@@ -94,7 +99,7 @@
         ]
     },
     "images": [
-        "$CSG[64210]",
+        { "path": "images/preview.png", "format": "raw" },
         "",
         "",
         "$CSG[2066]",
@@ -1779,7 +1784,7 @@
         "$CSG[3675]"
     ], 
     "noCsgImages": [
-        "$CSG[64210]",
+        { "path": "images/preview.png", "format": "raw" },
         "",
         "",
         "$RCT2:OBJDATA/SCHT1.DAT[19]",

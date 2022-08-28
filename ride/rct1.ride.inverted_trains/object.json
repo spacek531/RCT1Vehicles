@@ -61,7 +61,8 @@
             "hasAdditionalColour1": true,
             "hasScreamingRiders": true,
             "loadingPositions": [1, 3]
-        }
+        },
+        "buildMenuPriority": 2
     },
     "images": [
         { "path": "images/preview1.png", "format": "raw" },
