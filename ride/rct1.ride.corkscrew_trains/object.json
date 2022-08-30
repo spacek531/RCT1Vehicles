@@ -101,7 +101,7 @@
         "buildMenuPriority": 2
     },
     "images": [
-        "$CSG[64214]",
+        { "path": "images/preview.png", "format": "raw" },
         "",
         "",
             "$CSG[13542..13557]",
@@ -891,7 +891,7 @@
         "$CSG[15645]"
     ],
     "noCsgImages": [
-        "$CSG[64214]",
+        { "path": "images/preview.png", "format": "raw" },
         "",
         "",
         "$RCT2:OBJDATA/ARRT1.DAT[3]",

@@ -68,7 +68,7 @@
         ]
     },
     "images": [
-        "$CSG[64218]",
+        { "path": "images/preview.png", "format": "raw" },
         "",
         "",
         "$CSG[34169..34184]",
@@ -235,7 +235,7 @@
         "$CSG[34254]"
     ],
     "noCsgImages": [
-        "$CSG[64218]",
+        { "path": "images/preview.png", "format": "raw" },
         "",
         "",
         "$RCT2:OBJDATA/LFB1.DAT[3]",
