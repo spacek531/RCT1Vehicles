@@ -106,7 +106,7 @@
         "buildMenuPriority": 1
     },
     "images": [
-        "$CSG[64212]",
+        { "path": "images/preview.png", "format": "raw" },
         "",
         "",
         "$CSG[35737..35752]",
@@ -597,7 +597,7 @@
         }
     },
     "noCsgImages": [
-        "$CSG[64212]",
+        { "path": "images/preview.png", "format": "raw" },
         "",
         "",
         "$RCT2:OBJDATA/AMT1.DAT[3]",
