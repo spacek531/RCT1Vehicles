@@ -97,7 +97,7 @@
         "buildMenuPriority": 1
     },
     "images": [
-        "$CSG[64256]",
+        { "path": "images/preview.png", "format": "raw" },
         "",
         "",
         "$CSG[32877..33004]",
@@ -187,7 +187,7 @@
         }
     },
     "noCsgImages": [
-        "$CSG[64256]",
+        { "path": "images/preview.png", "format": "raw" },
         "",
         "",
         "$RCT2:OBJDATA/HELICAR.DAT[3..6]",

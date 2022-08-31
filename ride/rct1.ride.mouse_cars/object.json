@@ -84,7 +84,7 @@
         ]
     },
     "images": [
-        "$CSG[64204]",
+        { "path": "images/preview.png", "format": "raw" },
         "",
         "",
         "$CSG[30373..30420]",
@@ -342,7 +342,7 @@
         }
     },
     "noCsgImages": [
-        "$CSG[64204]",
+        { "path": "images/preview.png", "format": "raw" },
         "",
         "",
         "$RCT2:OBJDATA/WMOUSE.DAT[3..5]",
