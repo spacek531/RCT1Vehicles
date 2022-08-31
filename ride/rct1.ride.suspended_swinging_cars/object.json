@@ -64,7 +64,7 @@
         "buildMenuPriority": 3
     },
     "images": [
-        "$CSG[64197]",
+        { "path": "images/preview.png", "format": "raw"},
         "",
         "",
         "$CSG[22482..22873]",
@@ -449,7 +449,7 @@
         }
     },
     "noCsgImages": [
-        "$CSG[64197]",
+        { "path": "images/preview.png", "format": "raw"},
         "",
         "",
         "$RCT2:OBJDATA/ARRSW1.DAT[3..9]",
