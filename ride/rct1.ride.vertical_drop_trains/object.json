@@ -64,7 +64,7 @@
         "buildMenuPriority": 1
     },
     "images": [
-        "$CSG[64239]",
+        { "path": "images/preview.png", "format": "raw" },
         "",
         "",
         "$CSG[38173..38228]",
@@ -513,7 +513,7 @@
         }
     },
     "noCsgImages": [
-        "$CSG[64239]",
+        { "path": "images/preview.png", "format": "raw" },
         "",
         "",
         "$RCT2:OBJDATA/BMVD.DAT[3]",

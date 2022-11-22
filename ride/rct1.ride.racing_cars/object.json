@@ -64,7 +64,7 @@
         "buildMenuPriority": 4
     },
     "images": [
-        "$CSG[64206]",
+        { "path": "images/preview.png", "format": "raw" },
         "",
         "",
         "$CSG[33293..33308]",
@@ -114,7 +114,7 @@
 		""
     ],
     "noCsgImages": [
-        "$CSG[64206]",
+        { "path": "images/preview.png", "format": "raw" },
         "",
         "",
         "$RCT2:OBJDATA/RCR.DAT[3]",

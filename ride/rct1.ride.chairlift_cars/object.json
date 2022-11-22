@@ -41,7 +41,7 @@
         "buildMenuPriority": 2
     },
     "images": [
-        "$CSG[64213]",
+        { "path": "images/preview.png", "format": "raw" },
         "",
         "",
         "$CSG[36773..36788]",
@@ -75,7 +75,7 @@
         "$CSG[36828]"
     ],
     "noCsgImages": [
-        "$CSG[64213]",
+        { "path": "images/preview.png", "format": "raw" },
         "",
         "",
         "$RCT2:OBJDATA/CLIFT1.DAT[3]",
