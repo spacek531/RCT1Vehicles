@@ -15,9 +15,6 @@
         "tabCar": 1,
         "headCars": 1,
         "tailCars": 1,
-        "ratingMultipler": {
-            "excitement": 3
-        },
         "carColours": [
             [
                 ["bright_green", "yellow", "black"]
