@@ -104,7 +104,7 @@
         ""
     ],
     "noCsgImages": [
-        "$CSG[64206]",
+    { "path": "images/preview.png", "format": "raw"},
         "",
         "",
         "$RCT2:OBJDATA/SPCAR.DAT[3]",
@@ -162,8 +162,7 @@
         "$RCT2:OBJDATA/SPCAR.DAT[187]",
         "$RCT2:OBJDATA/SPCAR.DAT[195]",
         "$RCT2:OBJDATA/SPCAR.DAT[203]",
-
-		""
+        ""
     ],
     "strings": {
         "name": {
