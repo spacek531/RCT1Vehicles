@@ -1,15 +1,25 @@
 {
     "id": "rct1.terrain_surface.wildflowers",
     "authors": ["Chris Sawyer","Simon Foster","OpenRCT2 developers"],
-    "version": "1.0",
+    "version": "1.1",
     "sourceGame": "official",
     "objectType": "terrain_surface",
     "properties": {
-        "price": 100,
-        "mapColours": [77, 125]
+        "price": 300,
+        "mapColours": [75, 75],
+		"smoothWithSelf": true,
+		"smoothWithOther": true
     },
     "images": [
         { "path": "images/icon.png", "format": "raw", "x": 2, "y": 2 },
+		{ "path": "images/s1.png", "format": "raw", "x": 0, "y": 0 },
+		{ "path": "images/s2.png", "format": "raw", "x": 0, "y": 0 },
+		{ "path": "images/s3.png", "format": "raw", "x": 0, "y": 0 },
+		{ "path": "images/s4.png", "format": "raw", "x": 0, "y": 0 },
+		{ "path": "images/s5.png", "format": "raw", "x": 0, "y": 0 },
+		{ "path": "images/s6.png", "format": "raw", "x": 0, "y": 0 },
+        
+        
         { "path": "images/00.png", "x": -32, "y": 0 },
         { "path": "images/01.png", "x": -32, "y": -1 },
         { "path": "images/02-2.png", "x": -32, "y": 0 },
