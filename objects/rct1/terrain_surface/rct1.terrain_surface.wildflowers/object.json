@@ -7,17 +7,17 @@
     "properties": {
         "price": 300,
         "mapColours": [75, 75],
-		"smoothWithSelf": true,
-		"smoothWithOther": true
+	"smoothWithSelf": true,
+	"smoothWithOther": true
     },
     "images": [
         { "path": "images/icon.png", "format": "raw", "x": 2, "y": 2 },
-		{ "path": "images/s1.png", "format": "raw", "x": 0, "y": 0 },
-		{ "path": "images/s2.png", "format": "raw", "x": 0, "y": 0 },
-		{ "path": "images/s3.png", "format": "raw", "x": 0, "y": 0 },
-		{ "path": "images/s4.png", "format": "raw", "x": 0, "y": 0 },
-		{ "path": "images/s5.png", "format": "raw", "x": 0, "y": 0 },
-		{ "path": "images/s6.png", "format": "raw", "x": 0, "y": 0 },
+	{ "path": "images/s1.png", "format": "raw", "x": 0, "y": 0 },
+	{ "path": "images/s2.png", "format": "raw", "x": 0, "y": 0 },
+	{ "path": "images/s3.png", "format": "raw", "x": 0, "y": 0 },
+	{ "path": "images/s4.png", "format": "raw", "x": 0, "y": 0 },
+	{ "path": "images/s5.png", "format": "raw", "x": 0, "y": 0 },
+	{ "path": "images/s6.png", "format": "raw", "x": 0, "y": 0 },
         
         
         { "path": "images/00.png", "x": -32, "y": 0 },
