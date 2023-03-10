@@ -45,13 +45,13 @@
         }
     },
     "images": [
-        "$CSG[64220]",
+        { "path": "images/preview.png", "format": "raw" },
         "",
         "",
         "$CSG[34361..34424]"
     ],
     "noCsgImages": [
-        "$CSG[64220]",
+        { "path": "images/preview.png", "format": "raw" },
         "",
         "",
         "$RCT2:OBJDATA/DODG1.DAT[3..4]",

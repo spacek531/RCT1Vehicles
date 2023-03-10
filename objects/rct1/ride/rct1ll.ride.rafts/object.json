@@ -44,13 +44,13 @@
         }
     },
     "images": [
-        "$CSG[64274]",
+        { "path": "images/preview.png", "format": "raw" },
         "",
         "",
         "$CSG[34121..34168]"
     ],
     "noCsgImages": [
-        "$CSG[64274]",
+        { "path": "images/preview.png", "format": "raw" },
         "",
         "",
         "$RCT2:OBJDATA/RFTBOAT.DAT[3]",

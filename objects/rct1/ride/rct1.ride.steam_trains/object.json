@@ -96,7 +96,7 @@
         "buildMenuPriority": 4
     },
     "images": [
-        "$CSG[64200]",
+    { "path": "images/preview.png", "format": "raw"},
         "",
         "",
         "$CSG[29397..29460]",
@@ -260,7 +260,7 @@
         "$CSG[30369..30372]"
     ],
     "noCsgImages": [
-        "$CSG[64200]",
+    { "path": "images/preview.png", "format": "raw"},
         "",
         "",
            "$RCT2:OBJDATA/NRL.DAT[3..6]",

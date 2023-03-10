@@ -73,14 +73,20 @@
         ]
     },
     "images": [
-        "$CSG[64255]",
+        {
+            "path": "images/preview.png",
+            "format": "raw"
+        },
         "",
         "",
         "$CSG[33657..34088]",
 		""
     ],
     "noCsgImages": [
-        "$CSG[64255]",
+        {
+            "path": "images/preview.png",
+            "format": "raw"
+        },
         "",
         "",
         "$RCT2:OBJDATA/SPBOAT.DAT[3]",

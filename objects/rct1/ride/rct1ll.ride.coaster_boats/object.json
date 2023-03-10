@@ -73,7 +73,7 @@
         ]
     },
     "images": [
-        "$CSG[64269]",
+    { "path": "images/preview.png", "format": "raw"},
         "",
         "",
         "$CSG[31061..31076]",
@@ -419,7 +419,7 @@
 		""
     ],
     "noCsgImages": [
-        "$CSG[64269]",
+    { "path": "images/preview.png", "format": "raw"},
         "",
         "",
         "$RCT2:OBJDATA/CSTBOAT.DAT[3]",

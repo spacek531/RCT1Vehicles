@@ -53,7 +53,7 @@
         "buildMenuPriority": 1
     },
     "images": [
-        "$CSG[64267]",
+        { "path": "images/preview.png", "format": "raw" },
         "",
         "",
         "$CSG[32333..32412]"
@@ -116,7 +116,7 @@
         }
     },
     "noCsgImages": [
-        "$CSG[64267]",
+        { "path": "images/preview.png", "format": "raw" },
         "",
         "",
         "$RCT2:OBJDATA/MONBK.DAT[3]",
