@@ -47,13 +47,13 @@
         "buildMenuPriority": 1
     },
     "images": [
-        "$CSG[64272]",
+        { "path": "images/preview.png", "format": "raw" },
         "",
         "",
         "$CSG[32717..32748]"
     ],
     "noCsgImages": [
-        "$CSG[64272]",
+        { "path": "images/preview.png", "format": "raw" },
         "",
         "",
         "$RCT2:OBJDATA/JSKI.DAT[3]",

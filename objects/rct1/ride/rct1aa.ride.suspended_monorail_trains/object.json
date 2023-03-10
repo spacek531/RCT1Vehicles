@@ -73,7 +73,10 @@
         "buildMenuPriority": 1
     },
     "images": [
-        "$CSG[64258]",
+        {
+            "path": "images/preview.png",
+            "format": "raw"
+        },
         "",
         "",
         "$CSG[28779..28810]",
@@ -204,7 +207,10 @@
         }
     },
     "noCsgImages": [
-        "$CSG[64258]",
+        {
+            "path": "images/preview.png",
+            "format": "raw"
+        },
         "",
         "",
         "$RCT2:OBJDATA/SMONO.DAT[3]",

@@ -94,7 +94,7 @@
         "buildMenuPriority": 1
     },
     "images": [
-        "$CSG[64270]",
+    { "path": "images/preview.png", "format": "raw"},
         "",
         "",
         "$CSG[39745..39768]",
@@ -236,7 +236,7 @@
         }
     },
     "noCsgImages": [
-        "$CSG[64270]",
+    { "path": "images/preview.png", "format": "raw"},
         "",
         "",
         "$RCT2:OBJDATA/THCAR.DAT[3]",

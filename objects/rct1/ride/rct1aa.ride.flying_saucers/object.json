@@ -37,13 +37,13 @@
         }
     },
     "images": [
-        "$CSG[64265]",
+    { "path": "images/preview.png", "format": "raw"},
         "",
         "",
         "$CSG[32653..32684]"
     ],
     "noCsgImages": [
-        "$CSG[64265]",
+    { "path": "images/preview.png", "format": "raw"},
         "",
         "",
         "$RCT2:OBJDATA/FSAUC.DAT[3]",
