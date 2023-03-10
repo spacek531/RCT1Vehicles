@@ -3,7 +3,7 @@
     "authors": ["Chris Sawyer", "Simon Foster"],
     "version": "1.0",
     "originalId": "00000000|#RCT1LFB|00000000",
-    "sourceGame": "rct1",
+    "sourceGame": "custom",
     "objectType": "ride",
     "properties": {
         "type": "log_flume",

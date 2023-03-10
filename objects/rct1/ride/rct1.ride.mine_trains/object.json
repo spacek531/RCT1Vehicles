@@ -6,7 +6,7 @@
     ],
     "version": "1.0",
     "originalId": "00000000|#RCT1MIN|00000000",
-    "sourceGame": "rct1",
+    "sourceGame": "custom",
     "objectType": "ride",
     "properties": {
         "type": "mine_train_rc",

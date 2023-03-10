@@ -3,7 +3,7 @@
     "authors": ["Chris Sawyer", "Simon Foster"],
     "version": "1.0",
     "originalId": "00000000|#RCT1FAC|00000000",
-    "sourceGame": "rct1ll",
+    "sourceGame": "custom",
     "objectType": "ride",
     "properties": {
         "type": "compact_inverted_rc",
