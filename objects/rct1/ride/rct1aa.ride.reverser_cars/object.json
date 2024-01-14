@@ -129,13 +129,14 @@
                 },
                 "hasNoUpstopWheelsBobsleigh": true,
                 "isReverserBogie": true,
-                "recalculateSpriteBounds": true
+                "recalculateSpriteBounds": true,
+                "hasAdditionalColour1": true
             }
         ],
         "buildMenuPriority": 1
     },
     "images": [
-        "$CSG[64260]",
+        { "path": "images/preview.png", "format": "raw" },
         "",
         "",
         "$CSG[29861..29876]",
@@ -358,7 +359,7 @@
         }
     },
     "noCsgImages": [
-        "$CSG[64260]",
+        { "path": "images/preview.png", "format": "raw" },
         "",
         "",
         "$RCT2:OBJDATA/REVCAR.DAT[3]",
