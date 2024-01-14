@@ -87,7 +87,7 @@
         "buildMenuPriority": 3
     },
     "images": [
-        "$CSG[64249]",
+        { "path": "images/preview.png", "format": "raw" },
         "",
         "",
         "$CSG[18550..18565]",
@@ -234,7 +234,7 @@
         ""
     ],
     "noCsgImages": [
-        "$CSG[64249]",
+        { "path": "images/preview.png", "format": "raw" },
         "",
         "",
         "$RCT2:OBJDATA/SMC1.DAT[3]",

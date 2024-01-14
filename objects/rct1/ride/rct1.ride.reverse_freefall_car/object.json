@@ -71,7 +71,7 @@
         "buildMenuPriority": 1
     },
     "images": [
-        "$CSG[64237]",
+        { "path": "images/preview.png", "format": "raw" },
         "",
         "",
         "$CSG[37913..37928]",
@@ -437,7 +437,7 @@
         }
     },
     "noCsgImages": [
-        "$CSG[64237]",
+        { "path": "images/preview.png", "format": "raw" },
         "",
         "",
         "$RCT2:OBJDATA/REVF1.DAT[3]",

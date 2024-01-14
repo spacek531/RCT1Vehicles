@@ -108,7 +108,7 @@
         "buildMenuPriority": 2
     },
     "images": [
-        "$CSG[64261]",
+        { "path": "images/preview.png", "format": "raw" },
         "",
         "",
         "$CSG[6746..6761]",
@@ -709,7 +709,7 @@
         }
     },
     "noCsgImages": [
-        "$CSG[64261]",
+        { "path": "images/preview.png", "format": "raw" },
         "",
         "",
         "$RCT2:OBJDATA/UTCAR.DAT[3]",
