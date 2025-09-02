@@ -186,7 +186,7 @@ class SubpositionData:
                 outPut += ",\n    "+" "*tabSpaces
             else:
                 outPut += ", "
-        return self.name + " , {\n"+outPut+",\n"+" "*tabSpaces+"}"
+        return self.name + ", {\n"+outPut+",\n"+" "*tabSpaces+"}"
 
 def performActions(subpositionData):
     pass
